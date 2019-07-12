@@ -1,2 +1,19 @@
-# any-ui
-一个组件库
+*{margin:0;padding:0;box-sizing: border-box;
+    // &:before{
+    //     box-sizing: border-box;
+    // }
+    // &:after{
+    //     box-sizing: border-box;
+    // }
+}
+@import 'variables.scss';
+@import 'mixin.scss';
+// @import 'reset.scss';
+@import 'helpers/margin.scss';
+@import 'helpers/padding.scss';
+@import 'helpers/text.scss';
+@import 'helpers/background.scss';
+
+
+
+
