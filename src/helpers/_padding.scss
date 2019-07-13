@@ -1,5 +1,3 @@
-@import '../variables.scss';
-
 @for $i from 1 to 5 {
     .p-#{$i} {
         padding: $gutter * $i;

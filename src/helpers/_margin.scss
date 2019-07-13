@@ -1,4 +1,3 @@
-@import '../variables.scss';
 @for $i from 1 to 5 {
     .m-#{$i} {
         margin: 5px * $i;

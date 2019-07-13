@@ -170,3 +170,22 @@
 
 .bg-dark {
   color: #343a40; }
+
+table.table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background: #fff; }
+  table.table tr {
+    border-bottom: 1px solid #ddd;
+    width: 100%; }
+    table.table tr td, table.table tr th {
+      padding: 8px; }
+    table.table tr th {
+      text-align: start; }
+  table.table.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: #f9f9f9; }
+
+.border-rounded {
+  border-radius: 4px; }

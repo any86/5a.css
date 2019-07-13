@@ -1,8 +1,6 @@
-@import '../variables.scss';
-
 @each $key,
 $value in $theme-colors {
-    .text-#{$key} {
+    .bg-#{$key} {
         color: $value;
     }
 }
