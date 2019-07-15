@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "node-sass ./src/main.scss ./dist/main.css",
-    "start": "npm run build -- --watch"
+    "dev": "npm run build -- --watch"
   },
   "dependencies": {
     "node-sass": "^4.12.0"

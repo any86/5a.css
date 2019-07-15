@@ -3,6 +3,55 @@
   padding: 0;
   box-sizing: border-box; }
 
+[v-cloak] {
+  display: none; }
+
+.d-flex {
+  display: flex; }
+  .d-flex.row {
+    flex-direction: row; }
+  .d-flex.column {
+    flex-direction: column; }
+
+.flex-1 {
+  flex: 1; }
+
+.flex-2 {
+  flex: 2; }
+
+.flex-3 {
+  flex: 3; }
+
+.flex-4 {
+  flex: 4; }
+
+.flex-5 {
+  flex: 5; }
+
+.flex-6 {
+  flex: 6; }
+
+.flex-7 {
+  flex: 7; }
+
+.flex-8 {
+  flex: 8; }
+
+.flex-9 {
+  flex: 9; }
+
+.a-c-c {
+  align-content: center; }
+
+.a-i-c {
+  align-items: center; }
+
+.a-i-b {
+  align-items: baseline; }
+
+.a-i-f-e {
+  align-items: flex-end; }
+
 .m-1 {
   margin: 5px; }
 
@@ -148,28 +197,28 @@
   color: #343a40; }
 
 .bg-primary {
-  color: #007bff; }
+  background-color: #007bff; }
 
 .bg-secondary {
-  color: #6c757d; }
+  background-color: #6c757d; }
 
 .bg-success {
-  color: #28a745; }
+  background-color: #28a745; }
 
 .bg-info {
-  color: #17a2b8; }
+  background-color: #17a2b8; }
 
 .bg-warning {
-  color: #ffc107; }
+  background-color: #ffc107; }
 
 .bg-danger {
-  color: #dc3545; }
+  background-color: #dc3545; }
 
 .bg-light {
-  color: #f8f9fa; }
+  background-color: #f8f9fa; }
 
 .bg-dark {
-  color: #343a40; }
+  background-color: #343a40; }
 
 table.table {
   width: 100%;

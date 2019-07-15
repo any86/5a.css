@@ -5,42 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>App</title>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./dist/main.css">
     <style>
+        .total__list>p{
+            height:28px;
+        }
+
+        .total__chart>div{
+            height:28px;
+        }
     </style>
 </head>
 
 <body>
-    <h1 class="p-1">状态总览</h1>
+    <h2 class="p-1"><small><i class="icon ion-md-list"></i></small> 状态总览</h2>
+    <section class="p-1 d-flex total">
+        <div class="total__list">
+            <p class=""><i class="icon ion-md-stats"></i> 设备总数: 400台</p>
+            <p class="text-success "><i class="icon ion-md-checkmark-circle"></i> 正常设备: 100台</p>
+            <p class="text-danger "><i class="icon ion-md-close-circle"></i> 异常设备: 10台</p>
+            <p class="text-warning "><i class="icon ion-md-alert"></i> 离线设备: 100台</p>
+            <p class="text-secondary "><i class="icon ion-md-checkmark-circle"></i> 未知设备: 100台</p>
+        </div>
+        
+        <div class="flex-1 p-1 total-chart d-flex a-i-f-e">
+            <div class="bg-success flex-1" style="height:55%;"></div>
+            <div class="bg-danger flex-1" style="height:10%;"></div>
+            <div class="bg-warning flex-1" style="height:20%;"></div>
+            <div class="bg-secondary flex-1" style="height:15%;"></div>
+        </div>
+    </section>
 
     <details class="p-1" open>
-        <summary>服务器运行状态</summary>
+        <summary >服务器运行状况</summary>
         <table class="table table-striped mt-1">
             <tr>
                 <th>状态</th>
                 <th>总数量</th>
                 <th>异常数量</th>
+                <th>操作</th>
             </tr>
             <tr>
-                <td class="p-1 text-info">正常</td>
-                <td>13台</td>
-                <td class="text-danger">13台</td>
+                <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td>
+                <td>113台</td>
+                <td class="text-danger">19台</td>
+                <td class="text-info">查看</td>
+
             </tr>
             <tr>
-                <td class="p-1 text-danger">异常</td>
+                <td class="p-1 text-danger"><i class="icon ion-md-close-circle"></i> 异常</td>
                 <td>13台</td>
                 <td class="text-danger">13台</t'd>
+                <td class="text-info">查看</td>
             </tr>
             <tr>
-                <td class="p-1 text-warning">离线</td>
+                <td class="p-1 text-warning"><i class="icon ion-md-alert"></i> 离线</td>
                 <td>13台</td>
                 <td class="text-danger">13台</td>
+                <td class="text-info">查看</td>
             </tr>
             <tr>
-                <td class="p-1 text-secondary">未知</td>
+                <td class="p-1 text-secondary"><i class="icon ion-md-help-circle"></i> 未知</td>
                 <td>13台</td>
                 <td class="text-danger">13台</td>
+                <td class="text-info">查看</td>
             </tr>
         </table>
     </details>
@@ -48,8 +78,79 @@
 
     <details class="p-1" open>
         <summary>子系统运行状态</summary>
-        123123
+        <table class="table table-striped mt-1">
+            <tr>
+                <th>状态</th>
+                <th>总数量</th>
+                <th>异常数量</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td>
+                <td>113台</td>
+                <td class="text-danger">19台</td>
+                <td class="text-info">查看</td>
+
+            </tr>
+            <tr>
+                <td class="p-1 text-danger"><i class="icon ion-md-close-circle"></i> 异常</td>
+                <td>13台</td>
+                <td class="text-danger">13台</t'd>
+                <td class="text-info">查看</td>
+            </tr>
+            <tr>
+                <td class="p-1 text-warning"><i class="icon ion-md-alert"></i> 离线</td>
+                <td>13台</td>
+                <td class="text-danger">13台</td>
+                <td class="text-info">查看</td>
+            </tr>
+            <tr>
+                <td class="p-1 text-secondary"><i class="icon ion-md-help-circle"></i> 未知</td>
+                <td>13台</td>
+                <td class="text-danger">13台</td>
+                <td class="text-info">查看</td>
+            </tr>
+        </table>
     </details>
+
+    <details class="p-1" open>
+        <summary>自助设备运行状态</summary>
+        <table class="table table-striped mt-1">
+            <tr>
+                <th>状态</th>
+                <th>总数量</th>
+                <th>异常数量</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td>
+                <td>113台</td>
+                <td class="text-danger">19台</td>
+                <td class="text-info">查看</td>
+
+            </tr>
+            <tr>
+                <td class="p-1 text-danger"><i class="icon ion-md-close-circle"></i> 异常</td>
+                <td>13台</td>
+                <td class="text-danger">13台</t'd>
+                <td class="text-info">查看</td>
+            </tr>
+            <tr>
+                <td class="p-1 text-warning"><i class="icon ion-md-alert"></i> 离线</td>
+                <td>13台</td>
+                <td class="text-danger">13台</td>
+                <td class="text-info">查看</td>
+            </tr>
+            <tr>
+                <td class="p-1 text-secondary"><i class="icon ion-md-help-circle"></i> 未知</td>
+                <td>13台</td>
+                <td class="text-danger">13台</td>
+                <td class="text-info">查看</td>
+            </tr>
+        </table>
+    </details>
+
+
 </body>
 
 </html>
