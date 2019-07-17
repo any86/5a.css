@@ -39,3 +39,11 @@
 @mixin thinBorder($direction :'bottom'){
     border-#{$direction}: 0.5px solid $lighter;
 }
+
+@mixin hidden($isDeep:false){
+    @if $isDeep {
+        height: 0;
+        opacity: 0;
+    }
+    display: none;
+}

@@ -1,6 +1,6 @@
 @each $key,
 $value in $theme-colors {
     .text-#{$key} {
-        color: $value;
+        color: $value !important;
     }
 }

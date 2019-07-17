@@ -1,7 +1,12 @@
-$gutter: 8px;
+// 间距
+$space: 4px;
+// 单位圆角
+$radius: 2px;
+
+// 方向
 $directions: ('top':'t', 'right':'r', 'bottom':'b', 'left': 'l');
 
-
+// 颜色
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -13,7 +18,6 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
-
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default

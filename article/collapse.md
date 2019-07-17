@@ -1,0 +1,119 @@
+# collapse
+
+## 为自己的职业未来造轮子
+vue马上也快出3了, 又是一个造轮子的好时机, 如果你也想趁机造一个组件库, 收集star, 那么开始吧:
+
+## 最终效果
+![常规版本](https://ws1.sinaimg.cn/large/005IQkzXly1g52x6hy0vkj30c80b3q4b.jpg)
+
+![简化版](https://ws1.sinaimg.cn/large/005IQkzXly1g52x6qla7ij30c40b80u3.jpg)
+
+## html
+
+```html
+<div class="a-collapse" >
+    <div class="a-collapse__item" open>
+        <header>
+            <i class="icon-arrow"></i>
+            <p>唐诗</p>
+        </header>
+        <article>
+            <p>唐诗，泛指创作于唐朝诗人的诗。唐诗是中华民族珍贵的文化遗产之一，是中华文化宝库中的一颗明珠，同时也对世界上许多民族和国家的文化发展产生了很大影响，对于后人研究唐代的政治、民情、风俗、文化等都有重要的参考意义和价值。</p>
+        </article>
+    </div>
+
+    <div class="a-collapse__item">
+        <header>
+            <i class="icon-arrow"></i>
+            <p>宋词</p>
+        </header>
+        <article>
+            <p>宋代盛行的一种中国文学体裁，宋词是一种相对于古体诗的新体诗歌之一，标志宋代文学的最高成就。宋词句子有长有短，便于歌唱。因是合乐的歌词，故又称曲子词、乐府、乐章、长短...</p>
+        </article>
+    </div>
+
+    <div class="a-collapse__item" open>
+        <header>
+            <i class="icon-arrow"></i>
+            <p>元曲</p>
+        </header>
+        <article>
+            <p>元曲，是盛行于元代的一种文艺形式，包括杂剧和散曲，有时专指杂剧。 杂剧，宋代以滑稽搞笑为特点的一种表演形式，元代发展成戏曲形式。每本以四折为主，在开头或折间另加楔子，每折用同宫调同韵的北曲套曲和宾白组成。如关汉卿的《窦娥冤...</p>
+        </article>
+    </div>
+</div>
+```
+
+## scss
+```scss
+// 间距
+$space: 4px;
+// 单位圆角
+$radius: 2px;
+// 灰色
+$gray-100: #f8f9fa !default;
+$gray-300: #dee2e6 !default;
+
+.a-collapse {
+    overflow: hidden;
+    border-radius: $radius*2;
+    border: 1px solid $gray-300;
+
+    &__item {
+        &:nth-of-type(n+2) {
+            border-top: 1px solid $gray-300;
+        }
+
+        &[open] {
+            >header {
+                border-bottom: 1px solid $gray-300;
+                >i.icon-arrow{
+                    transform: rotate(90deg);
+                }
+            }
+
+            >article {
+                display: block;
+            }
+        }
+
+        >header {
+            background-color: $gray-100;
+            padding: 2*$space;
+            
+            cursor: pointer;
+            >i.icon-arrow {
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+                vertical-align: middle;
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"/></svg>')
+            }
+            >p{
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        >article {
+            display: none;
+            padding: $space;
+        }
+    }
+
+
+    // 简化版本
+    &[simplify] {
+        border: none;
+
+        .a-collapse__item {
+            >header {
+                border: none;
+                background-color: transparent;
+            }
+        }
+
+
+    }
+}
+```
