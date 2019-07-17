@@ -1,15 +1,21 @@
-# collapse
+# 面试题: 10分钟内手写collapse(折叠)的css/html部分
+
+## 做一个组件库不难
+其实vue/react等框架的出现, 让自己做一个ui变得简单, 大部分的js逻辑都被库封装, 反而组件的代码主要都是css, 所以只要css写好了, 一个组件就完成60%以上了.
 
 ## 为自己的职业未来造轮子
 vue马上也快出3了, 又是一个造轮子的好时机, 如果你也想趁机造一个组件库, 收集star, 那么开始吧:
 
 ## 最终效果
+
+##### 常规版本
 ![常规版本](https://ws1.sinaimg.cn/large/005IQkzXly1g52x6hy0vkj30c80b3q4b.jpg)
 
+
+##### 简化版
 ![简化版](https://ws1.sinaimg.cn/large/005IQkzXly1g52x6qla7ij30c40b80u3.jpg)
 
 ## html
-
 ```html
 <div class="a-collapse" >
     <div class="a-collapse__item" open>
@@ -117,3 +123,11 @@ $gray-300: #dee2e6 !default;
     }
 }
 ```
+
+## js
+本文并不想讲js, 剩下的js工作就交给大家完成了:
+1. 给组件增加一个"手风琴"的选项, 就是只可以同时打开一个"页".
+2. 给每次点击**header标签**的时候, 触发"页"的合并和展开.
+3. 给"合并/展开"加个动画效果,提示这里需要js计算"页"高度, 才能实现和"饿了么ui中collapse组件"的"合并/展开"一样的动画.
+
+**嘿, 看是不是js的工作并不是很多!**

@@ -354,11 +354,11 @@ dl dd {
   border: 1px solid #dee2e6; }
   .a-collapse__item:nth-of-type(n+2) {
     border-top: 1px solid #dee2e6; }
-  .a-collapse__item[open] > header {
+  .a-collapse__item[open] > header, .a-collapse__item--open > header {
     border-bottom: 1px solid #dee2e6; }
-    .a-collapse__item[open] > header > i.icon-arrow {
+    .a-collapse__item[open] > header > i.icon-arrow, .a-collapse__item--open > header > i.icon-arrow {
       transform: rotate(90deg); }
-  .a-collapse__item[open] > article {
+  .a-collapse__item[open] > article, .a-collapse__item--open > article {
     display: block; }
   .a-collapse__item > header {
     background-color: #f8f9fa;
