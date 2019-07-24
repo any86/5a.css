@@ -459,21 +459,29 @@ dl dd {
   to {
     opacity: 1; } }
 
-.a-loading-android > circle {
-  display: inline-block;
-  animation: color 6s ease-in-out infinite, dash 1.5s ease-in-out infinite;
-  stroke-linecap: round;
-  color: currentColor; }
+.a-loading-android {
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  transform-origin: center center; }
+  .a-loading-android > circle {
+    display: inline-block;
+    animation: color 6s ease-in-out infinite, dash 1.5s ease-in-out infinite;
+    stroke-linecap: round;
+    color: currentColor; }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
 
 @keyframes dash {
   0% {
     stroke-dasharray: 1, 200; }
   50% {
-    stroke-dasharray: 100, 200;
-    stroke-dashoffset: -45; }
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -45px; }
   100% {
-    stroke-dasharray: 100, 200;
-    stroke-dashoffset: -124; } }
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px; } }
 
 @keyframes color {
   0%,

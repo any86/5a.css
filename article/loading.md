@@ -11,7 +11,7 @@ web常用的loading图标有2种, 一种是ios的"菊花", 一种是android的"�
 
 ```xml
 <svg width="36" height="36" viewBox="0 0 50 50" class="a-loading-android">
-    <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5"></circle>
+    <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor"  stroke-width="5"></circle>
 </svg>
 ```
 首先我们定义svg的画布尺寸为**50x50**, 在浏览器中缩放为**36x36**显示(这个36你可以根据实际需要调整), 定义环的圆心坐标为**25,25**, **半径为20**(算下**周长大概为125**, 后面会用到), 颜色为**currentColor**获取父元素的color属性的值, 环的宽度为5像素, 看下在没写css前的效果:
@@ -23,12 +23,21 @@ web常用的loading图标有2种, 一种是ios的"菊花", 一种是android的"�
 ```scss
 .a-loading {
     &-android {
+        animation: rotate 2s linear infinite;
+        transform-origin: center center;
         >circle {
             display: inline-block;
             animation: dash 1500ms ease-in-out infinite;
             stroke-linecap: round; // 端点是圆形
             color: currentColor;
         }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
         @keyframes dash {
             0% {
                 stroke-dasharray: 1, 200;
@@ -74,6 +83,8 @@ web常用的loading图标有2种, 一种是ios的"菊花", 一种是android的"�
 ##### **100%**的时刻
 回到一个点的状态, 和0%状态一致, 这样动画循环起来不突兀, 但是从50%到100%的动画只是"尾部收缩", 所以我们用`stroke-dashoffset:-124`实现,`125-124=1` 正好是一个像素, 好了动画到此就实现完毕了.
 
+### 整体旋转
+为了和安卓系统的动画一致, 让整体也进行旋转. 这里代码比较简单不赘述.
 
 ## animation属性的扩展
 如果大家仔细看过css的`animation`的文档, 会发现`animation`可以同时支持多个过度动画, 比如`animation: color 6s ease-in-out infinite, dash 1.5s ease-in-out infinite;`, 用","分割多个动画.
@@ -86,12 +97,20 @@ web常用的loading图标有2种, 一种是ios的"菊花", 一种是android的"�
 
 ```scss
     &-android {
+        animation: rotate 2s linear infinite;
+        transform-origin: center center;
         >circle {
             display: inline-block;
             // 增加颜色变化的代码
             animation: color 6s ease-in-out infinite, dash 1.5s ease-in-out infinite; 
             stroke-linecap: round;
             color: currentColor;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes dash {
@@ -133,4 +152,4 @@ web常用的loading图标有2种, 一种是ios的"菊花", 一种是android的"�
     }
 ```
 
-本文代码参考于**iview**, 一个vue框架.
+本文代码参考**iview**, 一个vue框架.
