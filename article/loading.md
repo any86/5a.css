@@ -3,9 +3,9 @@
 源码: https://github.com/any86/any-ui/blob/master/src/components/_loading.scss
 
 ## ios/android
-常用的loading图标就2种, 一种是ios的"菊花", 一种是android的"环". 今天我们用svg实现android的"环"动画, 下节课实现ios的"菊花".
+web常用的loading图标有2种, 一种是ios的"菊花", 一种是android的"环". 今天我们用svg实现android的"环"动画, 下节课实现ios的"菊花".
 ![](https://user-gold-cdn.xitu.io/2019/7/24/16c22ad69ef58d9a?w=38&h=41&f=gif&s=36529)
-**注意**: gif帧数少的问题, 实际动画效果是很平滑的.
+**注意**: gif帧数少的原因, 实际动画效果是很**平滑**的.
 
 ## xml(svg)
 
@@ -14,13 +14,12 @@
     <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5"></circle>
 </svg>
 ```
-首先我们定义svg的画布尺寸为**50x50**, 在浏览器中缩放为**36x36**显示, 定义环的圆心坐标为**25x25**, **半径**为20(算下周长大概为125), 颜色为**currentColor**获取父元素的color属性的值, 环的宽度为5像素, 在没写css前的效果:
+首先我们定义svg的画布尺寸为**50x50**, 在浏览器中缩放为**36x36**显示(这个36你可以根据实际需要调整), 定义环的圆心坐标为**25,25**, **半径为20**(算下**周长大概为125**, 后面会用到), 颜色为**currentColor**获取父元素的color属性的值, 环的宽度为5像素, 看下在没写css前的效果:
 ![](https://ws1.sinaimg.cn/large/005IQkzXly1g59tuby5mdj30130170sh.jpg)
 
 
 ## scss
 
-### 代码
 ```scss
 .a-loading {
     &-android {
@@ -61,7 +60,7 @@
 ### stroke-dashoffset
 偏移, 值为正数的时候, 虚线逆时针回退, 负数顺时针前进(左图的stroke-dashoffset:0, 环的起点在3点方向, 右图设置为-10以后, 环的起点被顺时针偏移了一段距离):
 ![](https://ws1.sinaimg.cn/large/005IQkzXly1g5as5rhj03j305i02lmx0.jpg)
-因为动画中, 环在增加长度的同时尾部在收缩长度, 所以需要配合`stroke-dashoffset`实现.
+因为动画中, 环在增加长度的同时**尾部在收缩长度**, 所以需要配合`stroke-dashoffset`实现.
 
 ### 动画的3个关键时刻
 ![](https://ws1.sinaimg.cn/large/005IQkzXly1g5awigfu1pj304m02qt8k.jpg)
@@ -73,7 +72,7 @@
 为了让圆环呈现80%的环, 所以设置实线部分长度为100(125*0.8, 125是周长): `stroke-dasharray: 100, 200;`, 同时尾部在收缩, 所以设置` stroke-dashoffset: -45;`.
 
 ##### **100%**的时刻
-回到一个点的状态, 和0%状态一致, 这样动画循环起来不突兀, 但是从50%到100%的动画是"尾部收缩", 所以我们用`stroke-dashoffset:-124`实现,`125-124=1` 正好是一个像素, 好了动画到此就实现完毕了.
+回到一个点的状态, 和0%状态一致, 这样动画循环起来不突兀, 但是从50%到100%的动画只是"尾部收缩", 所以我们用`stroke-dashoffset:-124`实现,`125-124=1` 正好是一个像素, 好了动画到此就实现完毕了.
 
 
 ## animation属性的扩展
