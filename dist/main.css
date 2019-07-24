@@ -338,6 +338,9 @@ div.table {
 .border-rounded {
   border-radius: 4px; }
 
+.border-1px {
+  box-shadow: inset 0px -1px 1px -1px black; }
+
 dl dt {
   margin-top: 8px;
   font-size: 16px;
@@ -354,15 +357,10 @@ dl dd {
   border: 1px solid #dee2e6; }
   .a-collapse__item:nth-of-type(n+2) {
     border-top: 1px solid #dee2e6; }
-  .a-collapse__item[open] > header, .a-collapse__item--open > header {
-    border-bottom: 1px solid #dee2e6; }
-    .a-collapse__item[open] > header > i.icon-arrow, .a-collapse__item--open > header > i.icon-arrow {
-      transform: rotate(90deg); }
-  .a-collapse__item[open] > article, .a-collapse__item--open > article {
-    display: block; }
   .a-collapse__item > header {
     background-color: #f8f9fa;
     padding: 8px;
+    font-size: 14px;
     cursor: pointer; }
     .a-collapse__item > header > i.icon-arrow {
       width: 1em;
@@ -372,12 +370,119 @@ dl dd {
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"/></svg>'); }
     .a-collapse__item > header > p {
       display: inline-block;
-      vertical-align: middle; }
+      vertical-align: middle;
+      font-weight: bold; }
   .a-collapse__item > article {
     display: none;
-    padding: 4px; }
-  .a-collapse[simplify] {
+    padding: 4px;
+    font-size: 14px; }
+  .a-collapse__item--open > header {
+    border-bottom: 1px solid #dee2e6; }
+    .a-collapse__item--open > header > i.icon-arrow {
+      transform: rotate(90deg); }
+  .a-collapse__item--open > article {
+    display: block; }
+  .a-collapse--simplify {
     border: none; }
-    .a-collapse[simplify] .a-collapse__item > header {
+    .a-collapse--simplify .a-collapse__item > header {
       border: none;
       background-color: transparent; }
+
+.a-loading-ios {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  color: currentColor; }
+  .a-loading-ios > span {
+    overflow: hidden;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: block;
+    color: currentColor;
+    background-color: #ccc;
+    width: 10px;
+    height: 3px; }
+  .a-loading-ios > span:nth-of-type(1) {
+    transform: rotate(0deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0s; }
+  .a-loading-ios > span:nth-of-type(2) {
+    transform: rotate(30deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.05s; }
+  .a-loading-ios > span:nth-of-type(3) {
+    transform: rotate(60deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.1s; }
+  .a-loading-ios > span:nth-of-type(4) {
+    transform: rotate(90deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.15s; }
+  .a-loading-ios > span:nth-of-type(5) {
+    transform: rotate(120deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.2s; }
+  .a-loading-ios > span:nth-of-type(6) {
+    transform: rotate(150deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.25s; }
+  .a-loading-ios > span:nth-of-type(7) {
+    transform: rotate(180deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.3s; }
+  .a-loading-ios > span:nth-of-type(8) {
+    transform: rotate(210deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.35s; }
+  .a-loading-ios > span:nth-of-type(9) {
+    transform: rotate(240deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.4s; }
+  .a-loading-ios > span:nth-of-type(10) {
+    transform: rotate(270deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.45s; }
+  .a-loading-ios > span:nth-of-type(11) {
+    transform: rotate(300deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.5s; }
+  .a-loading-ios > span:nth-of-type(12) {
+    transform: rotate(330deg) translateX(15px);
+    animation: ios 0.6s linear infinite;
+    animation-delay: 0.55s; }
+
+@keyframes ios {
+  from {
+    opacity: 0.1; }
+  to {
+    opacity: 1; } }
+
+.a-loading-android > circle {
+  display: inline-block;
+  animation: color 6s ease-in-out infinite, dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+  color: currentColor; }
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200; }
+  50% {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -45; }
+  100% {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -124; } }
+
+@keyframes color {
+  0%,
+  100% {
+    stroke: #6b5c5b; }
+  40% {
+    stroke: #0057e7; }
+  66% {
+    stroke: #008744; }
+  80%,
+  90% {
+    stroke: #ffa700; } }
