@@ -276,6 +276,39 @@ a {
 .text-dark {
   color: #343a40 !important; }
 
+.text-sm {
+  font-size: 0.875rem; }
+
+.text-md {
+  font-size: 1rem; }
+
+.text-lg {
+  font-size: 1.25rem; }
+
+.text-short {
+  overflow: hidden; }
+
+.text-short-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.text-short-2 {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
+
+.text-short-3 {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; }
+
 .bg-primary {
   background-color: #007bff; }
 
@@ -391,78 +424,83 @@ dl dd {
 .a-loading-ios {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  color: currentColor; }
+  align-self: center;
+  width: 1em;
+  height: 1em;
+  color: currentColor;
+  vertical-align: -0.14em; }
   .a-loading-ios > span {
     overflow: hidden;
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 0.5em;
+    left: 0.5em;
     display: block;
     color: currentColor;
     background-color: #ccc;
-    width: 10px;
-    height: 3px; }
+    width: 0.2em;
+    height: 0.06em;
+    border-radius: 0.06em; }
   .a-loading-ios > span:nth-of-type(1) {
-    transform: rotate(0deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0s; }
+    transform: rotate(0deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 0ms; }
   .a-loading-ios > span:nth-of-type(2) {
-    transform: rotate(30deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.05s; }
+    transform: rotate(30deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 166.66667ms; }
   .a-loading-ios > span:nth-of-type(3) {
-    transform: rotate(60deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.1s; }
+    transform: rotate(60deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 333.33333ms; }
   .a-loading-ios > span:nth-of-type(4) {
-    transform: rotate(90deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.15s; }
+    transform: rotate(90deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 500ms; }
   .a-loading-ios > span:nth-of-type(5) {
-    transform: rotate(120deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.2s; }
+    transform: rotate(120deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 666.66667ms; }
   .a-loading-ios > span:nth-of-type(6) {
-    transform: rotate(150deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.25s; }
+    transform: rotate(150deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 833.33333ms; }
   .a-loading-ios > span:nth-of-type(7) {
-    transform: rotate(180deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.3s; }
+    transform: rotate(180deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 1000ms; }
   .a-loading-ios > span:nth-of-type(8) {
-    transform: rotate(210deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.35s; }
+    transform: rotate(210deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 1166.66667ms; }
   .a-loading-ios > span:nth-of-type(9) {
-    transform: rotate(240deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.4s; }
+    transform: rotate(240deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 1333.33333ms; }
   .a-loading-ios > span:nth-of-type(10) {
-    transform: rotate(270deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.45s; }
+    transform: rotate(270deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 1500ms; }
   .a-loading-ios > span:nth-of-type(11) {
-    transform: rotate(300deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.5s; }
+    transform: rotate(300deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 1666.66667ms; }
   .a-loading-ios > span:nth-of-type(12) {
-    transform: rotate(330deg) translateX(15px);
-    animation: ios 0.6s linear infinite;
-    animation-delay: 0.55s; }
+    transform: rotate(330deg) translateX(0.3em);
+    animation: ios 2000ms linear infinite;
+    animation-delay: 1833.33333ms; }
 
 @keyframes ios {
   from {
-    opacity: 0.1; }
+    opacity: 0.2; }
   to {
     opacity: 1; } }
 
 .a-loading-android {
+  display: inline-block;
   animation: rotate 2s linear infinite;
-  height: 100%;
-  transform-origin: center center; }
+  transform-origin: center center;
+  vertical-align: -0.14em;
+  align-self: center; }
   .a-loading-android > circle {
     display: inline-block;
     animation: color 6s ease-in-out infinite, dash 1.5s ease-in-out infinite;

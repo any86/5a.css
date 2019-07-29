@@ -10,9 +10,9 @@
     display: none;
 }
 @import '_variables.scss';
-@import 'mixin.scss';
-@import 'function.scss';
-@import 'reset.scss';
+@import '_mixin.scss';
+@import '_function.scss';
+@import '_reset.scss';
 
 @import 'helpers/_display';
 @import 'helpers/_flex.scss';

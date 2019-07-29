@@ -1,37 +1,38 @@
-@mixin iosLoading($size:1em, $duration:2000, $count:12) {
+.a-loading {
+    @mixin rotateSpan($duration,$count:18) {
+        @for $i from 0 to $count {
+            >span:nth-of-type(#{$i+1}) {
+                transform: rotate(#{30*$i}deg) translateX(15px);
+                animation: ios #{$duration}s linear infinite;
+                animation-delay: #{$duration*$i/$count}s;
+            }
+        }
+    }
+
     &-ios {
         position: relative;
         display: inline-block;
-        align-self: center;
-        width: $size;
-        height: $size;
+        width: 50px;
+        height: 50px;
         color: currentColor;
-        vertical-align: -0.14em;
+
         >span {
             overflow: hidden;
             position: absolute;
-            top: $size/2;
-            left: $size/2;
+            top: 25px;
+            left: 25px;
             display: block;
             color: currentColor;
             background-color: #ccc;
-            width: 0.2*$size;
-            height: 0.06*$size;
-            border-radius: 0.06*$size;
+            width: 10px;
+            height: 3px;
         }
 
-        @for $i from 0 to $count {
-            >span:nth-of-type(#{$i+1}) {
-                transform: rotate(#{360/$count*$i}deg) translateX(0.3*$size);
-                animation: ios #{$duration}ms linear infinite;
-                animation-delay: #{$duration*$i/($count)}ms;
-            }
-        }
-
+        @include rotateSpan(0.6);
 
         @keyframes ios {
             from {
-                opacity: 0.2;
+                opacity: 0.1;
             }
 
             to {
@@ -39,19 +40,13 @@
             }
         }
     }
-}
 
-
-
-.a-loading {
-    @include iosLoading();
 
     &-android {
-        display: inline-block;
         animation: rotate 2s linear infinite;
+        height: 100%;
         transform-origin: center center;
-        vertical-align: -0.14em;
-        align-self: center;
+
         >circle {
             display: inline-block;
             animation: color 6s ease-in-out infinite, dash 1.5s ease-in-out infinite;
