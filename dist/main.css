@@ -532,3 +532,52 @@ dl dd {
   80%,
   90% {
     stroke: #ffa700; } }
+
+.a-button {
+  -webkit-appearance: none;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  border: 0 none;
+  vertical-align: middle;
+  user-select: none;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  background: #fff;
+  color: #000; }
+
+.a-button-primary {
+  color: white;
+  background-color: #007bff; }
+
+.a-button-secondary {
+  color: white;
+  background-color: #6c757d; }
+
+.a-button-success {
+  color: white;
+  background-color: #28a745; }
+
+.a-button-info {
+  color: white;
+  background-color: #17a2b8; }
+
+.a-button-warning {
+  color: white;
+  background-color: #ffc107; }
+
+.a-button-danger {
+  color: white;
+  background-color: #dc3545; }
+
+.a-button-light {
+  color: #37414c;
+  background-color: #f8f9fa; }
+
+.a-button-dark {
+  color: white;
+  background-color: #343a40; }

@@ -3,11 +3,17 @@ $space: 4px;
 // 单位圆角
 $radius: 2px;
 
+
 // 方向
 $directions: ('top':'t', 'right':'r', 'bottom':'b', 'left': 'l');
 
 // 字体大小
 $font-size-base:1rem;
+
+
+// button
+$button-radius:$radius*2;
+$button-font-size:$font-size-base * .875;
 
 // 颜色
 $white:    #fff !default;

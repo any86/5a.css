@@ -1,0 +1,25 @@
+.a-button {
+    -webkit-appearance: none;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    outline: none;
+    padding: $space $space*2;
+    box-sizing: border-box;
+    border: 0 none;
+    vertical-align: middle;
+    user-select: none;
+    font-size: $button-font-size;
+    border-radius: $button-radius;
+    background: #fff;
+    color:#000;
+}
+
+@each $k,
+$color in $theme-colors {
+    .a-button-#{$k} {
+        color: color-yiq($color);
+        background-color: $color;
+    }
+}
