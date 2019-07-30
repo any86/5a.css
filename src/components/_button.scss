@@ -13,7 +13,16 @@
     font-size: $button-font-size;
     border-radius: $button-radius;
     background: #fff;
-    color:#000;
+    color: #000;
+
+    &--block{
+        width: 100%;
+    }
+
+    &--full{
+        border-radius: 0 !important;
+        width:100%;
+    }
 }
 
 @each $k,

@@ -549,6 +549,11 @@ dl dd {
   border-radius: 4px;
   background: #fff;
   color: #000; }
+  .a-button--block {
+    width: 100%; }
+  .a-button--full {
+    border-radius: 0 !important;
+    width: 100%; }
 
 .a-button-primary {
   color: white;
