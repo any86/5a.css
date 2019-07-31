@@ -44,13 +44,10 @@
     }
 }
 
-@mixin thinBorder($direction :'bottom', $color:#ddd) {
-    & {
-        position: relative;
-    }
-
+@mixin thinBorder($direction :'bottom', $color:#ccc) {
     @media only screen and (-webkit-min-device-pixel-ratio: 2) {
         & {
+            position: relative;
             border-bottom: none;
         }
 
@@ -59,7 +56,7 @@
             display: block;
             position: absolute;
             bottom: 0;
-            left:0;
+            left: 0;
             width: 100%;
             height: 1px;
             background-color: $color;
@@ -72,7 +69,7 @@
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3) {
         &:after {
-            transform: scaleY(0.333);
+            // transform: scaleY(0.333);
         }
     }
 }
