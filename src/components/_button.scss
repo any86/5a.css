@@ -1,28 +1,37 @@
 .a-button {
-    -webkit-appearance: none;
+    -webkit-appearance: button;
     position: relative;
     cursor: pointer;
     display: inline-block;
     text-align: center;
-    outline: none;
     padding: $space $space*2;
     box-sizing: border-box;
     border: 0 none;
     vertical-align: middle;
     user-select: none;
+    outline: none;
     font-size: $button-font-size;
     border-radius: $button-radius;
     background: #fff;
     color: #000;
+    transition: box-shadow 200ms;
 
-    &--block{
+    &--block,
+    &--full {
         width: 100%;
+        border-radius: $button-radius;
+        padding: $space*4;
     }
 
-    &--full{
+    &--full {
         border-radius: 0 !important;
-        width:100%;
     }
+
+    &:focus {
+        box-shadow: 0 0 0 4px rgba(#000, .125);
+    }
+
+
 }
 
 @each $k,
@@ -30,5 +39,14 @@ $color in $theme-colors {
     .a-button-#{$k} {
         color: color-yiq($color);
         background-color: $color;
+
+        &:active {
+            box-shadow: inset 0 3px 5px rgba(#000, .125);
+        }
+
+        &[disabled] {
+            background-color: lighten($color, 20%);
+            touch-action: none;
+        }
     }
 }
