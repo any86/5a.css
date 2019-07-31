@@ -1,0 +1,36 @@
+.a-card{
+    width: 100%;
+    box-shadow: 0 4px 16px rgba(0,0,0,.12);
+    background-color: $background-color;
+    border-radius: $radius*2;
+    overflow: hidden;
+    &__image{
+        display: block;
+        width: 100%;
+    }
+
+    &__header{
+        padding:$space*2;
+
+        >.header{
+
+            &__subtitle{
+                margin-top:$space;
+                font-weight: bolder;
+                font-size: $font-size-sm;
+                color:$secondary;
+            }
+            
+            &__title{
+                font-weight: bold;
+                font-size: $font-size-lg;
+                color:#000;
+            }
+        }
+    }
+    &__content{
+        padding:$space*2;
+        // white-space: 
+        word-break: break-all;
+    }
+}

@@ -672,3 +672,27 @@ dl dd {
   display: inline-block;
   vertical-align: middle;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"/></svg>'); }
+
+.a-card {
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden; }
+  .a-card__image {
+    display: block;
+    width: 100%; }
+  .a-card__header {
+    padding: 8px; }
+    .a-card__header > .header__subtitle {
+      margin-top: 4px;
+      font-weight: bolder;
+      font-size: 0.875rem;
+      color: #6c757d; }
+    .a-card__header > .header__title {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #000; }
+  .a-card__content {
+    padding: 8px;
+    word-break: break-all; }
