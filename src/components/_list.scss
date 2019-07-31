@@ -1,0 +1,20 @@
+.a-list{
+    &__title{
+        font-size: $list-title-font-size;
+        font-weight: bold;
+        color:#000;
+    }
+    
+    &__item{
+        .icon-arrow{
+            @extend .icon-arrow;
+        }
+    }
+    
+    &__item,&__title{
+        display: block;
+        width: 100%;
+        padding:$space*2;
+        @include thinBorder();
+    }
+}

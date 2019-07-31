@@ -5,14 +5,23 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -webkit-appearance: none; // text-rendering: optimizeLegibility;
-    &:after,
-    :before {
-        box-sizing: border-box;
-    }
+    // -webkit-touch-callout: none;
+    // -webkit-appearance: none; 
+    // text-rendering: optimizeLegibility;
+    // &:after,
+    // :before {
+    //     box-sizing: border-box;
+    // }
 }
 
+
+a{
+    text-decoration: none;
+    color:inherit;
+    &:hover{
+        cursor: pointer;
+    }
+}
 // ::-webkit-scrollbar {
 //     background: #ccc;
 //     width: 4px;
@@ -37,3 +46,7 @@
 // ::-ms-scrollbar-thumb {
 //     background: #fff;
 // }
+
+li{
+    list-style: none;
+}

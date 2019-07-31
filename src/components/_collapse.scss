@@ -1,0 +1,63 @@
+.a-collapse {
+    overflow: hidden;
+    border-radius: $radius*2;
+    border: 1px solid $gray-300;
+
+    &__item {
+        &:nth-of-type(n+2) {
+            border-top: 1px solid $gray-300;
+        }
+
+        >header {
+            background-color: $gray-100;
+            padding: 2*$space;
+            font-size: 14px;
+            cursor: pointer;
+
+            >i.icon-arrow {
+                @extend .icon-arrow;
+            }
+
+            >p {
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: bold;
+            }
+        }
+
+        >article {
+            display: none;
+            padding: $space;
+            font-size: 14px;
+        }
+    }
+
+    // 展开情况下
+    &__item {
+        &--open {
+            >header {
+                border-bottom: 1px solid $gray-300;
+
+                >i.icon-arrow {
+                    transform: rotate(90deg);
+                }
+            }
+
+            >article {
+                display: block;
+            }
+        }
+    }
+
+    // 简化版本
+    &--simplify {
+        border: none;
+
+        .a-collapse__item {
+            >header {
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+}
