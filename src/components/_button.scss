@@ -1,3 +1,12 @@
+.a-button-group{
+    display: flex;
+    
+}
+
+.a-button-group--block{
+    border-radius: $button-radius;
+}
+
 .a-button {
     -webkit-appearance: button;
     position: relative;

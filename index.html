@@ -3,7 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=App-Config content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta content=yes name=apple-mobile-web-app-capable>
+    <meta content=yes name=apple-touch-fullscreen>
+    <meta content="telephone=no,email=no" name=format-detection>
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>App</title>
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
@@ -24,41 +28,93 @@
 </head>
 
 <body>
+    <p style="font-size:100px;background:#111;color:#fff;">
+        <i class="a-loading-ios">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </i>加载中...<svg height="1em" width="1em" viewBox="0 0 50 50" class="a-loading-android">
+            <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5"></circle>
+        </svg>
 
-    
-<p style="font-size:100px;background:#111;color:#fff;">
+        <br>
+    </p>
+
+    <ul class="a-list">
+        <li class="a-list__title">
+            123bi必滔天
+        </li>
+        <li class="a-list__item">
+            <i class="icon-arrow"></i>
+            当然还是利用伪元素画边框然后通过缩小，达到边框变细的目的。首先我们使用伪元素画四条边，在将宽高调整到200%,最后再缩小50%，由于边框是1px不会因宽高的改变而改变，所以我们缩小时边框也会跟着变细。
+        </li>
+
+        <li class="a-list__item">
+            <div class="a-button-group a-button-group--block">
+                    <button class="a-button a-button-primary a-button--full" disabled>primary</button>
+                    <button class="a-button a-button-success a-button--full">success</button>
+            </div>
+        </li>
+        <li class="a-list__item">
+            <button class="a-button a-button-warning  a-button--block">warning</button>
+            <button class="a-button a-button-danger">warning</button>
+            <button class="a-button a-button-info">info</button>
+            <button class="a-button a-button-secondary">secondary</button>
+        </li>
+
+        <li class="a-list__item">
+            <button class="a-button a-button-light">light</button>
+            <button class="a-button a-button-dark">dark</button>
+        </li>
+
+
+        <li class="a-list__item">
+            <i class="a-loading-ios">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </i> 已按时打算的加拉会计师抵抗力
+        </li>
+
+
+        <li class="a-list__item">
+            <svg height="1em" width="1em" viewBox="0 0 50 50" class="a-loading-android">
+                <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5"></circle>
+            </svg> 已按时打算的加拉会计师抵抗力已按时打算的加拉会计师抵抗力已按时打算的加拉会计师抵抗力已按时打算的加拉会计师抵抗力已按时打算的加拉会计师抵抗力
+        </li>
+
+    </ul>
 
 
 
 
-    <i class="a-loading-ios">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </i>加载中...<svg height="1em"   width="1em" viewBox="0 0 50 50" class="a-loading-android">
-        <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor"  stroke-width="5"></circle>
-    </svg>
 
-    <br>
 
-    <button class="a-button a-button-primary a-button--block" >primary</button>
-    <button class="a-button a-button-success a-button--full">success</button>
-    <button class="a-button a-button-warning">warning</button>
-    <button class="a-button a-button-danger">warning</button>
-    <button class="a-button a-button-info">info</button>
-    <button class="a-button a-button-secondary">secondary</button>
-    <button class="a-button a-button-light">light</button>
-    <button class="a-button a-button-dark">dark</button>
-</p>
+
+
+
+
+
+
+
 
 
     <h2 class="p-1"><small><i class="icon ion-md-stats"></i></small> 状态总览</h2>
@@ -78,6 +134,15 @@
             <div class="bg-secondary flex-1" style="height:15%;"></div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
 
     <details class="p-1" open>
         <summary class="text-danger">异常 </summary>

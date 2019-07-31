@@ -1,4 +1,5 @@
 {
+  "name": "@3a/css",
   "scripts": {
     "build": "node-sass ./src/main.scss ./dist/main.css",
     "dev": "npm run build -- --watch"

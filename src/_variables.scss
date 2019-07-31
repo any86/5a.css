@@ -9,11 +9,15 @@ $directions: ('top':'t', 'right':'r', 'bottom':'b', 'left': 'l');
 
 // 字体大小
 $font-size-base:1rem;
-
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
 
 // button
 $button-radius:$radius*2;
 $button-font-size:$font-size-base * .875;
+
+// list
+$list-title-font-size: $font-size-lg;
 
 // 颜色
 $white:    #fff !default;
@@ -50,9 +54,11 @@ $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
+// $red: #f44336 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
+// $green: #42b983 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 

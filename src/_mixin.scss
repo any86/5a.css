@@ -69,7 +69,7 @@
 
     @media only screen and (-webkit-min-device-pixel-ratio: 3) {
         &:after {
-            // transform: scaleY(0.333);
+            transform: scaleY(0.33);
         }
     }
 }
