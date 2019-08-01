@@ -13,6 +13,16 @@ $directions: ('top':'t', 'right':'r', 'bottom':'b', 'left': 'l');
 $font-size-base:1rem;
 $font-size-sm: $font-size-base * .875;
 $font-size-lg: $font-size-base * 1.25;
+// 
+$font-size-1: $font-size-base * .875;
+$font-size-2: $font-size-base;
+$font-size-3: $font-size-base * 1.25;
+$font-size-4: $font-size-base * 1.5;
+$font-size-5: $font-size-base * 1.75;
+$font-size-6: $font-size-base * 2;
+
+
+
 
 // button
 $button-radius:$radius*2;

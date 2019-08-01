@@ -1,20 +1,36 @@
-.a-list{
-    &__title{
+.a-list {
+    &__title {
         font-size: $list-title-font-size;
         font-weight: bold;
-        color:#000;
+        color: #000;
     }
-    
-    &__item{
-        .icon-arrow{
+
+    &__item {
+        display: flex;
+        // transition: all 200ms;
+
+        // &:hover {
+        //     background-color: rgba(#ddd, .1);
+        // }
+
+        >a {
+            display: block;
+            flex: 1;
+
+        }
+
+        >.icon-arrow {
             @extend .icon-arrow;
         }
     }
-    
-    &__item,&__title{
-        display: block;
+
+    &__item,
+    &__title {
         width: 100%;
-        padding:$space*2;
+        padding: $space*2;
         @include thinBorder();
     }
+
+
+
 }

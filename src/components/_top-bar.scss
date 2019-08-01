@@ -1,0 +1,34 @@
+%icon-arrow {
+    width: 2em;
+    height: 1.25em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    @extend .icon-arrow;
+
+    &:active {
+        opacity: 0.1;
+    }
+}
+
+.a-top-bar {
+    position: relative;
+    padding: $space*2;
+    font-size: $font-size-3;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(#000, .125);
+    text-align: center;
+
+    &__icon-arrow-left {
+        left: 0;
+        @extend %icon-arrow;
+        @extend .rotate-180;
+    }
+
+    &__icon-arrow-right {
+        right: 0;
+        @extend %icon-arrow;
+    }
+}
