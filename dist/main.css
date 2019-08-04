@@ -759,3 +759,14 @@ div.table {
     left: 0; }
   .a-top-bar__icon-arrow-right {
     right: 0; }
+
+.a-divider {
+  display: table;
+  text-align: center;
+  word-break: keep-all;
+  height: 1px; }
+  .a-divider::after, .a-divider::before {
+    content: '';
+    display: table-cell;
+    width: 100%;
+    background-color: #ccc; }
