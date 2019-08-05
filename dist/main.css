@@ -622,9 +622,9 @@ div.table {
 .a-button--primary {
   color: white;
   background-color: #007bff; }
-  .a-button--primary:active {
+  .a-button--primary:not(.a-button--full):active {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .a-button--primary:focus {
+  .a-button--primary:not(.a-button--full):focus {
     z-index: 1;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4); }
   .a-button--primary[disabled] {
@@ -634,9 +634,9 @@ div.table {
 .a-button--secondary {
   color: white;
   background-color: #6c757d; }
-  .a-button--secondary:active {
+  .a-button--secondary:not(.a-button--full):active {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .a-button--secondary:focus {
+  .a-button--secondary:not(.a-button--full):focus {
     z-index: 1;
     box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.4); }
   .a-button--secondary[disabled] {
@@ -646,9 +646,9 @@ div.table {
 .a-button--success {
   color: white;
   background-color: #28a745; }
-  .a-button--success:active {
+  .a-button--success:not(.a-button--full):active {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .a-button--success:focus {
+  .a-button--success:not(.a-button--full):focus {
     z-index: 1;
     box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.4); }
   .a-button--success[disabled] {
@@ -658,9 +658,9 @@ div.table {
 .a-button--info {
   color: white;
   background-color: #17a2b8; }
-  .a-button--info:active {
+  .a-button--info:not(.a-button--full):active {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .a-button--info:focus {
+  .a-button--info:not(.a-button--full):focus {
     z-index: 1;
     box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.4); }
   .a-button--info[disabled] {
@@ -670,9 +670,9 @@ div.table {
 .a-button--warning {
   color: white;
   background-color: #ffc107; }
-  .a-button--warning:active {
+  .a-button--warning:not(.a-button--full):active {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .a-button--warning:focus {
+  .a-button--warning:not(.a-button--full):focus {
     z-index: 1;
     box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.4); }
   .a-button--warning[disabled] {
@@ -682,9 +682,9 @@ div.table {
 .a-button--danger {
   color: white;
   background-color: #dc3545; }
-  .a-button--danger:active {
+  .a-button--danger:not(.a-button--full):active {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .a-button--danger:focus {
+  .a-button--danger:not(.a-button--full):focus {
     z-index: 1;
     box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.4); }
   .a-button--danger[disabled] {
@@ -694,9 +694,9 @@ div.table {
 .a-button--light {
   color: #37414c;
   background-color: #f8f9fa; }
-  .a-button--light:active {
+  .a-button--light:not(.a-button--full):active {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .a-button--light:focus {
+  .a-button--light:not(.a-button--full):focus {
     z-index: 1;
     box-shadow: 0 0 0 3px rgba(248, 249, 250, 0.4); }
   .a-button--light[disabled] {
@@ -706,9 +706,9 @@ div.table {
 .a-button--dark {
   color: white;
   background-color: #343a40; }
-  .a-button--dark:active {
+  .a-button--dark:not(.a-button--full):active {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .a-button--dark:focus {
+  .a-button--dark:not(.a-button--full):focus {
     z-index: 1;
     box-shadow: 0 0 0 3px rgba(52, 58, 64, 0.4); }
   .a-button--dark[disabled] {
@@ -728,7 +728,8 @@ div.table {
 
 .a-list__item, .a-list__title {
   width: 100%;
-  padding: 16px; }
+  padding: 16px;
+  border-bottom: 1px solid #ccc; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .a-list__item, .a-list__title {
       position: relative;
@@ -831,3 +832,36 @@ div.table {
     max-width: 10%; }
   .a-divider--right::after {
     max-width: 10%; }
+
+.a-mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); }
+
+.a-popup {
+  position: fixed !important;
+  z-index: 1001;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 20px; }
+  .a-popup:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-top: 1px solid #ccc;
+    border-radius: 40px;
+    pointer-events: none;
+    width: 200%;
+    height: 200%;
+    padding: 1px;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: scale(0.5); }

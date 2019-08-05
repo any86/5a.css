@@ -6,3 +6,12 @@
         @return lighten($color,90%);
     }
 }
+
+// @function array-include($arr, $item){
+//     @for $var from $arr to length($arr) {
+//         @if($var == $item){
+//             @return true;
+//         }
+//         @return false;
+//     }
+// }

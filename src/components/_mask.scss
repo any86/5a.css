@@ -1,0 +1,9 @@
+.a-mask {
+    position: fixed;
+    z-index: $z-index-mask;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $mask-background-color;
+}
