@@ -17,7 +17,7 @@
     cursor: pointer;
     display: inline-block;
     text-align: center;
-    padding: $space $space*2;
+    padding: $space/2 $space;
     box-sizing: border-box;
     border: 0 none;
     vertical-align: middle;
@@ -33,7 +33,7 @@
     &--full {
         width: 100%;
         border-radius: $button-radius;
-        padding: $space*4;
+        padding: $space*2;
     }
 
     &--full {

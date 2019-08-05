@@ -12,3 +12,17 @@ $short in $directions {
         }
     }
 }
+
+
+@for $i from 0 to 6 {
+    .mx-#{$i} {
+        margin-left: $space * $i !important;
+        margin-right: $space * $i !important;
+    }
+
+    .my-#{$i} {
+        margin-top: $space * $i !important;
+        margin-bottom: $space * $i !important;
+    }
+
+}
