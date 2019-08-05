@@ -845,23 +845,23 @@ div.table {
 .a-popup {
   position: fixed !important;
   z-index: 1001;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: 20px; }
-  .a-popup:after {
-    content: '';
-    position: absolute;
+  background-color: #fff;
+  overflow: hidden; }
+  .a-popup--top {
+    left: 0;
     top: 0;
+    right: 0; }
+  .a-popup--right {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%; }
+  .a-popup--bottom {
     left: 0;
     bottom: 0;
-    right: 0;
-    border-top: 1px solid #ccc;
-    border-radius: 40px;
-    pointer-events: none;
-    width: 200%;
-    height: 200%;
-    padding: 1px;
-    box-sizing: border-box;
-    transform-origin: 0 0;
-    transform: scale(0.5); }
+    right: 0; }
+  .a-popup--left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 60%; }

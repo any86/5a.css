@@ -5,8 +5,6 @@ $radius: 2px;
 
 
 
-
-
 // 背景色
 $background-color: #fff;
 
@@ -42,6 +40,10 @@ $list-title-font-size: $font-size-lg;
 
 // mask
 $mask-background-color: rgba(0, 0, 0, 0.6);
+
+// popup
+$popup-background-color:$background-color;
+
 
 // 颜色
 $white:    #fff !default;
