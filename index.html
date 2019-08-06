@@ -13,17 +13,7 @@
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./dist/main.css">
     <style>
-        .total__list>p {
-            height: 28px;
-        }
 
-        .total__chart {
-            max-width: 320px;
-        }
-
-        .total__chart>div {
-            height: 28px;
-        }
     </style>
 </head>
 
@@ -31,6 +21,7 @@
     <header class="a-top-bar">
         3a.css
     </header>
+
     <dl class="a-list mt-1">
         <dt class="a-list__title">
             组件
@@ -82,161 +73,11 @@
             <i class="icon-arrow"></i>
         </dd>
 
-
+        <dd class="a-list__item">
+            <p></p><a href="example/collapse.html">collapse(折叠)</a></p>
+            <i class="icon-arrow"></i>
+        </dd>
     </dl>
-
-
-
-    <h2 class="p-1"><small><i class="icon ion-md-stats"></i></small> 状态总览</h2>
-    <section class="p-1 d-flex total">
-        <div class="total__list">
-            <p class=""><i class="icon ion-md-list"></i> 设备总数: 400台</p>
-            <p class="text-success "><i class="icon ion-md-checkmark-circle"></i> 正常设备: 100台</p>
-            <p class="text-danger "><i class="icon ion-md-close-circle"></i> 异常设备: 10台</p>
-            <p class="text-warning "><i class="icon ion-md-alert"></i> 签退设备: 100台</p>
-            <p class="text-secondary "><i class="icon ion-md-checkmark-circle"></i> 未知设备: 100台</p>
-        </div>
-
-        <div class="flex-1 p-1 ml-1 total__chart d-flex a-i-f-e">
-            <div class="bg-success flex-1" style="height:55%;"></div>
-            <div class="bg-danger flex-1" style="height:10%;"></div>
-            <div class="bg-warning flex-1" style="height:20%;"></div>
-            <div class="bg-secondary flex-1" style="height:15%;"></div>
-        </div>
-    </section>
-
-
-    <details class="p-1" open>
-        <summary class="text-danger">异常 </summary>
-        <table class="table table-striped mt-1">
-            <tr>
-                <th>分组</th>
-                <th>数量</th>
-                <th>操作</th>
-            </tr>
-            <tr>
-                <td>服务器</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-            <tr>
-                <td>子系统</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-            <tr>
-                <td>自助设备</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-        </table>
-    </details>
-
-    <details class="p-1">
-        <summary class="text-warning">签退 </summary>
-        <table class="table table-striped mt-1">
-            <tr>
-                <th>分组</th>
-                <th>数量</th>
-                <th>操作</th>
-            </tr>
-            <tr>
-                <td>服务器</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-            <tr>
-                <td>子系统</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-            <tr>
-                <td>自助设备</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-        </table>
-    </details>
-
-
-    <details class="p-1">
-        <summary class="text-secondary">未知 </summary>
-        <table class="table table-striped mt-1">
-            <tr>
-                <th>分组</th>
-                <th>数量</th>
-                <th>操作</th>
-            </tr>
-            <tr>
-                <td>服务器</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-            <tr>
-                <td>子系统</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-            <tr>
-                <td>自助设备</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-        </table>
-    </details>
-
-    <details class="p-1">
-        <summary class="text-success">正常 </summary>
-        <table class="table table-striped mt-1">
-            <tr>
-                <th>分组</th>
-                <th>数量</th>
-                <th>操作</th>
-            </tr>
-            <tr>
-                <td>服务器</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-            <tr>
-                <td>子系统</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-            <tr>
-                <td>自助设备</td>
-                <td>100</td>
-                <!-- <td class="p-1 text-success"><i class="icon ion-md-checkmark-circle"></i> 正常</td> -->
-                <td class="text-info"><a href="list.html">查看</a></td>
-
-            </tr>
-        </table>
-    </details>
-
-
-
 
 </body>
 

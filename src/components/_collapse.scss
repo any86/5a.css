@@ -8,9 +8,9 @@
             border-top: 1px solid $gray-300;
         }
 
-        >header {
+        >header, .item__header {
             background-color: $gray-100;
-            padding: 2*$space;
+            padding: $space;
             font-size: 14px;
             cursor: pointer;
 
@@ -25,7 +25,7 @@
             }
         }
 
-        >article {
+        >article, .item__body {
             display: none;
             padding: $space;
             font-size: 14px;
@@ -35,7 +35,7 @@
     // 展开情况下
     &__item {
         &--open {
-            >header {
+            >header, .item__header {
                 border-bottom: 1px solid $gray-300;
 
                 >i.icon-arrow {
@@ -43,7 +43,7 @@
                 }
             }
 
-            >article {
+            >article, .item__body {
                 display: block;
             }
         }
