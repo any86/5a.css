@@ -1,0 +1,33 @@
+.a-radio {
+    @extend .d-flex;
+    border-radius: 100%;
+    overflow: hidden;
+    transition: all 200ms;
+    height: $radio-size;
+    width: $radio-size;
+    border: 1px solid $primary;
+    background-color: $white;
+
+    &--active {
+        z-index: 1;
+
+        &::after {
+            content: '';
+            margin: auto;
+            @extend .d-block;
+            border-radius: 100%;
+            height: ceil($radio-size*0.5*10)/10;
+            width: ceil($radio-size*0.5*10)/10;
+            background-color: $primary;
+        }
+    }
+
+    &--disabled {
+        background-color: lighten($dark, 70%);
+        border-color: lighten($dark, 70%);
+        &::after{
+            background-color: lighten($dark, 60%);
+        }
+    }
+
+}

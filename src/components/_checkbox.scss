@@ -1,0 +1,26 @@
+.a-checkbox {
+    border-radius: $radius;
+    overflow: hidden;
+    transition: all 200ms;
+    height: $checkbox-size;
+    width: $checkbox-size;
+    background-color: $white;
+    border: 1px solid $primary;
+
+    &--active {
+        background-color: $primary;
+        z-index: 1;
+        .icon-check {
+            @extend .d-block;
+            height: $checkbox-size;
+            width: $checkbox-size;
+        }
+    }
+
+
+    &--disabled {
+        background-color: lighten($dark,60%);
+        border-color: lighten($dark,60%);
+    }
+
+}
