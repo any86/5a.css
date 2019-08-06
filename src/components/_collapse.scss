@@ -8,7 +8,8 @@
             border-top: 1px solid $gray-300;
         }
 
-        >header, .item__header {
+        >header,
+        .item__header {
             background-color: $gray-100;
             padding: $space;
             font-size: 14px;
@@ -25,7 +26,8 @@
             }
         }
 
-        >article, .item__body {
+        >article,
+        .item__body {
             display: none;
             padding: $space;
             font-size: 14px;
@@ -35,7 +37,9 @@
     // 展开情况下
     &__item {
         &--open {
-            >header, .item__header {
+
+            >header,
+            .item__header {
                 border-bottom: 1px solid $gray-300;
 
                 >i.icon-arrow {
@@ -43,7 +47,8 @@
                 }
             }
 
-            >article, .item__body {
+            >article,
+            .item__body {
                 display: block;
             }
         }
@@ -57,6 +62,12 @@
             >header {
                 border: none;
                 background-color: transparent;
+                padding: $space;
+            }
+
+            >article,
+            .item__body {
+                padding: 0 $space $space $space;
             }
         }
     }
