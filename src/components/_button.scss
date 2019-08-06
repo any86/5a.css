@@ -12,6 +12,7 @@
 }
 
 .a-button {
+    @extend .title-4;
     -webkit-appearance: button;
     position: relative;
     cursor: pointer;
@@ -23,7 +24,6 @@
     vertical-align: middle;
     user-select: none;
     outline: none;
-    font-size: $button-font-size;
     border-radius: $button-radius;
     background: #fff;
     color: #000;
@@ -58,7 +58,9 @@ $color in $theme-colors {
         background-color: $color;
 
         &:not(.a-button--full):active {
-            box-shadow: inset 0 3px 5px rgba(#000, .125);
+            // z-index: 1;
+            // box-shadow: 0 0 0 3px rgba($color, .4);
+            background-color: lighten($color,6%);
         }
 
         &:not(.a-button--full):focus {

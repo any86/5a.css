@@ -17,26 +17,23 @@ $z-index-popup:1001;
 
 
 // 字体大小
-$font-size-base:1rem;
-$font-size-sm: $font-size-base * .875;
-$font-size-lg: $font-size-base * 1.25;
-// 
-$font-size-1: $font-size-base * .875;
-$font-size-2: $font-size-base;
-$font-size-3: $font-size-base * 1.25;
-$font-size-4: $font-size-base * 1.5;
-$font-size-5: $font-size-base * 1.75;
-$font-size-6: $font-size-base * 2;
-
-
+// $font-size-base:1rem;
+$font-size-base:16px;
+$font-size-1: $font-size-base * 1.5;
+$font-size-2: $font-size-base * 1.25;
+$font-size-3: $font-size-base * 1.125;
+$font-size-4: $font-size-base;
+$font-size-5: $font-size-base * 0.875;
+$font-size-6: $font-size-base * 0.75;
+// 字体集合
+$font-sizes: ($font-size-1,$font-size-2,$font-size-3,$font-size-4,$font-size-5,$font-size-6);
 
 
 // button
 $button-radius:$radius*2;
-$button-font-size:$font-size-base * .875;
 
 // list
-$list-title-font-size: $font-size-lg;
+
 
 // mask
 $mask-background-color: rgba(0, 0, 0, 0.6);
@@ -46,7 +43,7 @@ $popup-background-color:$background-color;
 
 
 // 颜色
-$white:    #fff !default;
+$white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -56,83 +53,71 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black: #000 !default;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(
-  (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-  ),
-  $grays
-);
+$grays: map-merge(("100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900),
+    $grays);
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
 // $red: #f44336 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
 // $green: #42b983 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$colors: map-merge(
-  (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
-    "gray":       $gray-600,
-    "gray-dark":  $gray-800
-  ),
-  $colors
-);
+$colors: map-merge(("blue": $blue,
+        "indigo": $indigo,
+        "purple": $purple,
+        "pink": $pink,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "cyan": $cyan,
+        "white": $white,
+        "gray": $gray-600,
+        "gray-dark": $gray-800),
+    $colors);
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark
-  ),
-  $theme-colors
-);
+$theme-colors: map-merge(("primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark),
+    $theme-colors);
 
 // // Set a specific jump point for requesting color jumps
 // $theme-color-interval:      8% !default;

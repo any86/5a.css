@@ -15,15 +15,15 @@
         >.header{
 
             &__subtitle{
+                @extend .title-3;
                 margin-top:$space;
                 font-weight: bolder;
-                font-size: $font-size-sm;
                 color:$secondary;
             }
             
             &__title{
+                @extend .title-2;
                 font-weight: bold;
-                font-size: $font-size-lg;
                 color:#000;
             }
         }

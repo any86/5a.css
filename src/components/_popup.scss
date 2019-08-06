@@ -1,4 +1,5 @@
 .a-popup {
+    @extend .p-1;
     position: fixed !important;
     z-index: $z-index-popup;
     // border-radius: $radius;
@@ -35,4 +36,8 @@
         width: 60%;
     }
 
+
+    &__header{
+        @extend .title-3, .m-1;
+    }
 }
