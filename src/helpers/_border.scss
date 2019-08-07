@@ -1,0 +1,16 @@
+@each $dir,
+$dir-short in $directions {
+    .b-#{$dir-short} {
+        border-#{$dir}: 1px solid #ddd;
+    }
+}
+
+.b-x {
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.b-y {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
