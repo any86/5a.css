@@ -1,6 +1,22 @@
+// $size:6px;
+
+// .b-radio{
+//     display: block;
+//     height:0.8em;
+//     width: 0.8em;
+//     border-radius: 0.8em;
+//     background:$white;
+//     box-shadow:0 0 0 $size $white,  0 0 0 $size+1px $primary;
+//     transition: all 200ms;
+// }
+
+// .b-radio--active{
+//     background:$primary;
+// }
+
 .a-radio {
     @extend .d-flex;
-    border-radius: 100%;
+    border-radius: $radio-size;
     overflow: hidden;
     transition: all 200ms;
     height: $radio-size;
@@ -15,7 +31,7 @@
             content: '';
             margin: auto;
             @extend .d-block;
-            border-radius: 100%;
+            border-radius: ceil($radio-size*0.5*10)/10;
             height: ceil($radio-size*0.5*10)/10;
             width: ceil($radio-size*0.5*10)/10;
             background-color: $primary;
