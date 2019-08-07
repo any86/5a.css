@@ -489,24 +489,25 @@ table.table {
   table.table.table-hover tbody tr:hover {
     background-color: #dbdbdb; }
 
-div.table {
-  display: table;
-  border: 1px solid #ddd;
-  width: 100%;
-  background-color: #fff; }
-  div.table.table-striped .tr:nth-of-type(2n+1) {
-    background-color: #f9f9f9; }
-  div.table .tr {
-    display: table-row;
-    width: 100%;
-    padding: 8px; }
-    div.table .tr .td, div.table .tr .th {
-      display: table-cell;
-      vertical-align: middle;
-      padding: 8px;
-      border-top: 1px solid #ddd; }
-    div.table .tr .th {
-      font-weight: bold; }
+.b-t {
+  border-top: 1px solid #ddd; }
+
+.b-r {
+  border-right: 1px solid #ddd; }
+
+.b-b {
+  border-bottom: 1px solid #ddd; }
+
+.b-l {
+  border-left: 1px solid #ddd; }
+
+.b-x {
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd; }
+
+.b-y {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; }
 
 .rotate-0 {
   transform: rotate(0deg) !important; }
@@ -1001,11 +1002,11 @@ div.table {
     border-color: #ced3d8; }
 
 .a-radio {
-  border-radius: 100%;
+  border-radius: 1.6em;
   overflow: hidden;
   transition: all 200ms;
-  height: 1.4em;
-  width: 1.4em;
+  height: 1.6em;
+  width: 1.6em;
   border: 1px solid #007bff;
   background-color: #fff; }
   .a-radio--active {
@@ -1013,9 +1014,9 @@ div.table {
     .a-radio--active::after {
       content: '';
       margin: auto;
-      border-radius: 100%;
-      height: 0.7em;
-      width: 0.7em;
+      border-radius: 0.8em;
+      height: 0.8em;
+      width: 0.8em;
       background-color: #007bff; }
   .a-radio--disabled {
     background-color: #ebedee;
@@ -1069,3 +1070,26 @@ div.table {
     border-color: #ced3d8; }
     .a-switch--disabled::after {
       display: none; }
+
+.a-table {
+  display: table;
+  width: 100%;
+  background-color: #fff; }
+  .a-table--border {
+    border: 1px solid #ddd; }
+  .a-table--striped .tr:nth-of-type(2n) {
+    background-color: #f9f9f9; }
+  .a-table .tr {
+    display: table-row;
+    width: 100%;
+    padding: 8px; }
+    .a-table .tr .td,
+    .a-table .tr .th {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 8px; }
+    .a-table .tr .td {
+      border-top: 1px solid #ddd; }
+    .a-table .tr .th {
+      word-break: keep-all;
+      font-weight: bold; }
