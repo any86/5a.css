@@ -1,36 +1,41 @@
 .a-list {
-    &__title {
-        @extend .title-3;
-        font-weight: bold;
-        color: #000;
-    }
+  &__title {
+    @extend .title-3;
+    font-weight: bold;
+    color: #000;
+  }
 
-    &__item {
-        display: flex;
-        // transition: all 200ms;
-
-        // &:hover {
-        //     background-color: rgba(#ddd, .1);
-        // }
-
-        >a {
-            display: block;
-            flex: 1;
-
-        }
-
-        >.icon-arrow {
-            @extend .icon-arrow;
-        }
-    }
-
-    &__item,
-    &__title {
+  &__item {
+    display: flex;
+    align-items: center;
+    > .item__img-containor {
+      display: block;
+      width: 3em;
+      height: 3em;
+      line-height: 3em;
+      background: #ccc;
+      overflow: hidden;
+      border-radius: $radius;
+      > img {
+        display: block;
         width: 100%;
-        padding: $space*2;
-        @include thinBorder();
+      }
     }
 
+    > .item__content {
+      @extend .pl-1;
+      flex: 1;
+    }
 
+    > .item__icon-arrow {
+      @extend .icon-arrow;
+    }
+  }
 
+  &__item,
+  &__title {
+    width: 100%;
+    @extend .py-2, .px-1;
+    @include thinBorder();
+  }
 }
