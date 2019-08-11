@@ -844,7 +844,8 @@ table.table {
     border-radius: 2px; }
     .a-list__item > .item__img-containor > img {
       display: block;
-      width: 100%; }
+      width: 100%;
+      overflow: hidden; }
   .a-list__item > .item__content {
     flex: 1; }
 
