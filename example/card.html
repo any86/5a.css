@@ -10,24 +10,51 @@
     <meta name=viewport
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Button</title>
+    <title>Card(卡片)</title>
     <link rel="stylesheet" href="../dist/main.css">
+
 </head>
 
-<body class="p-1 bg-light">
-    <article class="a-card">
-        <img class="a-card__image" src="https://avatars1.githubusercontent.com/u/8264787?s=460&v=4" alt="预览图">
-        <header class="a-card__header">
-            <h1 class="header__title">大标题123ABC</h1>
-            <h1 class="header__subtitle">副标题123abc</h1>
-        </header>
+<body class="bg-light">
 
-        <section class="a-card__content">
-            旋转前：x=Rcosa y=Rsina逆时针旋转X角度后：x'=Rcos(a+X)
-            y'=Rsin(a+X)x'=R(cosacosX-sinasinX)=RcosacosX-RsinasinX=xcosX-ysinXy'=R(sinacosX+cosasinX)=RsinacosX+RcosasinX=ycosX+xsinX所以旋转后P'(xcosX-ysin...
-        </section>
+    <!-- 头 -->
+    <header class="a-top-bar">
+        <a href="../index.html" class="a-top-bar__icon-arrow-left"></a>
+        Card(卡片)
+    </header>
+    <!-- 头 -->
 
+    <article class="p-2">
+        <article class="a-card">
+            <img class="a-card__image" src="https://avatars1.githubusercontent.com/u/8264787?s=460&v=4" alt="预览图">
+            <header class="a-card__header">
+                <h1 class="header__title">小黄人</h1>
+                <h1 class="header__subtitle">首次出现在动画片"神偷奶爸"</h1>
+            </header>
+
+            <section class="a-card__content">
+                    影片里的小黄人 ，他们的出现让影片在整个动画情节并没有很出彩的情况下，大大的“火”了。这些小黄人拥有自己独特的语言，短胳膊短腿的，走起来也显得特别可爱...
+            </section>
+
+            <a class="a-card__button">查看更多</a>
+
+        </article>
+
+
+        <article class="a-card mt-3">
+            <header class="a-card__header">
+                <h1 class="header__title">登鹳雀楼</h1>
+                <h1 class="header__subtitle">是盛唐诗人王之涣的一首五言绝句</h1>
+            </header>
+
+            <section class="a-card__content">
+                《登鹳雀楼》是盛唐诗人王之涣的一首五言绝句。前两句写的是自然景色，但开笔就有缩万里于咫尺，使咫尺有万里之势；后两句写意，写的出人意料，把哲理与景物、情势溶化得天衣无缝，成为鹳雀楼上一首不朽的绝唱。
+                此诗虽然只有二十字，却以千均巨
+            </section>
+
+        </article>
     </article>
+
 
 </body>
 
