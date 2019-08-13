@@ -1,23 +1,24 @@
 .a-icon {
-    width: 1em;
-    height: 1em;
+    // width: 1em;
+    // height: 1em;
     display: inline-block;
-    vertical-align: -0.14em;
+    vertical-align: middle;
+    // vertical-align: -0.14em;
     align-self: center;
-    background-position: center center;
-    background-repeat: no-repeat;
+    // background-position: center center;
+    // background-repeat: no-repeat;
 }
 
-.icon-arrow {
-    @extend .a-icon;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"/></svg>')
-}
+// .icon-arrow {
+//     @extend .a-icon;
+//     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"/></svg>')
+// }
 
 
 
-.icon-check {
-    @extend .a-icon;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="white" d="M186.301 339.893L96 249.461l-32 30.507L186.301 402 448 140.506 416 110z"/></svg>')
-}
+// .icon-check {
+//     @extend .a-icon;
+//     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="white" d="M186.301 339.893L96 249.461l-32 30.507L186.301 402 448 140.506 416 110z"/></svg>')
+// }
 
 

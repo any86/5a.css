@@ -1,8 +1,8 @@
 const sass = require('node-sass');
 const fs = require('fs');
 const mime = require('mime-types')
-const ICON_CSS_PATH = 'node_modules/ionicons/dist/scss/ionicons.scss';
-const FONT_URL = 'node_modules/ionicons/dist/fonts/ionicons.ttf';
+const ICON_CSS_PATH = './src/iconfont/iconfont.scss';
+const FONT_URL = './src/iconfont/iconfont.ttf';
 
 /**
  * 文件转base64
@@ -16,9 +16,9 @@ function genBase64(url) {
 }
 
 function replaceBase64(){
-    const RULE = /@font-face[\s\S]*}[\s\S]*\.ion/;
+    const RULE = /@font-face[\s\S]*}[\s\S]*\.iconfont/;
     const font = fs.readFileSync(ICON_CSS_PATH, 'utf8');
-    const newCss = font.replace(RULE, `@font-face {font-family: "Ionicons"; src: url('${genBase64(FONT_URL)}');} \r\n\r\n.ion`);
+    const newCss = font.replace(RULE, `@font-face {font-family: "iconfont"; src: url('${genBase64(FONT_URL)}');} \r\n\r\n.iconfont`);
     return newCss;
 }
 

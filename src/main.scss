@@ -14,7 +14,8 @@
     display: none;
 }
 
-@import 'iconfont/iconfont.scss';
+// @import 'iconfont/iconfont.scss';
+@import 'node_modules/ionicons/dist/scss/ionicons.scss';
 
 @import '_variables.scss';
 @import '_function.scss';

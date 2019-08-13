@@ -6,7 +6,8 @@
     bottom: 0;
     margin: auto;
     z-index: 1;
-    @extend .icon-arrow;
+    font-size: 1.2em;
+    @extend .ion-ios-arrow-forward;
 
     &:active {
         opacity: 0.1;

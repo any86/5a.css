@@ -16,7 +16,7 @@
             cursor: pointer;
 
             >i.icon-arrow {
-                @extend .icon-arrow;
+                @extend .a-icon, .ion-ios-arrow-forward;
             }
 
             >p {
