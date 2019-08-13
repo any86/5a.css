@@ -16,7 +16,9 @@
             cursor: pointer;
 
             >i.icon-arrow {
-                @extend .a-icon, .ion-ios-arrow-forward;
+                @extend .a-icon, .ion-ios-arrow-forward, .mr-1;
+                font-size: 1.1em;
+
             }
 
             >p {

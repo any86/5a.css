@@ -29,7 +29,9 @@
     }
 
     > .item__icon-arrow {
-      @extend .icon-arrow;
+      font-size: 1.2em;
+      width:0.6em;
+      @extend .ion-ios-arrow-forward;
     }
   }
 
