@@ -2,7 +2,6 @@
     box-sizing: content-box;
     border-radius: $radius;
     overflow: hidden;
-    transition: all 200ms;
     height: $checkbox-size;
     width: $checkbox-size;
     background-color: $white;
@@ -11,6 +10,7 @@
     >.ion-ios-checkmark {
         width: $checkbox-size;
         height: $checkbox-size;
+        transition: transform 200ms;
         display: none;
     }
 
