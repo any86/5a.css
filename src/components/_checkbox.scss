@@ -10,29 +10,31 @@
     >.ion-ios-checkmark {
         width: $checkbox-size;
         height: $checkbox-size;
-        transition: transform 200ms;
-        display: none;
+        text-align: center;
+        transform: scale(0);
+        transform-origin: center center;
+        transition: transform 200ms, color 200ms;
+        display: inline-block;
+        &::before {
+            vertical-align: middle;
+        }
     }
 
     &--checked {
         z-index: 1;
         >.ion-ios-checkmark {
-            display: inline-block !important;
-            text-align: center;
             color: $primary;
             transform: scale(2);
-            transform-origin: center center;
+
         }
     }
+
 
     &--disabled {
-        background-color: lighten($dark, 60%);
         border-color: lighten($dark, 60%);
-
+        background-color: lighten($dark, 70%);
         >.ion-ios-checkmark {
-            color:$secondary;
+            color: lighten($dark, 60%);
         }
     }
-
-
 }
