@@ -1,24 +1,27 @@
 .a-collapse {
     overflow: hidden;
-    border-radius: $radius*2;
-    border: 1px solid $gray-300;
+    border-bottom: 1px solid $gray-300;
 
     &__item {
-        &:nth-of-type(n+2) {
-            border-top: 1px solid $gray-300;
-        }
+        border-top: 1px solid $gray-300;
 
         >.item__header {
+            display: flex;
+            align-items: center;
+            align-content: center;
             background-color: $gray-100;
             padding: $space;
             font-size: $collapse-title-font-size;
             cursor: pointer;
             font-weight: bold;
 
-            >.icon-arrow {
+            >.header__icon-arrow {
                 @extend .ion-ios-arrow-forward;
-                display: inline-block;
-                // vertical-align: middle;
+                @extend .d-inline-block;
+                transition: transform 200ms;
+                width: 1.3em;
+                height: 1.3em;
+                text-align: center;
             }
         }
 
@@ -32,12 +35,10 @@
     // 展开情况下
     &__item {
         &--open {
-
             >.item__header {
                 border-bottom: 1px solid $gray-300;
 
-                >.icon-arrow {
-                    transition: transform 200ms;
+                >.header__icon-arrow {
                     transform: rotate(90deg);
                     transform-origin: center center;
                 }
@@ -52,6 +53,7 @@
     // 简化版本
     &--simplify {
         border: none;
+        border-bottom: 1px solid $gray-300;
 
         .a-collapse__item {
             >.item__header {

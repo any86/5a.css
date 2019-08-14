@@ -5,6 +5,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
+    font-family:
+        system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+        Helvetica, Arial,
+        sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+
+
     // -webkit-touch-callout: none;
     // -webkit-appearance: none; 
     // text-rendering: optimizeLegibility;
@@ -15,13 +21,15 @@
 }
 
 
-a{
+a {
     text-decoration: none;
-    color:inherit;
-    &:hover{
+    color: inherit;
+
+    &:hover {
         cursor: pointer;
     }
 }
+
 // ::-webkit-scrollbar {
 //     background: #ccc;
 //     width: 4px;
@@ -47,6 +55,6 @@ a{
 //     background: #fff;
 // }
 
-li{
+li {
     list-style: none;
 }
