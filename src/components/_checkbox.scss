@@ -2,26 +2,23 @@
     box-sizing: content-box;
     border-radius: $radius;
     overflow: hidden;
-    height: $checkbox-size;
-    width: $checkbox-size;
     background-color: $white;
     border: 1px solid $primary;
 
     >.ion-ios-checkmark {
         width: $checkbox-size;
         height: $checkbox-size;
+        line-height: $checkbox-size;
         text-align: center;
         transform: scale(0);
         transform-origin: center center;
         transition: transform 200ms, color 200ms;
         display: inline-block;
-        &::before {
-            vertical-align: middle;
-        }
     }
 
     &--checked {
         z-index: 1;
+
         >.ion-ios-checkmark {
             color: $primary;
             transform: scale(2);
@@ -33,6 +30,7 @@
     &--disabled {
         border-color: lighten($dark, 60%);
         background-color: lighten($dark, 70%);
+
         >.ion-ios-checkmark {
             color: lighten($dark, 60%);
         }

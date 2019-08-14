@@ -45,10 +45,10 @@ $popup-background-color:$background-color;
 $collapse-title-font-size:14px;
 
 // checkbox
-$checkbox-size:1.4em;
+$checkbox-size:1.4em !default;
 
 // radio
-$radio-size:1.6em !default;
+$radio-size:1.4em !default;
 
 // switch
 $switch-size:2em;
