@@ -2826,7 +2826,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
 
 a {
   text-decoration: none;
@@ -2844,7 +2844,7 @@ li {
   .d-flex.column, .column.a-radio {
     flex-direction: column; }
 
-.d-block, .a-card__button, .a-radio--active::after {
+.d-block, .a-card__button, .a-radio::after {
   display: block !important; }
 
 .d-none {
@@ -3797,48 +3797,50 @@ table.table {
   box-sizing: content-box;
   border-radius: 2px;
   overflow: hidden;
-  height: 1.4em;
-  width: 1.4em;
   background-color: #fff;
   border: 1px solid #3190ff; }
   .a-checkbox > .ion-ios-checkmark {
     width: 1.4em;
     height: 1.4em;
-    transition: transform 200ms;
-    display: none; }
-    .a-checkbox > .ion-ios-checkmark::before {
-      vertical-align: middle; }
+    line-height: 1.4em;
+    text-align: center;
+    transform: scale(0);
+    transform-origin: center center;
+    transition: transform 200ms, color 200ms;
+    display: inline-block; }
   .a-checkbox--checked {
     z-index: 1; }
     .a-checkbox--checked > .ion-ios-checkmark {
-      display: inline-block !important;
-      text-align: center;
       color: #3190ff;
-      transform: scale(2);
-      transform-origin: center center; }
+      transform: scale(2); }
   .a-checkbox--disabled {
-    background-color: #ced3d8;
-    border-color: #ced3d8; }
+    border-color: #ced3d8;
+    background-color: #ebedee; }
     .a-checkbox--disabled > .ion-ios-checkmark {
-      color: #95a5a6; }
+      color: #ced3d8; }
 
 .a-radio {
-  border-radius: 1.6em;
+  box-sizing: content-box;
+  border-radius: 1.4em;
   overflow: hidden;
   transition: all 200ms;
-  height: 1.6em;
-  width: 1.6em;
+  height: 1.4em;
+  width: 1.4em;
   border: 1px solid #3190ff;
   background-color: #fff; }
-  .a-radio--active {
+  .a-radio::after {
+    content: '';
+    margin: auto;
+    border-radius: 0.7em;
+    height: 0.7em;
+    width: 0.7em;
+    transition: transform 200ms;
+    transform: scale(0);
+    background-color: #3190ff; }
+  .a-radio--checked {
     z-index: 1; }
-    .a-radio--active::after {
-      content: '';
-      margin: auto;
-      border-radius: 0.8em;
-      height: 0.8em;
-      width: 0.8em;
-      background-color: #3190ff; }
+    .a-radio--checked::after {
+      transform: scale(1); }
   .a-radio--disabled {
     background-color: #ebedee;
     border-color: #ebedee; }
