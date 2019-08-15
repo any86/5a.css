@@ -1,44 +1,48 @@
 .a-list {
-  &__title {
-    @extend .title-3;
-    font-weight: bold;
-    color: #000;
-  }
+    &__title {
+        @extend .title-3, .pl-1;
+        font-weight: bold;
+        color: #000;
+    }
 
-  &__item {
-    display: flex;
-    align-items: center;
-    > .item__img-containor {
-      display: block;
-      width: 3em;
-      height: 3em;
-      line-height: 3em;
-      background: #ccc;
-      overflow: hidden;
-      border-radius: $radius;
-      > img {
-        display: block;
+    &__item {
+        display: flex;
+
+        >.item__start {
+            display: block;
+            width: 3em;
+            height: 3em;
+            background: #ccc;
+            overflow: hidden;
+            border-radius: $radius;
+
+            >img {
+                display: block;
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+
+        >.item__content {
+            @include thinBorder();
+            @extend .pl-1,
+            .pb-2;
+            flex: 1;
+            display: table;
+            >.icon-arrow {
+                vertical-align: middle;
+                display: table-cell;
+                font-size: 1.2em;
+                width: 1em;
+                height: 1em;
+                @extend .ion-ios-arrow-forward;
+            }
+        }
+    }
+
+    &__item,
+    &__title {
         width: 100%;
-        overflow: hidden;
-      }
+        @extend .pt-2
     }
-
-    > .item__content {
-      @extend .pl-1;
-      flex: 1;
-    }
-
-    > .item__icon-arrow {
-      font-size: 1.2em;
-      width:0.6em;
-      @extend .ion-ios-arrow-forward;
-    }
-  }
-
-  &__item,
-  &__title {
-    width: 100%;
-    @extend .py-2, .px-1;
-    @include thinBorder();
-  }
 }
