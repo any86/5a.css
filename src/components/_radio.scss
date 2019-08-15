@@ -16,7 +16,7 @@
 
 .a-radio {
     box-sizing: content-box;
-    @extend .d-flex;
+    display: inline-flex;
     border-radius: $radio-size;
     overflow: hidden;
     transition: all 200ms;

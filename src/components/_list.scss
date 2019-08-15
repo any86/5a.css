@@ -1,6 +1,7 @@
 .a-list {
     &__title {
-        @extend .title-3, .pl-1;
+        @extend .title-3,
+        .pl-1;
         font-weight: bold;
         color: #000;
     }
@@ -9,10 +10,10 @@
         display: flex;
 
         >.item__start {
+            @extend .ml-1;
             display: block;
-            width: 3em;
-            height: 3em;
-            background: #ccc;
+            max-width: 3em;
+            max-height: 3em;
             overflow: hidden;
             border-radius: $radius;
 
@@ -23,12 +24,18 @@
             }
         }
 
+        >.item__start+.item__content {
+            @extend .pl-0,
+            .ml-1;
+        }
+
         >.item__content {
             @include thinBorder();
-            @extend .pl-1,
+            @extend .pl-2,
             .pb-2;
             flex: 1;
             display: table;
+
             >.icon-arrow {
                 vertical-align: middle;
                 display: table-cell;

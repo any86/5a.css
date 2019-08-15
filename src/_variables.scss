@@ -42,16 +42,16 @@ $mask-background-color: rgba(0, 0, 0, 0.6);
 $popup-background-color:$background-color;
 
 // collapse
-$collapse-title-font-size:14px;
+$collapse-title-font-size:16px;
 
 // checkbox
-$checkbox-size:1.4em !default;
+$checkbox-size:24px !default;
 
 // radio
-$radio-size:1.4em !default;
+$radio-size: 24px !default;
 
 // switch
-$switch-size:2em;
+$switch-size:1.4em;
 $switch-border-color:#ddd;
 
 
@@ -89,11 +89,11 @@ $blue: #3190ff !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
-$red: #cb0101 !default;
+$red: #dc3545 !default;
 // $red: #f44336 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
-$green: #2ecc71 !default;
+$green: #28a745 !default;
 // $green: #42b983 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;

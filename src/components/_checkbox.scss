@@ -1,10 +1,11 @@
 .a-checkbox {
     box-sizing: content-box;
+    display: inline-block;
     border-radius: $radius;
     overflow: hidden;
     background-color: $white;
     border: 1px solid $primary;
-
+    vertical-align: middle;
     >.ion-ios-checkmark {
         width: $checkbox-size;
         height: $checkbox-size;
@@ -17,12 +18,9 @@
     }
 
     &--checked {
-        z-index: 1;
-
         >.ion-ios-checkmark {
             color: $primary;
             transform: scale(2);
-
         }
     }
 
