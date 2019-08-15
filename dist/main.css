@@ -46,7 +46,7 @@
 .ion-ios-arrow-dropright-circle:before,
 .ion-ios-arrow-dropup:before,
 .ion-ios-arrow-dropup-circle:before,
-.ion-ios-arrow-forward:before, .a-collapse__item > .item__header > .header__icon-arrow:before, .a-list__item > .item__icon-arrow:before, .a-top-bar__icon-arrow-left:before, .a-top-bar__icon-arrow-right:before,
+.ion-ios-arrow-forward:before, .a-collapse__item > .item__header > .header__icon-arrow:before, .a-list__item > .item__content > .icon-arrow:before, .a-top-bar__icon-arrow-left:before, .a-top-bar__icon-arrow-right:before,
 .ion-ios-arrow-round-back:before,
 .ion-ios-arrow-round-down:before,
 .ion-ios-arrow-round-forward:before,
@@ -800,7 +800,7 @@
 .ion-ios-arrow-dropup-circle:before {
   content: "\f12d"; }
 
-.ion-ios-arrow-forward:before, .a-collapse__item > .item__header > .header__icon-arrow:before, .a-list__item > .item__icon-arrow:before, .a-top-bar__icon-arrow-left:before, .a-top-bar__icon-arrow-right:before {
+.ion-ios-arrow-forward:before, .a-collapse__item > .item__header > .header__icon-arrow:before, .a-list__item > .item__content > .icon-arrow:before, .a-top-bar__icon-arrow-left:before, .a-top-bar__icon-arrow-right:before {
   content: "\f3d1"; }
 
 .ion-ios-arrow-round-back:before {
@@ -2826,7 +2826,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
 
 a {
   text-decoration: none;
@@ -3080,7 +3080,7 @@ li {
 .pt-1, .a-card__content {
   padding-top: 8px !important; }
 
-.pt-2, .a-card__header {
+.pt-2, .a-list__item, .a-list__title, .a-card__header {
   padding-top: 16px !important; }
 
 .pt-3 {
@@ -3116,7 +3116,7 @@ li {
 .pb-1 {
   padding-bottom: 8px !important; }
 
-.pb-2, .a-card__content, .a-card__button {
+.pb-2, .a-list__item > .item__content, .a-card__content, .a-card__button {
   padding-bottom: 16px !important; }
 
 .pb-3 {
@@ -3131,7 +3131,7 @@ li {
 .pl-0 {
   padding-left: 0px !important; }
 
-.pl-1, .a-list__item > .item__content {
+.pl-1, .a-list__title, .a-list__item > .item__content {
   padding-left: 8px !important; }
 
 .pl-2 {
@@ -3154,7 +3154,7 @@ li {
   padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
-.px-1, .a-list__item, .a-list__title {
+.px-1 {
   padding-left: 8px !important;
   padding-right: 8px !important; }
 
@@ -3166,7 +3166,7 @@ li {
   padding-left: 16px !important;
   padding-right: 16px !important; }
 
-.py-2, .a-list__item, .a-list__title {
+.py-2 {
   padding-top: 16px !important;
   padding-bottom: 16px !important; }
 
@@ -3643,48 +3643,50 @@ table.table {
   color: #000; }
 
 .a-list__item {
-  display: flex;
-  align-items: center; }
-  .a-list__item > .item__img-containor {
+  display: flex; }
+  .a-list__item > .item__start {
     display: block;
     width: 3em;
     height: 3em;
-    line-height: 3em;
     background: #ccc;
     overflow: hidden;
     border-radius: 2px; }
-    .a-list__item > .item__img-containor > img {
+    .a-list__item > .item__start > img {
       display: block;
       width: 100%;
       overflow: hidden; }
   .a-list__item > .item__content {
-    flex: 1; }
-  .a-list__item > .item__icon-arrow {
-    font-size: 1.2em;
-    width: 0.6em; }
+    border-bottom: 1px solid #ccc;
+    flex: 1;
+    display: table; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      .a-list__item > .item__content {
+        position: relative;
+        border-bottom: none; }
+      .a-list__item > .item__content:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        transform: scaleY(0.5);
+        transform-origin: 0 0;
+        pointer-events: none; } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+      .a-list__item > .item__content:after {
+        transform: scaleY(0.33); } }
+    .a-list__item > .item__content > .icon-arrow {
+      vertical-align: middle;
+      display: table-cell;
+      font-size: 1.2em;
+      width: 1em;
+      height: 1em; }
 
 .a-list__item, .a-list__title {
-  width: 100%;
-  border-bottom: 1px solid #ccc; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    .a-list__item, .a-list__title {
-      position: relative;
-      border-bottom: none; }
-    .a-list__item:after, .a-list__title:after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: #ccc;
-      transform: scaleY(0.5);
-      transform-origin: 0 0;
-      pointer-events: none; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    .a-list__item:after, .a-list__title:after {
-      transform: scaleY(0.33); } }
+  width: 100%; }
 
 .a-icon {
   display: inline-block;
@@ -3849,9 +3851,9 @@ table.table {
 
 .a-switch {
   position: relative;
-  height: 2em;
-  width: 4em;
-  border-radius: 2em;
+  height: 1.4em;
+  width: 2.8em;
+  border-radius: 1.4em;
   background-color: #fff;
   border: 1px solid #ddd;
   box-sizing: content-box;
@@ -3863,9 +3865,9 @@ table.table {
     left: 0;
     top: 0;
     display: block;
-    width: 2em;
-    height: 2em;
-    border-radius: 2em;
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 1.4em;
     background: #fff;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
     transition: all 200ms; }
@@ -3876,16 +3878,16 @@ table.table {
     right: 0;
     top: 0;
     display: block;
-    width: 2em;
-    height: 2em;
-    border-radius: 0 2em 2em 0;
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 0 1.4em 1.4em 0;
     background: #fff;
     transition: all 200ms; }
   .a-switch--active {
     background-color: #3190ff;
     z-index: 1; }
     .a-switch--active::before {
-      transform: translateX(2em); }
+      transform: translateX(1.4em); }
     .a-switch--active::after {
       transform: scale(0); }
   .a-switch--disabled {
