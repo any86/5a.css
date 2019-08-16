@@ -1,19 +1,6 @@
-%icon-arrow {
-    width: 1.6em;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 1;
-    font-size: 1.4em;
-    @extend .ion-ios-arrow-forward;
+$cname :'.a-top-bar';
 
-    &:active {
-        opacity: 0.1;
-    }
-}
-
-.a-top-bar {
+#{$cname} {
     position: relative;
     height: 2.8em;
     line-height: 2.8em;
@@ -22,14 +9,50 @@
     box-shadow: 0 1px 3px rgba(#000, .125);
     text-align: center;
 
-    &__icon-arrow-left {
-        left: 0;
-        @extend %icon-arrow;
-        @extend .rotate-180;
+    // icon公共样式
+    &__icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 1.6em;
+        z-index: 1;
+        font-size: 1.4em;
+
+        &:active {
+            opacity: 0.1;
+        }
     }
 
-    &__icon-arrow-right {
+
+    &__icon-arrow {
+        left: 0;
+        @extend .a-top-bar__icon;
+        @extend .rotate-180;
+        @extend .ion-ios-arrow-forward;
+    }
+
+    &__icon-more {
         right: 0;
-        @extend %icon-arrow;
+        @extend .a-top-bar__icon;
+        @extend .ion-ios-more;
+    }
+
+
+    // 反向
+    &--reverse {
+        #{$cname}__icon-arrow {
+            right: 0 !important;
+            left: auto !important;
+            @extend .a-top-bar__icon;
+            @extend .ion-ios-arrow-forward;
+        }
+
+        #{$cname}__icon-more {
+            left: 0 !important;
+            right: auto !important;
+            @extend .a-top-bar__icon;
+            @extend .ion-ios-more;
+        }
     }
 }
