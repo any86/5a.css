@@ -3131,10 +3131,10 @@ li {
 .pl-0, .a-list__item > .item__start + .item__content {
   padding-left: 0px !important; }
 
-.pl-1, .a-list__title {
+.pl-1 {
   padding-left: 8px !important; }
 
-.pl-2, .a-list__item > .item__content {
+.pl-2, .a-list__title, .a-list__item > .item__content {
   padding-left: 16px !important; }
 
 .pl-3 {
@@ -3646,10 +3646,11 @@ table.table {
   display: flex; }
   .a-list__item > .item__start {
     display: block;
-    max-width: 3em;
-    max-height: 3em;
+    width: 3em;
+    height: 3em;
     overflow: hidden;
-    border-radius: 2px; }
+    border-radius: 2px;
+    background: #e9ecef; }
     .a-list__item > .item__start > img {
       display: block;
       width: 100%;
@@ -3851,49 +3852,51 @@ table.table {
 
 .a-switch {
   position: relative;
-  height: 1.4em;
-  width: 2.8em;
-  border-radius: 1.4em;
-  background-color: #fff;
-  border: 1px solid #ddd;
   box-sizing: content-box;
-  transition: all 200ms; }
-  .a-switch::before {
+  display: inline-block;
+  height: 24px;
+  width: 48px;
+  border-radius: 24px;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  transition: all 200ms;
+  padding: 1px; }
+  .a-switch:before {
     content: '';
     position: absolute;
     z-index: 2;
-    left: 0;
-    top: 0;
+    left: 1px;
+    top: 1px;
     display: block;
-    width: 1.4em;
-    height: 1.4em;
-    border-radius: 1.4em;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
     background: #fff;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
     transition: all 200ms; }
-  .a-switch::after {
+  .a-switch:after {
     content: '';
     position: absolute;
     z-index: 1;
     right: 0;
     top: 0;
     display: block;
-    width: 1.4em;
-    height: 1.4em;
-    border-radius: 0 1.4em 1.4em 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 0 24px 24px 0;
     background: #fff;
     transition: all 200ms; }
   .a-switch--active {
     background-color: #3190ff;
     z-index: 1; }
-    .a-switch--active::before {
-      transform: translateX(1.4em); }
-    .a-switch--active::after {
+    .a-switch--active:before {
+      transform: translateX(24px); }
+    .a-switch--active:after {
       transform: scale(0); }
   .a-switch--disabled {
     background-color: #ced3d8;
     border-color: #ced3d8; }
-    .a-switch--disabled::after {
+    .a-switch--disabled:after {
       display: none; }
 
 .a-table {
