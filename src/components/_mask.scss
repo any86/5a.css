@@ -6,4 +6,19 @@
     right: 0;
     bottom: 0;
     background: $mask-background-color;
+
+    &__button-close {
+        @extend .ion-ios-close;
+        position: absolute;
+        top: $space;
+        right: $space;
+        color: $white;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 42px;
+        // border-radius: 42px;
+        text-align: center;
+        // border: 1px solid #fff;
+    }
 }
