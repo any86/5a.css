@@ -13,7 +13,7 @@ $background-color: #fff;
 $directions: ('top':'t', 'right':'r', 'bottom':'b', 'left': 'l');
 
 // zindex
-$z-index-mask:1000;
+$z-index-backdrop:1000;
 $z-index-popup:1001;
 
 
@@ -124,8 +124,8 @@ $button-radius:$radius*2;
 // list
 
 
-// mask
-$mask-background-color: rgba(0, 0, 0, 0.6);
+// backdrop
+$backdrop-background-color: rgba(0, 0, 0, 0.6);
 
 // popup
 $popup-background-color:$background-color;
