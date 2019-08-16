@@ -1,7 +1,7 @@
 .a-list {
     &__title {
         @extend .title-3,
-        .pl-1;
+        .pl-2;
         font-weight: bold;
         color: #000;
     }
@@ -12,11 +12,11 @@
         >.item__start {
             @extend .ml-1;
             display: block;
-            max-width: 3em;
-            max-height: 3em;
+            width: 3em;
+            height: 3em;
             overflow: hidden;
             border-radius: $radius;
-
+            background:$gray-200;
             >img {
                 display: block;
                 width: 100%;

@@ -3,7 +3,8 @@ $space: 8px;
 // 单位圆角
 $radius: 2px;
 
-
+// 动画时间
+$animateDuration: 200ms;
 
 // 背景色
 $background-color: #fff;
@@ -29,35 +30,7 @@ $font-size-6: $font-size-base * 0.75;
 $font-sizes: ($font-size-1, $font-size-2, $font-size-3, $font-size-4, $font-size-5, $font-size-6);
 
 
-// button
-$button-radius:$radius*2;
 
-// list
-
-
-// mask
-$mask-background-color: rgba(0, 0, 0, 0.6);
-
-// popup
-$popup-background-color:$background-color;
-
-// collapse
-$collapse-title-font-size:16px;
-
-// checkbox
-$checkbox-size:24px !default;
-
-// radio
-$radio-size: 24px !default;
-
-// switch
-$switch-size:1.4em;
-$switch-border-color:#ddd;
-
-
-// table
-$table-border-color: #ddd;
-$table-striped-color:#f9f9f9;
 
 // 颜色
 $white: #fff !default;
@@ -66,7 +39,7 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #95a5a6 !default;
+$gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
@@ -137,6 +110,46 @@ $theme-colors: map-merge(("primary": $primary,
         "light": $light,
         "dark": $dark),
     $theme-colors);
+
+
+
+
+
+
+// ========== 组件相关 ==========
+
+// button
+$button-radius:$radius*2;
+
+// list
+
+
+// mask
+$mask-background-color: rgba(0, 0, 0, 0.6);
+
+// popup
+$popup-background-color:$background-color;
+
+// collapse
+$collapse-title-font-size:16px;
+
+// checkbox
+$checkbox-size:24px !default;
+
+// radio
+$radio-size: 24px !default;
+
+// switch
+$switch-size:24px;
+$switch-border-color:$gray-300;
+
+
+// table
+$table-border-color: #ddd;
+$table-striped-color:#f9f9f9;
+
+
+
 
 // // Set a specific jump point for requesting color jumps
 // $theme-color-interval:      8% !default;

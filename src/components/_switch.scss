@@ -1,63 +1,53 @@
 .a-switch {
     position: relative;
+    box-sizing: content-box;
+    display: inline-block;
     height: $switch-size;
     width: $switch-size*2;
     border-radius: $switch-size;
-    background-color: $white;
-    border: 1px solid $switch-border-color;
-    box-sizing: content-box;
-    transition: all 200ms;
-
-    &::before {
+    background-color: $gray-500;
+    transition: background-color $animateDuration;
+    padding: 1px;
+    vertical-align: middle;
+    // 圆
+    &:after {
         content: '';
         position: absolute;
         z-index: 2;
-        left: 0;
-        top: 0;
+        left: 1px;
+        top: 1px;
         display: block;
         width: $switch-size;
         height: $switch-size;
         border-radius: $switch-size;
         background: $white;
-        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-        transition: all 200ms;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+        transition: transform $animateDuration;
+
     }
 
-
-    &::after {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        right: 0;
-        top: 0;
-        display: block;
-        width: $switch-size;
-        height: $switch-size;
-        border-radius: 0 $switch-size $switch-size 0;
-        background: $white;
-        transition: all 200ms;
-    }
-
-
-    &--active {
+    &--checked {
         background-color: $primary;
         z-index: 1;
 
-        &::before {
+        &:after {
             transform: translateX($switch-size);
-        }
-
-        &::after {
-            transform: scale(0);
+            // animation: checkboxAnimation $animateDuration;
         }
     }
 
     &--disabled {
-        background-color: lighten($dark, 60%);
-        border-color: lighten($dark, 60%);
+        opacity: 0.6;
+    }
 
-        &::after {
-            display: none;
+
+    @keyframes checkboxAnimation {
+        0% {
+            width: $switch-size * 2;
+        }
+
+        100% {
+            width: $switch-size;
         }
     }
 
