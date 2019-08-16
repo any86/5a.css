@@ -37,6 +37,9 @@
     }
 
     &--disabled {
+        &:after{
+            background-color: #ddd;
+        }
         opacity: 0.6;
     }
 
