@@ -2837,11 +2837,11 @@ a {
 li {
   list-style: none; }
 
-.d-flex, .a-radio {
+.d-flex {
   display: flex; }
-  .d-flex.row, .row.a-radio {
+  .d-flex.row {
     flex-direction: row; }
-  .d-flex.column, .column.a-radio {
+  .d-flex.column {
     flex-direction: column; }
 
 .d-block, .a-card__button, .a-radio::after {
@@ -2982,7 +2982,7 @@ li {
 .ml-0 {
   margin-left: 0px !important; }
 
-.ml-1 {
+.ml-1, .a-list__item > .item__start, .a-list__item > .item__start + .item__content {
   margin-left: 8px !important; }
 
 .ml-2 {
@@ -3128,13 +3128,13 @@ li {
 .pb-5 {
   padding-bottom: 40px !important; }
 
-.pl-0 {
+.pl-0, .a-list__item > .item__start + .item__content {
   padding-left: 0px !important; }
 
-.pl-1, .a-list__title, .a-list__item > .item__content {
+.pl-1, .a-list__title {
   padding-left: 8px !important; }
 
-.pl-2 {
+.pl-2, .a-list__item > .item__content {
   padding-left: 16px !important; }
 
 .pl-3 {
@@ -3201,7 +3201,7 @@ li {
   color: #95a5a6 !important; }
 
 .text-success {
-  color: #2ecc71 !important; }
+  color: #28a745 !important; }
 
 .text-info, .a-card__button {
   color: #17a2b8 !important; }
@@ -3210,7 +3210,7 @@ li {
   color: #ffc107 !important; }
 
 .text-danger {
-  color: #cb0101 !important; }
+  color: #dc3545 !important; }
 
 .text-light {
   color: #f8f9fa !important; }
@@ -3270,7 +3270,7 @@ li {
   background-color: #95a5a6 !important; }
 
 .bg-success {
-  background-color: #2ecc71 !important; }
+  background-color: #28a745 !important; }
 
 .bg-info {
   background-color: #17a2b8 !important; }
@@ -3279,7 +3279,7 @@ li {
   background-color: #ffc107 !important; }
 
 .bg-danger {
-  background-color: #cb0101 !important; }
+  background-color: #dc3545 !important; }
 
 .bg-light {
   background-color: #f8f9fa !important; }
@@ -3357,7 +3357,7 @@ table.table {
       align-content: center;
       background-color: #f8f9fa;
       padding: 8px;
-      font-size: 14px;
+      font-size: 16px;
       cursor: pointer;
       font-weight: bold; }
       .a-collapse__item > .item__header > .header__icon-arrow {
@@ -3568,14 +3568,14 @@ table.table {
 
 .a-button--success {
   color: white;
-  background-color: #2ecc71; }
+  background-color: #28a745; }
   .a-button--success:not(.a-button--full):active {
-    background-color: #44d581; }
+    background-color: #2ec04f; }
   .a-button--success:not(.a-button--full):focus {
     z-index: 1;
-    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.4); }
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.4); }
   .a-button--success[disabled] {
-    background-color: #7ee2a8;
+    background-color: #5dd879;
     touch-action: none; }
 
 .a-button--info {
@@ -3604,14 +3604,14 @@ table.table {
 
 .a-button--danger {
   color: white;
-  background-color: #cb0101; }
+  background-color: #dc3545; }
   .a-button--danger:not(.a-button--full):active {
-    background-color: #e90101; }
+    background-color: #e14f5d; }
   .a-button--danger:not(.a-button--full):focus {
     z-index: 1;
-    box-shadow: 0 0 0 3px rgba(203, 1, 1, 0.4); }
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.4); }
   .a-button--danger[disabled] {
-    background-color: #fe3434;
+    background-color: #eb8c95;
     touch-action: none; }
 
 .a-button--light {
@@ -3646,9 +3646,8 @@ table.table {
   display: flex; }
   .a-list__item > .item__start {
     display: block;
-    width: 3em;
-    height: 3em;
-    background: #ccc;
+    max-width: 3em;
+    max-height: 3em;
     overflow: hidden;
     border-radius: 2px; }
     .a-list__item > .item__start > img {
@@ -3797,24 +3796,24 @@ table.table {
 
 .a-checkbox {
   box-sizing: content-box;
+  display: inline-block;
   border-radius: 2px;
   overflow: hidden;
   background-color: #fff;
-  border: 1px solid #3190ff; }
+  border: 1px solid #3190ff;
+  vertical-align: middle; }
   .a-checkbox > .ion-ios-checkmark {
-    width: 1.4em;
-    height: 1.4em;
-    line-height: 1.4em;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
     text-align: center;
     transform: scale(0);
     transform-origin: center center;
     transition: transform 200ms, color 200ms;
     display: inline-block; }
-  .a-checkbox--checked {
-    z-index: 1; }
-    .a-checkbox--checked > .ion-ios-checkmark {
-      color: #3190ff;
-      transform: scale(2); }
+  .a-checkbox--checked > .ion-ios-checkmark {
+    color: #3190ff;
+    transform: scale(2); }
   .a-checkbox--disabled {
     border-color: #ced3d8;
     background-color: #ebedee; }
@@ -3823,19 +3822,20 @@ table.table {
 
 .a-radio {
   box-sizing: content-box;
-  border-radius: 1.4em;
+  display: inline-flex;
+  border-radius: 24px;
   overflow: hidden;
   transition: all 200ms;
-  height: 1.4em;
-  width: 1.4em;
+  height: 24px;
+  width: 24px;
   border: 1px solid #3190ff;
   background-color: #fff; }
   .a-radio::after {
     content: '';
     margin: auto;
-    border-radius: 0.7em;
-    height: 0.7em;
-    width: 0.7em;
+    border-radius: 12px;
+    height: 12px;
+    width: 12px;
     transition: transform 200ms;
     transform: scale(0);
     background-color: #3190ff; }
