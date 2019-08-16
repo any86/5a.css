@@ -13,9 +13,10 @@
 
 .a-button {
     @extend .title-4;
+    margin: 0;
     // -webkit-appearance: button;
+    font-size: 16px;
     position: relative;
-    cursor: pointer;
     display: inline-block;
     text-align: center;
     padding: $space/2 $space;
@@ -27,7 +28,12 @@
     border-radius: $button-radius;
     background: #fff;
     color: #000;
+    line-height: 1;
     transition: box-shadow 200ms;
+
+    &::after {
+        content: ''
+    }
 
     &--block,
     &--full {
@@ -49,6 +55,17 @@
         border-radius: 99999px;
     }
 
+    &--loading {
+        &::before {
+            @extend .a-loading-half, .mr-1;
+            content: '';
+            height: 0.6em;
+            width: 0.6em;
+            
+        }
+
+    }
+
 }
 
 @each $k,
@@ -57,17 +74,14 @@ $color in $theme-colors {
         color: color-yiq($color);
         background-color: $color;
 
-        &:not(.a-button--full):active {
-            // z-index: 1;
-            // box-shadow: 0 0 0 3px rgba($color, .4);
-            background-color: lighten($color,6%);
+        &:active {
+            background-color: darken($color, 6%);
         }
 
         &:not(.a-button--full):focus {
             z-index: 1;
-            box-shadow: 0 0 0 3px rgba($color, .4);
+            // box-shadow: 0 0 0 3px rgba($color, .4);
         }
-
 
         &[disabled] {
             background-color: lighten($color, 20%);
