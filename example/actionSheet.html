@@ -9,7 +9,7 @@
     <meta content="telephone=no,email=no" name=format-detection>
     <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ActionSheet</title>
+    <title>Popup</title>
     <link rel="stylesheet" href="../dist/main.css">
 
 </head>
@@ -17,13 +17,19 @@
 <body>
     <!-- 头 -->
     <header class="a-top-bar">
-        <a href="../index.html" class="a-top-bar__icon-arrow-left"></a>
-        ActionSheet(底部菜单)
+        <a href="../index.html" class="a-top-bar__icon-arrow"></a>
+        Popup(底部菜单)
     </header>
     <!-- 头 -->
+    <div class="a-backdrop"></div>
 
-    <article class="a-action-sheet">
-        123
+
+    <article class="a-popup a-popup--bottom" role="dialog">
+        <header class="a-popup__header">
+                弹出菜单
+        </header>
+        <button class="a-button a-button--primary a-button--block">确定</button>
+        <button class="a-button a-button--danger a-button--block mt-1">取消</button>
     </article>
 
 </body>
