@@ -33,9 +33,9 @@
             @include thinBorder();
             @extend .pl-2,
             .pb-2;
-            flex: 1;
+           width: 100%;
+            flex-grow: 1;
             display: table;
-
             >.icon-arrow {
                 vertical-align: middle;
                 display: table-cell;
