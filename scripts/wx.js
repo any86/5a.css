@@ -22,7 +22,7 @@ function replaceBase64(){
     return newCss;
 }
 
-fs.writeFileSync('./dist/main.css', replaceBase64());
+// fs.writeFileSync('./dist/main.css', replaceBase64());
 
 
 const result = sass.renderSync({
@@ -39,6 +39,12 @@ const result = sass.renderSync({
         return null;
     }]
 });
+
+try {
+    const stat = fs.statSync('./dist');
+} catch (error) {
+    fs.mkdirSync('./dist');
+}
 
 fs.writeFileSync('./dist/main.css', result.css);
 
