@@ -17,6 +17,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: login
+      run: |
+        git config --global user.email ${{ secrets.email }}
+        git config --global user.name "any86"
+      with: 
+        
     - name: release demo page
       run: |
         npm install
