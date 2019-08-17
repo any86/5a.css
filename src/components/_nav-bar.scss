@@ -1,4 +1,4 @@
-$cname :'.a-top-bar';
+$cname :'.a-nav-bar';
 
 #{$cname} {
     position: relative;
@@ -27,14 +27,14 @@ $cname :'.a-top-bar';
 
     &__icon-arrow {
         left: 0;
-        @extend .a-top-bar__icon;
+        @extend .a-nav-bar__icon;
         @extend .rotate-180;
         @extend .ion-ios-arrow-forward;
     }
 
     &__icon-more {
         right: 0;
-        @extend .a-top-bar__icon;
+        @extend .a-nav-bar__icon;
         @extend .ion-ios-more;
     }
 
@@ -44,14 +44,14 @@ $cname :'.a-top-bar';
         #{$cname}__icon-arrow {
             right: 0 !important;
             left: auto !important;
-            @extend .a-top-bar__icon;
+            @extend .a-nav-bar__icon;
             @extend .ion-ios-arrow-forward;
         }
 
         #{$cname}__icon-more {
             left: 0 !important;
             right: auto !important;
-            @extend .a-top-bar__icon;
+            @extend .a-nav-bar__icon;
             @extend .ion-ios-more;
         }
     }
