@@ -2,7 +2,7 @@
     @extend .p-1, .text-size-5;
     display: inline-block;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: $tooltip-color;
     border-radius: $radius;
     word-break: keep-all;
     &:after {
@@ -17,7 +17,7 @@
         transform: translate(-50%, -100%);
 
         &:after {
-            @include triangle(5px, rgba(0, 0, 0, 0.6), bottom);
+            @include triangle(5px, $tooltip-color, bottom);
             bottom: 0;
             left: 50%;
             transform: translate(-50%, 100%);
@@ -31,7 +31,7 @@
         transform: translate(-50%, 100%);
 
         &:after {
-            @include triangle(5px, rgba(0, 0, 0, 0.6), top);
+            @include triangle(5px, $tooltip-color, top);
             top: 0;
             left: 50%;
             transform: translate(-50%, -100%);
@@ -44,7 +44,7 @@
         transform: translate(-100%, -50%);
 
         &:after {
-            @include triangle(5px, rgba(0, 0, 0, 0.6), right);
+            @include triangle(5px, $tooltip-color, right);
             top: 50%;
             right: 0;
             transform: translate(100%, -50%);
@@ -57,7 +57,7 @@
         transform: translate(100%, -50%);
 
         &:after {
-            @include triangle(5px, rgba(0, 0, 0, 0.6), left);
+            @include triangle(5px, $tooltip-color, left);
             top: 50%;
             left: 0;
             transform: translate(-100%, -50%);

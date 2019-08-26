@@ -151,3 +151,17 @@
         border-color: transparent $color transparent transparent;
     }
 }
+
+
+@mixin bgChessboard($color:#aaa) {
+    background-image: linear-gradient(45deg, $color 25%, transparent 25%, transparent 75%, $color 75%, $color),
+        linear-gradient(45deg, $color 26%, transparent 26%, transparent 74%, $color 74%, $color);
+    background-image: -webkit-linear-gradient(45deg, $color 25%, transparent 25%, transparent 75%, $color 75%, $color),
+        -webkit-linear-gradient(45deg, $color 26%, transparent 26%, transparent 74%, $color 74%, $color);
+    background-image: -moz-linear-gradient(45deg, $color 24%, transparent 24%, transparent 76%, $color 76%, $color),
+        -moz-linear-gradient(45deg, $color 26%, transparent 26%, transparent 74%, $color 74%, $color);
+    background-image: -o-linear-gradient(45deg, $color 25%, transparent 25%, transparent 75%, $color 75%, $color),
+        -o-linear-gradient(45deg, $color 25%, transparent 25%, transparent 75%, $color 75%, $color);
+    background-size: 10vw 10vw;
+    background-position: 0 0, 5vw 5vw;
+}

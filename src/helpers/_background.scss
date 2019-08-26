@@ -4,3 +4,7 @@ $value in $theme-colors {
         background-color: $value !important;
     }
 }
+
+.bg-chessboard {
+    @include bgChessboard()
+}
