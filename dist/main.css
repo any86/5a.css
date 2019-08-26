@@ -3059,7 +3059,7 @@ li {
 .p-0 {
   padding: 0px !important; }
 
-.p-1, .a-popup {
+.p-1, .a-popup, .a-tooltip {
   padding: 8px !important; }
 
 .p-2 {
@@ -3073,6 +3073,9 @@ li {
 
 .p-5 {
   padding: 40px !important; }
+
+.p-6 {
+  padding: 48px !important; }
 
 .pt-0 {
   padding-top: 0px !important; }
@@ -3092,6 +3095,9 @@ li {
 .pt-5 {
   padding-top: 40px !important; }
 
+.pt-6 {
+  padding-top: 48px !important; }
+
 .pr-0 {
   padding-right: 0px !important; }
 
@@ -3109,6 +3115,9 @@ li {
 
 .pr-5 {
   padding-right: 40px !important; }
+
+.pr-6 {
+  padding-right: 48px !important; }
 
 .pb-0 {
   padding-bottom: 0px !important; }
@@ -3128,6 +3137,9 @@ li {
 .pb-5 {
   padding-bottom: 40px !important; }
 
+.pb-6 {
+  padding-bottom: 48px !important; }
+
 .pl-0, .a-list__item > .item__start + .item__content {
   padding-left: 0px !important; }
 
@@ -3145,6 +3157,9 @@ li {
 
 .pl-5 {
   padding-left: 40px !important; }
+
+.pl-6 {
+  padding-left: 48px !important; }
 
 .px-0 {
   padding-left: 0px !important;
@@ -3194,6 +3209,14 @@ li {
   padding-top: 40px !important;
   padding-bottom: 40px !important; }
 
+.px-6 {
+  padding-left: 48px !important;
+  padding-right: 48px !important; }
+
+.py-6 {
+  padding-top: 48px !important;
+  padding-bottom: 48px !important; }
+
 .text-primary {
   color: #3190ff !important; }
 
@@ -3230,7 +3253,7 @@ li {
 .title-4, .a-button, .text-size-4 {
   font-size: 16px; }
 
-.title-5, .a-card__header > .header__subtitle, .text-size-5, .a-card__content, .a-card__button, .a-input-reset {
+.title-5, .a-card__header > .header__subtitle, .text-size-5, .a-card__content, .a-card__button, .a-input-reset, .a-tooltip {
   font-size: 14px; }
 
 .title-6, .text-size-6 {
@@ -3286,6 +3309,14 @@ li {
 
 .bg-dark {
   background-color: #343a40 !important; }
+
+.bg-chessboard {
+  background-image: linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa), linear-gradient(45deg, #aaa 26%, transparent 26%, transparent 74%, #aaa 74%, #aaa);
+  background-image: -webkit-linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa), -webkit-linear-gradient(45deg, #aaa 26%, transparent 26%, transparent 74%, #aaa 74%, #aaa);
+  background-image: -moz-linear-gradient(45deg, #aaa 24%, transparent 24%, transparent 76%, #aaa 76%, #aaa), -moz-linear-gradient(45deg, #aaa 26%, transparent 26%, transparent 74%, #aaa 74%, #aaa);
+  background-image: -o-linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa), -o-linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa);
+  background-size: 10vw 10vw;
+  background-position: 0 0, 5vw 5vw; }
 
 table.table {
   width: 100%;
@@ -3930,3 +3961,66 @@ table.table {
     .a-table .tr .th {
       word-break: keep-all;
       font-weight: bold; }
+
+.a-tooltip {
+  display: inline-block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  word-break: keep-all; }
+  .a-tooltip:after {
+    content: '';
+    position: absolute;
+    display: block; }
+  .a-tooltip--top {
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%, -100%); }
+    .a-tooltip--top:after {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: rgba(0, 0, 0, 0.4) transparent transparent transparent;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%); }
+  .a-tooltip--bottom {
+    bottom: -8px;
+    left: 50%;
+    transform: translate(-50%, 100%); }
+    .a-tooltip--bottom:after {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent rgba(0, 0, 0, 0.4) transparent;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%); }
+  .a-tooltip--left {
+    left: -8px;
+    top: 50%;
+    transform: translate(-100%, -50%); }
+    .a-tooltip--left:after {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 5px;
+      border-color: transparent transparent transparent rgba(0, 0, 0, 0.4);
+      top: 50%;
+      right: 0;
+      transform: translate(100%, -50%); }
+  .a-tooltip--right {
+    right: -8px;
+    top: 50%;
+    transform: translate(100%, -50%); }
+    .a-tooltip--right:after {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 5px 0;
+      border-color: transparent rgba(0, 0, 0, 0.4) transparent transparent;
+      top: 50%;
+      left: 0;
+      transform: translate(-100%, -50%); }
