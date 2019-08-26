@@ -16,6 +16,8 @@ $directions: ('top':'t', 'right':'r', 'bottom':'b', 'left': 'l');
 $z-index-backdrop:1000;
 $z-index-popup:1001;
 
+$z-index-tooltip:1002;
+
 
 // 字体大小
 // $font-size-base:1rem;
@@ -111,7 +113,7 @@ $theme-colors: map-merge(("primary": $primary,
         "dark": $dark),
     $theme-colors);
 
-
+$backgroundColor:$white;
 
 
 
@@ -149,7 +151,7 @@ $table-border-color: #ddd;
 $table-striped-color:#f9f9f9;
 
 // tooltip
-$tooltip-color:rgba(0,0,0,0.4);
+$tooltip-color:rgba(0,0,0,0.6);
 
 
 // // Set a specific jump point for requesting color jumps

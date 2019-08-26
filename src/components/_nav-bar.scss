@@ -8,7 +8,7 @@ $cname :'.a-nav-bar';
     font-weight: bold;
     box-shadow: 0 1px 3px rgba(#000, .125);
     text-align: center;
-
+    background-color: $backgroundColor;
     // icon公共样式
     &__icon {
         position: absolute;

@@ -5,6 +5,8 @@
     background-color: $tooltip-color;
     border-radius: $radius;
     word-break: keep-all;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: $z-index-tooltip;
     &:after {
         content: '';
         position: absolute;
