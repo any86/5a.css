@@ -44,7 +44,7 @@
     }
 }
 
-@mixin border-1px($dirs:(top,left,right,bottom),$color:#000, $radius:0) {
+@mixin border-1px($dirs:(top, left, right, bottom), $color:#000, $radius:0) {
     &:after {
         content: '';
         position: absolute;
@@ -52,8 +52,9 @@
         left: 0;
         bottom: 0;
         right: 0;
+
         @each $dir in $dirs {
-            border-#{$dir}:1px solid  $color;
+            border-#{$dir}: 1px solid $color;
         }
 
         border-radius: $radius;
@@ -68,13 +69,13 @@
 }
 
 
-
 @mixin thinBorder($direction :bottom, $color:#ccc) {
     border-#{$direction}: 1px solid $color;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2) {
         & {
             position: relative;
+
             @if('top'==$direction) {
                 border-top: none;
             }

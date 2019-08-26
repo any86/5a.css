@@ -7,8 +7,8 @@
     }
 
     &__item {
-        display: flex;
 
+        display: flex;
         >.item__start {
             @extend .ml-1;
             display: block;
@@ -16,7 +16,8 @@
             height: 3em;
             overflow: hidden;
             border-radius: $radius;
-            background:$gray-200;
+            background: $gray-200;
+
             >img {
                 display: block;
                 width: 100%;
@@ -30,12 +31,11 @@
         }
 
         >.item__content {
-            @include thinBorder();
-            @extend .pl-2,
-            .pb-2;
-           width: 100%;
-            flex-grow: 1;
+            @extend .pl-2;
+            width: 100%;
+            flex: 1;
             display: table;
+
             >.icon-arrow {
                 vertical-align: middle;
                 display: table-cell;
@@ -46,6 +46,17 @@
             }
         }
     }
+
+    &__item+&__item {
+        >.item__start{
+            @extend .mt-2;
+        }
+        >.item__content {
+            @extend .pt-2;
+            @include thinBorder('top');
+        }
+    }
+
 
     &__item,
     &__title {
