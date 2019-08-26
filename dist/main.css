@@ -101,7 +101,7 @@
 .ion-ios-checkmark-circle-outline:before,
 .ion-ios-clipboard:before,
 .ion-ios-clock:before,
-.ion-ios-close:before, .a-backdrop__button-close:before,
+.ion-ios-close:before, .a-backdrop__button-close:before, .a-toast--fail .a-toast__icon:before,
 .ion-ios-close-circle:before,
 .ion-ios-close-circle-outline:before,
 .ion-ios-cloud:before,
@@ -965,7 +965,7 @@
 .ion-ios-clock:before {
   content: "\f403"; }
 
-.ion-ios-close:before, .a-backdrop__button-close:before {
+.ion-ios-close:before, .a-backdrop__button-close:before, .a-toast--fail .a-toast__icon:before {
   content: "\f406"; }
 
 .ion-ios-close-circle:before {
@@ -2826,7 +2826,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
 
 a {
   text-decoration: none;
@@ -3312,9 +3312,6 @@ li {
 
 .bg-chessboard {
   background-image: linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa), linear-gradient(45deg, #aaa 26%, transparent 26%, transparent 74%, #aaa 74%, #aaa);
-  background-image: -webkit-linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa), -webkit-linear-gradient(45deg, #aaa 26%, transparent 26%, transparent 74%, #aaa 74%, #aaa);
-  background-image: -moz-linear-gradient(45deg, #aaa 24%, transparent 24%, transparent 76%, #aaa 76%, #aaa), -moz-linear-gradient(45deg, #aaa 26%, transparent 26%, transparent 74%, #aaa 74%, #aaa);
-  background-image: -o-linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa), -o-linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa);
   background-size: 10vw 10vw;
   background-position: 0 0, 5vw 5vw; }
 
@@ -3529,7 +3526,7 @@ table.table {
   90% {
     stroke: #ffa700; } }
 
-.a-loading-half, .a-button--loading::before {
+.a-loading-half, .a-button--loading::before, .a-toast--loading .a-toast__icon {
   display: inline-block;
   height: 1em;
   width: 1em;
@@ -3704,7 +3701,7 @@ table.table {
       position: relative;
       border-top: none; }
     .a-list__item + .a-list__item > .item__content:after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0;
@@ -3751,7 +3748,8 @@ table.table {
   font-size: 18px;
   font-weight: bold;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
-  text-align: center; }
+  text-align: center;
+  background-color: #fff; }
   .a-nav-bar__icon, .a-nav-bar__icon-arrow, .a-nav-bar__icon-more, .a-nav-bar--reverse .a-nav-bar__icon-arrow, .a-nav-bar--reverse .a-nav-bar__icon-more {
     position: absolute;
     top: 0;
@@ -3965,9 +3963,11 @@ table.table {
 .a-tooltip {
   display: inline-block;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 2px;
-  word-break: keep-all; }
+  word-break: keep-all;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1002; }
   .a-tooltip:after {
     content: '';
     position: absolute;
@@ -3981,7 +3981,7 @@ table.table {
       height: 0;
       border-style: solid;
       border-width: 5px 5px 0 5px;
-      border-color: rgba(0, 0, 0, 0.4) transparent transparent transparent;
+      border-color: rgba(0, 0, 0, 0.6) transparent transparent transparent;
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 100%); }
@@ -3994,7 +3994,7 @@ table.table {
       height: 0;
       border-style: solid;
       border-width: 0 5px 5px 5px;
-      border-color: transparent transparent rgba(0, 0, 0, 0.4) transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.6) transparent;
       top: 0;
       left: 50%;
       transform: translate(-50%, -100%); }
@@ -4007,7 +4007,7 @@ table.table {
       height: 0;
       border-style: solid;
       border-width: 5px 0 5px 5px;
-      border-color: transparent transparent transparent rgba(0, 0, 0, 0.4);
+      border-color: transparent transparent transparent rgba(0, 0, 0, 0.6);
       top: 50%;
       right: 0;
       transform: translate(100%, -50%); }
@@ -4020,7 +4020,32 @@ table.table {
       height: 0;
       border-style: solid;
       border-width: 5px 5px 5px 0;
-      border-color: transparent rgba(0, 0, 0, 0.4) transparent transparent;
+      border-color: transparent rgba(0, 0, 0, 0.6) transparent transparent;
       top: 50%;
       left: 0;
       transform: translate(-100%, -50%); }
+
+.a-toast {
+  position: fixed;
+  display: inline-block;
+  max-width: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  font-size: 14px; }
+  .a-toast__icon {
+    display: block; }
+  .a-toast--fail .a-toast__icon {
+    font-size: 5em;
+    line-height: 0.6em; }
+    .a-toast--fail .a-toast__icon:before {
+      line-height: 0.6em; }
+  .a-toast--loading .a-toast__icon {
+    font-size: 1em; }
