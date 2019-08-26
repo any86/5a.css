@@ -1,4 +1,4 @@
-@for $i from 0 to 6 {
+@for $i from 0 to 7 {
     .p-#{$i} {
         padding: $space * $i !important;
     }
@@ -6,7 +6,7 @@
 
 @each $direction,
 $short in $directions {
-    @for $i from 0 to 6 {
+    @for $i from 0 to 7 {
         .p#{$short}-#{$i} {
             padding-#{$direction}: $space * $i !important;
         }
@@ -14,7 +14,7 @@ $short in $directions {
 }
 
 
-@for $i from 0 to 6 {
+@for $i from 0 to 7 {
     .px-#{$i} {
         padding-left: $space * $i !important;
         padding-right: $space * $i !important;

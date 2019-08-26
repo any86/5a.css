@@ -1,0 +1,67 @@
+.a-tooltip {
+    @extend .p-1, .text-size-5;
+    display: inline-block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: $radius;
+    word-break: keep-all;
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+    }
+
+    &--top {
+        top: -$space;
+        left: 50%;
+        transform: translate(-50%, -100%);
+
+        &:after {
+            @include triangle(5px, rgba(0, 0, 0, 0.6), bottom);
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 100%);
+        }
+    }
+
+
+    &--bottom {
+        bottom: -$space;
+        left: 50%;
+        transform: translate(-50%, 100%);
+
+        &:after {
+            @include triangle(5px, rgba(0, 0, 0, 0.6), top);
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -100%);
+        }
+    }
+
+    &--left {
+        left: -$space;
+        top: 50%;
+        transform: translate(-100%, -50%);
+
+        &:after {
+            @include triangle(5px, rgba(0, 0, 0, 0.6), right);
+            top: 50%;
+            right: 0;
+            transform: translate(100%, -50%);
+        }
+    }
+
+    &--right {
+        right: -$space;
+        top: 50%;
+        transform: translate(100%, -50%);
+
+        &:after {
+            @include triangle(5px, rgba(0, 0, 0, 0.6), left);
+            top: 50%;
+            left: 0;
+            transform: translate(-100%, -50%);
+        }
+    }
+
+}

@@ -125,3 +125,29 @@
 
     display: none;
 }
+
+@mixin triangle($size:5px, $color:rgba(0, 0, 0, 0.6), $direction:bottom) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+
+    @if('bottom'==$direction) {
+        border-width: 5px 5px 0 5px;
+        border-color: $color transparent transparent transparent;
+    }
+
+    @if('top'==$direction) {
+        border-width: 0 5px 5px 5px;
+        border-color: transparent transparent $color transparent;
+    }
+
+    @if('right'==$direction) {
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent $color;
+    }
+
+    @if('left'==$direction) {
+        border-width: 5px 5px 5px 0;
+        border-color: transparent $color transparent transparent;
+    }
+}
