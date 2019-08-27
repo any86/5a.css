@@ -10,7 +10,6 @@
         Helvetica, Arial,
         sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
 
-
     // -webkit-touch-callout: none;
     // -webkit-appearance: none; 
     // text-rendering: optimizeLegibility;
@@ -28,6 +27,8 @@ a {
         cursor: pointer;
     }
 }
+    
+a,p,article,section,pre{font-size: 14px;}
 
 // ::-webkit-scrollbar {
 //     background: #ccc;
