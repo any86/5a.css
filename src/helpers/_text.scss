@@ -12,9 +12,13 @@ $value in $theme-colors {
     }
 }
 
-.text-align-center{
-    text-align: center;
+
+@each $var in (left,right,center,start,end) {
+    .text-align-#{$var}{
+        text-align: #{$var};
+    }
 }
+
 
 .text-short {
     overflow: hidden;

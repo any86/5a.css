@@ -1,11 +1,10 @@
 .a-button-group {
+    @extend .pos-r;
     display: flex;
-
 }
 
 .a-button-group--block {
     border-radius: $button-radius;
-
     .a-button {
         border-radius: 0 !important;
     }

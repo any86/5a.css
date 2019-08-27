@@ -1,0 +1,20 @@
+.a-dropdown{
+    // pointer-events: none;
+    @extend .pos-a, .px-1, .full-width;
+    z-index: $z-index-dropdown;
+    bottom: 0;
+    right:0;
+    transform: translate(0, 100%);
+    color:$dropdown-color;
+    background-color:$backgroundColor;
+    border-radius: $radius;
+    box-shadow: 0 2px 8px rgba(#000,0.1), 0 0 0 1px rgba(#ccc,0.05);
+    // &:after{
+    //     @include triangle(5px,$backgroundColor,top);
+    //     content: '';
+    //     position: absolute;
+    //     top:0;
+    //     left:50%;
+    //     transform: translate(-50%, -100%);
+    // }
+}

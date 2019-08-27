@@ -1,11 +1,11 @@
-@mixin iosLoading($size:1em, $duration:2000, $count:12) {
+@mixin iosLoading($size:1em, $duration:1000, $count:12) {
     &-ios {
         position: relative;
         display: inline-block;
         align-self: center;
         width: $size;
         height: $size;
-        color: currentColor;
+        color: #aaa;
         vertical-align: -0.14em;
 
         >span {
@@ -14,8 +14,7 @@
             top: $size/2;
             left: $size/2;
             display: block;
-            color: currentColor;
-            background-color: #ccc;
+            background-color:currentColor;
             width: 0.2*$size;
             height: 0.06*$size;
             border-radius: 0.06*$size;
