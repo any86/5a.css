@@ -1,16 +1,18 @@
 .a-list {
+
+    // @extend .pb-2;
     &__title {
         @extend .title-3,
-        .pl-1;
+        .pl-1,
+        .mt-2;
         font-weight: bold;
         color: #000;
     }
 
     &__item {
-
         display: flex;
         >.item__start {
-            @extend .ml-1;
+            @extend .ml-1, .mt-1;
             display: block;
             width: 3em;
             height: 3em;
@@ -25,13 +27,14 @@
             }
         }
 
+
         >.item__start+.item__content {
             @extend .pl-0,
             .ml-1;
         }
 
         >.item__content {
-            @extend .pl-2;
+            @extend .pl-2, .py-1;
             width: 100%;
             flex: 1;
             display: table;
@@ -47,20 +50,16 @@
         }
     }
 
+
+
     &__item+&__item {
-        >.item__start{
-            @extend .mt-2;
-        }
         >.item__content {
-            @extend .pt-2;
             @include thinBorder('top');
         }
     }
 
-
     &__item,
     &__title {
         width: 100%;
-        @extend .pt-2
     }
 }
