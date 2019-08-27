@@ -46,7 +46,7 @@
 .ion-ios-arrow-dropright-circle:before,
 .ion-ios-arrow-dropup:before,
 .ion-ios-arrow-dropup-circle:before,
-.ion-ios-arrow-forward:before, .a-collapse__item > .item__header > .header__icon-arrow:before, .a-list__item > .item__content > .icon-arrow:before, .a-nav-bar__icon-arrow:before, .a-nav-bar--reverse .a-nav-bar__icon-arrow:before,
+.ion-ios-arrow-forward:before, .a-collapse__item > .item__header > .header__icon-arrow:before, .a-nav-bar__icon-arrow:before, .a-nav-bar--reverse .a-nav-bar__icon-arrow:before,
 .ion-ios-arrow-round-back:before,
 .ion-ios-arrow-round-down:before,
 .ion-ios-arrow-round-forward:before,
@@ -96,7 +96,7 @@
 .ion-ios-chatbubbles:before,
 .ion-ios-checkbox:before,
 .ion-ios-checkbox-outline:before,
-.ion-ios-checkmark:before,
+.ion-ios-checkmark:before, .a-toast--success .a-toast__icon:before,
 .ion-ios-checkmark-circle:before,
 .ion-ios-checkmark-circle-outline:before,
 .ion-ios-clipboard:before,
@@ -800,7 +800,7 @@
 .ion-ios-arrow-dropup-circle:before {
   content: "\f12d"; }
 
-.ion-ios-arrow-forward:before, .a-collapse__item > .item__header > .header__icon-arrow:before, .a-list__item > .item__content > .icon-arrow:before, .a-nav-bar__icon-arrow:before, .a-nav-bar--reverse .a-nav-bar__icon-arrow:before {
+.ion-ios-arrow-forward:before, .a-collapse__item > .item__header > .header__icon-arrow:before, .a-nav-bar__icon-arrow:before, .a-nav-bar--reverse .a-nav-bar__icon-arrow:before {
   content: "\f3d1"; }
 
 .ion-ios-arrow-round-back:before {
@@ -950,7 +950,7 @@
 .ion-ios-checkbox-outline:before {
   content: "\f147"; }
 
-.ion-ios-checkmark:before {
+.ion-ios-checkmark:before, .a-toast--success .a-toast__icon:before {
   content: "\f3ff"; }
 
 .ion-ios-checkmark-circle:before {
@@ -2826,7 +2826,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
 
 a {
   text-decoration: none;
@@ -2922,7 +2922,7 @@ li {
 .mt-1 {
   margin-top: 8px !important; }
 
-.mt-2, .a-list__item + .a-list__item > .item__start {
+.mt-2, .a-list__title, .a-list__item > .item__start {
   margin-top: 16px !important; }
 
 .mt-3 {
@@ -2961,7 +2961,7 @@ li {
 .mb-0 {
   margin-bottom: 0px !important; }
 
-.mb-1 {
+.mb-1, .a-toast--loading .a-toast__icon {
   margin-bottom: 8px !important; }
 
 .mb-2 {
@@ -3083,7 +3083,7 @@ li {
 .pt-1, .a-card__content {
   padding-top: 8px !important; }
 
-.pt-2, .a-list__item + .a-list__item > .item__content, .a-list__item, .a-list__title, .a-card__header {
+.pt-2, .a-card__header {
   padding-top: 16px !important; }
 
 .pt-3 {
@@ -3169,7 +3169,7 @@ li {
   padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
-.px-1 {
+.px-1, .a-dropdown {
   padding-left: 8px !important;
   padding-right: 8px !important; }
 
@@ -3181,7 +3181,63 @@ li {
   padding-left: 16px !important;
   padding-right: 16px !important; }
 
-.py-2 {
+.py-2, .a-list__item > .item__content {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important; }
+
+.px-3 {
+  padding-left: 24px !important;
+  padding-right: 24px !important; }
+
+.py-3 {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important; }
+
+.px-4 {
+  padding-left: 32px !important;
+  padding-right: 32px !important; }
+
+.py-4 {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important; }
+
+.px-5 {
+  padding-left: 40px !important;
+  padding-right: 40px !important; }
+
+.py-5 {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important; }
+
+.px-6 {
+  padding-left: 48px !important;
+  padding-right: 48px !important; }
+
+.py-6 {
+  padding-top: 48px !important;
+  padding-bottom: 48px !important; }
+
+.px-0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+.py-0 {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important; }
+
+.px-1, .a-dropdown {
+  padding-left: 8px !important;
+  padding-right: 8px !important; }
+
+.py-1, .a-input-reset {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important; }
+
+.px-2, .a-card__header, .a-card__content, .a-card__button {
+  padding-left: 16px !important;
+  padding-right: 16px !important; }
+
+.py-2, .a-list__item > .item__content {
   padding-top: 16px !important;
   padding-bottom: 16px !important; }
 
@@ -3259,8 +3315,20 @@ li {
 .title-6, .text-size-6 {
   font-size: 12px; }
 
+.text-align-left {
+  text-align: left; }
+
+.text-align-right {
+  text-align: right; }
+
 .text-align-center {
   text-align: center; }
+
+.text-align-start {
+  text-align: start; }
+
+.text-align-end {
+  text-align: end; }
 
 .text-short {
   overflow: hidden; }
@@ -3285,6 +3353,9 @@ li {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical; }
+
+.text-lg {
+  font-size: 64px; }
 
 .bg-primary {
   background-color: #3190ff !important; }
@@ -3366,8 +3437,27 @@ table.table {
 .rotate-270 {
   transform: rotate(270deg); }
 
-.full-width, .a-input-reset {
+.pos-r, .a-button-group {
+  position: relative; }
+
+.pos-a, .a-dropdown {
+  position: absolute; }
+
+.pos-f {
+  position: fixed; }
+
+.pos-s {
+  position: sticky; }
+
+.full-width, .a-input-reset, .a-dropdown {
   width: 100% !important; }
+
+.full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
 
 .center-block {
   margin-left: auto !important;
@@ -3420,7 +3510,7 @@ table.table {
   align-self: center;
   width: 1em;
   height: 1em;
-  color: currentColor;
+  color: #aaa;
   vertical-align: -0.14em; }
   .a-loading-ios > span {
     overflow: hidden;
@@ -3428,59 +3518,58 @@ table.table {
     top: 0.5em;
     left: 0.5em;
     display: block;
-    color: currentColor;
-    background-color: #ccc;
+    background-color: currentColor;
     width: 0.2em;
     height: 0.06em;
     border-radius: 0.06em; }
   .a-loading-ios > span:nth-of-type(1) {
     transform: rotate(0deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
+    animation: ios 1000ms linear infinite;
     animation-delay: 0ms; }
   .a-loading-ios > span:nth-of-type(2) {
     transform: rotate(30deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 166.66667ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 83.33333ms; }
   .a-loading-ios > span:nth-of-type(3) {
     transform: rotate(60deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 333.33333ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 166.66667ms; }
   .a-loading-ios > span:nth-of-type(4) {
     transform: rotate(90deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 500ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 250ms; }
   .a-loading-ios > span:nth-of-type(5) {
     transform: rotate(120deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 666.66667ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 333.33333ms; }
   .a-loading-ios > span:nth-of-type(6) {
     transform: rotate(150deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 833.33333ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 416.66667ms; }
   .a-loading-ios > span:nth-of-type(7) {
     transform: rotate(180deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 1000ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 500ms; }
   .a-loading-ios > span:nth-of-type(8) {
     transform: rotate(210deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 1166.66667ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 583.33333ms; }
   .a-loading-ios > span:nth-of-type(9) {
     transform: rotate(240deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 1333.33333ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 666.66667ms; }
   .a-loading-ios > span:nth-of-type(10) {
     transform: rotate(270deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 1500ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 750ms; }
   .a-loading-ios > span:nth-of-type(11) {
     transform: rotate(300deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 1666.66667ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 833.33333ms; }
   .a-loading-ios > span:nth-of-type(12) {
     transform: rotate(330deg) translateX(0.3em);
-    animation: ios 2000ms linear infinite;
-    animation-delay: 1833.33333ms; }
+    animation: ios 1000ms linear infinite;
+    animation-delay: 916.66667ms; }
 
 @keyframes ios {
   from {
@@ -3526,7 +3615,7 @@ table.table {
   90% {
     stroke: #ffa700; } }
 
-.a-loading-half, .a-button--loading::before, .a-toast--loading .a-toast__icon {
+.a-loading-android-half, .a-button--loading::before, .a-toast--loading .a-toast__icon {
   display: inline-block;
   height: 1em;
   width: 1em;
@@ -3534,7 +3623,8 @@ table.table {
   border-style: solid;
   border-width: 0.1em;
   border-color: transparent currentColor transparent transparent;
-  animation: rotate 0.6s  linear infinite; }
+  animation: rotate 0.6s  linear infinite;
+  vertical-align: middle; }
 
 .a-button-group {
   display: flex; }
@@ -3687,7 +3777,7 @@ table.table {
     width: 100%;
     flex: 1;
     display: table; }
-    .a-list__item > .item__content > .icon-arrow {
+    .a-list__item > .item__content > .icon {
       vertical-align: middle;
       display: table-cell;
       font-size: 1.2em;
@@ -3850,7 +3940,7 @@ table.table {
   background-color: #fff;
   border: 1px solid #3190ff;
   vertical-align: middle; }
-  .a-checkbox > .ion-ios-checkmark {
+  .a-checkbox > .ion-ios-checkmark, .a-toast--success .a-checkbox > .a-toast__icon {
     width: 24px;
     height: 24px;
     line-height: 24px;
@@ -3859,13 +3949,13 @@ table.table {
     transform-origin: center center;
     transition: transform 200ms, color 200ms;
     display: inline-block; }
-  .a-checkbox--checked > .ion-ios-checkmark {
+  .a-checkbox--checked > .ion-ios-checkmark, .a-toast--success .a-checkbox--checked > .a-toast__icon {
     color: #3190ff;
     transform: scale(2); }
   .a-checkbox--disabled {
     border-color: #ced3d8;
     background-color: #ebedee; }
-    .a-checkbox--disabled > .ion-ios-checkmark {
+    .a-checkbox--disabled > .ion-ios-checkmark, .a-toast--success .a-checkbox--disabled > .a-toast__icon {
       color: #ced3d8; }
 
 .a-radio {
@@ -4026,7 +4116,7 @@ table.table {
       transform: translate(-100%, -50%); }
 
 .a-toast {
-  position: fixed;
+  position: absolute;
   display: inline-block;
   max-width: 60%;
   left: 50%;
@@ -4041,11 +4131,31 @@ table.table {
   border-radius: 2px;
   font-size: 14px; }
   .a-toast__icon {
-    display: block; }
-  .a-toast--fail .a-toast__icon {
-    font-size: 5em;
+    display: inline;
+    vertical-align: middle;
+    font-size: 2em;
     line-height: 0.6em; }
-    .a-toast--fail .a-toast__icon:before {
+    .a-toast__icon:before {
+      line-height: 0.6em; }
+  .a-toast--block .a-toast__icon {
+    display: block !important;
+    margin: auto;
+    font-size: 5em !important;
+    line-height: 0.6em; }
+    .a-toast--block .a-toast__icon:before {
       line-height: 0.6em; }
   .a-toast--loading .a-toast__icon {
-    font-size: 1em; }
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 0.5em;
+    border-width: 0.05em; }
+
+.a-dropdown {
+  z-index: 1003;
+  bottom: 0;
+  right: 0;
+  transform: translate(0, 100%);
+  color: #000;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(204, 204, 204, 0.05); }

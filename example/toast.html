@@ -12,7 +12,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Toast</title>
     <link rel="stylesheet" href="../dist/main.css">
-
+    <style>
+    section{
+        position: relative;
+        height:20vh;
+        border-bottom: 1px solid #efefef;
+    }
+    </style>
 </head>
 
 <body class="bg-white">
@@ -23,16 +29,58 @@
     </header>
     <!-- 头 -->
 
-    <!-- <span class="a-toast a-toast--success">
-        <i class="a-toast__icon"></i>
-        添加成功!
-    </span> -->
+
+    <!-- success -->
+    <section >
+        <span class="a-toast a-toast--success" >
+            <i class="a-toast__icon"></i>
+            添加成功!
+        </span>
+    </section>
+
+    <!-- error -->
+    <section >
+        <span class="a-toast a-toast--fail" >
+            <i class="a-toast__icon"></i>
+            添加失败!
+        </span>
+    </section>
+
+    <!-- loading -->
+    <section>
+        <span class="a-toast a-toast--loading">
+            <i class="a-toast__icon"></i>
+            加载中...
+        </span>
+    </section>
 
 
-    <span class="a-toast a-toast--loading">
-        <i class="a-toast__icon"></i>
-        加载中...
-    </span>
+
+    <!-- success -->
+    <section >
+        <span class="a-toast a-toast--success a-toast--block" >
+            <i class="a-toast__icon"></i>
+            添加成功!
+        </span>
+    </section>
+
+    <!-- error -->
+    <section >
+        <span class="a-toast a-toast--fail a-toast--block" >
+            <i class="a-toast__icon"></i>
+            添加失败!
+        </span>
+    </section>
+
+    <!-- loading -->
+    <section>
+        <span class="a-toast a-toast--loading a-toast--block">
+            <i class="a-toast__icon"></i>
+            加载中...
+        </span>
+    </section>
+
+
 </body>
 
 </html>
