@@ -25,3 +25,15 @@ $short in $directions {
         padding-bottom: $space * $i !important;
     }
 }
+
+@for $i from 0 to 7 {
+    .px-#{$i} {
+        padding-left: $space * $i !important;
+        padding-right: $space * $i !important;
+    }
+
+    .py-#{$i} {
+        padding-top: $space * $i !important;
+        padding-bottom: $space * $i !important;
+    }
+}

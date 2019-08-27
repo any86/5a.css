@@ -20,10 +20,25 @@
         vertical-align: middle;
         font-size: 2em;
         line-height: 0.6em;
+
         &:before {
+
             line-height: 0.6em;
         }
 
+    }
+
+    &--block {
+        .a-toast__icon {
+            display: block !important;
+            margin: auto;
+            font-size: 5em !important;
+            line-height: 0.6em;
+            &:before {
+                line-height: 0.6em;
+            }
+
+        }
     }
 
     &--fail {
@@ -42,8 +57,11 @@
 
     &--loading {
         .a-toast__icon {
-            @extend .a-loading-half;
-            font-size: 1em;
+            @extend .a-loading-half, .mb-1;
+            height: 0.5em;
+            width: 0.5em;
+            border-radius: 0.5em;
+            border-width: 0.05em;
         }
     }
 }
