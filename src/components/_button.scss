@@ -57,7 +57,7 @@
 
     &--loading {
         &::before {
-            @extend .a-loading-half, .mr-1;
+            @extend .a-loading-android-half, .mr-1;
             content: '';
             height: 0.6em;
             width: 0.6em;

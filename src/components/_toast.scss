@@ -57,7 +57,7 @@
 
     &--loading {
         .a-toast__icon {
-            @extend .a-loading-half, .mb-1;
+            @extend .a-loading-android-half, .mb-1;
             height: 0.5em;
             width: 0.5em;
             border-radius: 0.5em;

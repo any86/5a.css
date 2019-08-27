@@ -25,3 +25,7 @@ $value in $theme-colors {
         @include ellipsis($i)
     }
 }
+
+.text-lg{
+    font-size: 64px;
+}
