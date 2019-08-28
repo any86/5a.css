@@ -1,5 +1,5 @@
-
 .a-list {
+
     // @extend .pb-2;
     &__title {
         @extend .title-3,
@@ -11,9 +11,11 @@
 
     &__item {
         display: flex;
+
         >.item__start {
             // 内部间隙因子
-            @extend .ml-1, .mt-#{$space-multiple};
+            @extend .ml-1,
+            .mt-#{$space-multiple};
             display: block;
             width: 3em;
             height: 3em;
@@ -36,7 +38,8 @@
 
         >.item__content {
             // .py-1决定内部间隙
-            @extend .pl-2, .py-#{$space-multiple};
+            @extend .pl-2,
+            .py-#{$space-multiple};
             width: 100%;
             flex: 1;
             display: table;

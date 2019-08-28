@@ -1,0 +1,112 @@
+.a-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .a-grid__item {
+        @extend .text-align-center,
+        .pos-r;
+
+        >.item__content {
+            @extend .d-flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@mixin grid($row:3, $column:3, $hasBorder:false, $isSquare:true) {
+    @extend .a-grid;
+
+    .a-grid__item {
+
+        flex-basis: 100%/$column;
+
+        @if($isSquare) {
+            padding-bottom: 100%/$column;
+            height: 0;
+        }
+
+        >.item__content {
+
+            @if($isSquare) {
+                @extend .full;
+            }
+        }
+    }
+
+    @for $index from 1 to (($row - 1) * $column + 1) {
+        .a-grid__item:nth-child(#{$index}) {
+            @if($hasBorder) {
+                border-bottom: 1px solid #eee;
+            }
+        }
+    }
+
+    @for $index from 1 to $column {
+        .a-grid__item:nth-child(#{$column}n + #{$index}) {
+            @if($hasBorder) {
+                border-right: 1px solid #eee;
+            }
+        }
+    }
+}
+
+
+
+// @mixin grid($row:3, $column:3, $hasBorder:false, $isSquare:true) {
+//     display: flex;
+//     flex-wrap: wrap;
+//     width: 100%;
+
+//     .a-grid__item {
+//         @extend .text-align-center,
+//         .pos-r;
+//         flex-basis: 100%/$column;
+
+//         @if($isSquare) {
+//             padding-bottom: 100%/$column;
+//             height: 0;
+//         }
+
+//         >.item__content {
+
+//             @if($isSquare) {
+//                 @extend .full;
+//             }
+
+//             @extend .d-flex;
+//             flex-flow: column;
+//             align-items: center;
+//             justify-content: center;
+//         }
+//     }
+
+
+//     @for $index from 1 to (($row - 1) * $column + 1) {
+//         .a-grid__item:nth-child(#{$index}) {
+//             @if($hasBorder) {
+//                 border-bottom: 1px solid #eee;
+//             }
+//         }
+//     }
+
+//     @for $index from 1 to $column {
+//         .a-grid__item:nth-child(#{$column}n + #{$index}) {
+//             @if($hasBorder) {
+//                 border-right: 1px solid #eee;
+//             }
+//         }
+//     }
+// }
+
+
+
+.a-grid-3-3 {
+    @include grid(3, 3, true);
+}
+
+.a-grid-2-5 {
+    @include grid(2, 5, false, false);
+}
