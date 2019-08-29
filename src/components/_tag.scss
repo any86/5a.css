@@ -1,1 +1,18 @@
-.a-tag{}
+.a-tag{
+    padding:$space/2;
+    @extend  .d-inline-block, .radius-1, .text-size-6;
+}
+
+@each $k, $color in $theme-colors {
+    .a-tag--#{$k} {
+        color: color-yiq($color);
+        background-color: $color;
+    }
+
+    .a-tag--#{$k}.a-tag--outline{
+        border:1px solid $color;
+        color: $color;
+        background-color:$white;
+    }
+
+}
