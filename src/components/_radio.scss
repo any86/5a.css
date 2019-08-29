@@ -22,35 +22,36 @@
     transition: all 200ms;
     height: $radio-size;
     width: $radio-size;
-    border: 1px solid $primary;
+    border: 1px solid $gray-300;
     background-color: $white;
 
-    &::after {
+    &:after {
         content: '';
         margin: auto;
         @extend .d-block;
         border-radius: $radio-size/2;
         height: $radio-size/2;
         width: $radio-size/2;
-        transition: transform 200ms;
+        transition: transform $animateDuration;
         transform: scale(0);
         background-color: $primary;
     }
 
     &--checked {
         z-index: 1;
-        &::after {
+        border-color:$primary;
+        &:after {
             transform: scale(1);
         }
 
     }
 
     &--disabled {
-        background-color: lighten($dark, 70%);
-        border-color: lighten($dark, 70%);
+        background-color: $gray-200;
+        border-color: $gray-300;
 
-        &::after {
-            background-color: lighten($dark, 60%);
+        &:after {
+            background-color: $gray-400;
         }
     }
 
