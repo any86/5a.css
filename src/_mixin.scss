@@ -1,172 +1,236 @@
 @mixin ellipsis($row_count: 1) {
-  @if $row_count <=1 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  } @else {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: $row_count;
-    -webkit-box-orient: vertical;
-  }
+    @if $row_count <=1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    @else {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $row_count;
+        -webkit-box-orient: vertical;
+    }
 }
 
 @mixin triangle($size, $color, $direction) {
-  width: 0;
-  height: 0;
+    width: 0;
+    height: 0;
 
-  @if top==$direction {
-    border-left: $size solid transparent;
-    border-right: $size solid transparent;
-    border-bottom: $size solid $color;
-  } @else if right==$direction {
-    border-top: $size solid transparent;
-    border-bottom: $size solid transparent;
-    border-left: $size solid $color;
-  } @else if bottom==$direction {
-    border-left: $size solid transparent;
-    border-right: $size solid transparent;
-    border-top: $size solid $color;
-  } @else if left==$direction {
-    border-top: $size solid transparent;
-    border-bottom: $size solid transparent;
-    border-right: $size solid $color;
-  }
-}
-
-@mixin border-1px(
-  $dirs: (
-    top,
-    left,
-    right,
-    bottom
-  ),
-  $color: #000,
-  $radius: 0
-) {
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
-    @each $dir in $dirs {
-      border-#{$dir}: 1px solid $color;
+    @if top==$direction {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
     }
 
-    border-radius: $radius;
-    pointer-events: none;
-    width: 200%;
-    height: 200%;
-    padding: 1px;
-    box-sizing: border-box;
-    transform-origin: 0 0;
-    transform: scale(0.5);
-  }
-}
-
-@mixin thinBorder($direction: bottom, $color: #ccc) {
-  border-#{$direction}: 1px solid $color;
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    & {
-      position: relative;
-
-      @if ("top" ==$direction) {
-        border-top: none;
-      }
-
-      @if ("bottom" ==$direction) {
-        border-bottom: none;
-      }
+    @else if right==$direction {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
     }
 
+    @else if bottom==$direction {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+    }
+
+    @else if left==$direction {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+    }
+}
+
+@mixin border-1px($dirs: (top,
+        left,
+        right,
+        bottom),
+    $color: #000,
+    $radius: 0) {
     &:after {
-      content: "";
-      display: block;
-      position: absolute;
-
-      @if ("top" ==$direction) {
+        content: "";
+        position: absolute;
         top: 0;
-      }
-
-      @if ("bottom" ==$direction) {
+        left: 0;
         bottom: 0;
-      }
+        right: 0;
 
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: $color;
-      transform: scaleY(0.5);
-      transform-origin: 0 0;
-      pointer-events: none;
-    }
-  }
+        @each $dir in $dirs {
+            border-#{$dir}: 1px solid $color;
+        }
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    &:after {
-      transform: scaleY(0.33);
+        border-radius: $radius;
+        pointer-events: none;
+        width: 200%;
+        height: 200%;
+        padding: 1px;
+        box-sizing: border-box;
+        transform-origin: 0 0;
+        transform: scale(0.5);
     }
-  }
+}
+
+@mixin thinBorderOld($direction: bottom, $color: #ccc) {
+    border-#{$direction}: 1px solid $color;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        & {
+            position: relative;
+
+            @if ("top"==$direction) {
+                border-top: none;
+            }
+
+            @if ("bottom"==$direction) {
+                border-bottom: none;
+            }
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+
+            @if ("top"==$direction) {
+                top: 0;
+            }
+
+            @if ("bottom"==$direction) {
+                bottom: 0;
+            }
+
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $color;
+            transform: scaleY(0.5);
+            transform-origin: 0 0;
+            pointer-events: none;
+        }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+        &:after {
+            transform: scaleY(0.33);
+        }
+    }
+}
+
+
+@mixin thinBorder($directions: bottom, $color: #ccc) {
+    // 是否只有一个方向
+    $isOnlyOneDir: string==type-of($directions);
+
+    @if ($isOnlyOneDir) {
+        $directions: ($directions);
+    }
+
+    @each $direction in $directions {
+        border-#{$direction}: 1px solid $color;
+    }
+
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        & {
+            position: relative;
+
+            // 删除1像素密度比下的边框
+            @each $direction in $directions {
+                border-#{$direction}: none;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 200%;
+            height: 200%;
+            transform: scaleY(0.5);
+            box-sizing: border-box;
+            padding: 1px;
+            transform-origin: 0 0;
+            pointer-events: none;
+            border: 0 solid $color;
+
+            @each $direction in $directions {
+                border-#{$direction}-width: 1px;
+            }
+        }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+        &:after {
+            width: 300%;
+            height: 300%;
+            transform: scaleY(0.33);
+        }
+    }
 }
 
 @mixin hidden($isDeep: false) {
-  @if $isDeep {
-    height: 0;
-    opacity: 0;
-  }
+    @if $isDeep {
+        height: 0;
+        opacity: 0;
+    }
 
-  display: none;
+    display: none;
 }
 
+/**
+* 等边三角形
+* @param {String} 尺寸
+* @param {Color} 颜色
+* @param {String} 方向
+*/
 @mixin triangle($size: 5px, $color: rgba(0, 0, 0, 0.6), $direction: bottom) {
-  width: 0;
-  height: 0;
-  border-style: solid;
+    width: 0;
+    height: 0;
+    border-style: solid;
 
-  @if ("bottom" ==$direction) {
-    border-width: 5px 5px 0 5px;
-    border-color: $color transparent transparent transparent;
-  }
+    @if ("bottom"==$direction) {
+        border-width: 5px 5px 0 5px;
+        border-color: $color transparent transparent transparent;
+    }
 
-  @if ("top" ==$direction) {
-    border-width: 0 5px 5px 5px;
-    border-color: transparent transparent $color transparent;
-  }
+    @if ("top"==$direction) {
+        border-width: 0 5px 5px 5px;
+        border-color: transparent transparent $color transparent;
+    }
 
-  @if ("right" ==$direction) {
-    border-width: 5px 0 5px 5px;
-    border-color: transparent transparent transparent $color;
-  }
+    @if ("right"==$direction) {
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent $color;
+    }
 
-  @if ("left" ==$direction) {
-    border-width: 5px 5px 5px 0;
-    border-color: transparent $color transparent transparent;
-  }
+    @if ("left"==$direction) {
+        border-width: 5px 5px 5px 0;
+        border-color: transparent $color transparent transparent;
+    }
 }
 
+/**
+* 棋盘背景
+* @param {Color} 背景色
+*/
 @mixin bgChessboard($color: #aaa) {
-  background-image: linear-gradient(
-      45deg,
-      $color 25%,
-      transparent 25%,
-      transparent 75%,
-      $color 75%,
-      $color
-    ),
-    linear-gradient(
-      45deg,
-      $color 26%,
-      transparent 26%,
-      transparent 74%,
-      $color 74%,
-      $color
-    );
-  background-size: 10vw 10vw;
-  background-position: 0 0, 5vw 5vw;
+    background-image: linear-gradient(45deg,
+            $color 25%,
+            transparent 25%,
+            transparent 75%,
+            $color 75%,
+            $color),
+        linear-gradient(45deg,
+            $color 26%,
+            transparent 26%,
+            transparent 74%,
+            $color 74%,
+            $color);
+    background-size: 10vw 10vw;
+    background-position: 0 0, 5vw 5vw;
 }

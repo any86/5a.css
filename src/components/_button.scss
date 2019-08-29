@@ -5,6 +5,7 @@
 
 .a-button-group--block {
     border-radius: $button-radius;
+
     .a-button {
         border-radius: 0 !important;
     }
@@ -56,11 +57,12 @@
 
     &--loading {
         &::before {
-            @extend .a-loading-android-half, .mr-1;
+            @extend .a-loading-android-half,
+            .mr-1;
             content: '';
             height: 0.6em;
             width: 0.6em;
-            
+
         }
 
     }
@@ -75,6 +77,7 @@ $color in $theme-colors {
 
         &:active {
             background-color: darken($color, 6%);
+            box-shadow: 0 0 0 3px rgba($color, .4);
         }
 
         &:not(.a-button--full):focus {
