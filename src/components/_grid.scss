@@ -36,71 +36,49 @@
         }
     }
 
-    @for $index from 1 to (($row - 1) * $column + 1) {
-        .a-grid__item:nth-child(#{$index}) {
-            @if($hasBorder) {
-                border-bottom: 1px solid #eee;
+    @if($hasBorder) {
+        @for $i from 1 through $row {
+            @for $j from 1 through $column {
+                // 当前格索引
+                $index: ($i - 1) * $column + $j;
+
+                .a-grid__item:nth-child(#{$index}) {
+                    @if $j < $column {
+                        @if $i < $row {
+
+                            @include thinBorder((right, bottom), #ccc);
+                        }
+
+                        @else {
+                            @include thinBorder((right), #ccc);
+                        }
+                    }
+                    @else if $i < $row {
+                        @include thinBorder((bottom), #ccc);
+                    }
+                }
             }
         }
     }
 
-    @for $index from 1 to $column {
-        .a-grid__item:nth-child(#{$column}n + #{$index}) {
-            @if($hasBorder) {
-                border-right: 1px solid #eee;
-            }
-        }
-    }
+
+    // @for $index from 1 to (($row - 1) * $column + 1) {
+    //     .a-grid__item:nth-child(#{$index}) {
+    //         @if($hasBorder) {
+    //             @include thinBorder(bottom, #ccc);
+    //             // border-bottom: 1px solid #ccc;
+    //         }
+    //     }
+    // }
+
+    // @for $index from 1 to $column {
+    //     .a-grid__item:nth-child(#{$column}n + #{$index}) {
+    //         @if($hasBorder) {
+    //             @include thinBorder(right, #ccc);
+    //         }
+    //     }
+    // }
 }
-
-
-
-// @mixin grid($row:3, $column:3, $hasBorder:false, $isSquare:true) {
-//     display: flex;
-//     flex-wrap: wrap;
-//     width: 100%;
-
-//     .a-grid__item {
-//         @extend .text-align-center,
-//         .pos-r;
-//         flex-basis: 100%/$column;
-
-//         @if($isSquare) {
-//             padding-bottom: 100%/$column;
-//             height: 0;
-//         }
-
-//         >.item__content {
-
-//             @if($isSquare) {
-//                 @extend .full;
-//             }
-
-//             @extend .d-flex;
-//             flex-flow: column;
-//             align-items: center;
-//             justify-content: center;
-//         }
-//     }
-
-
-//     @for $index from 1 to (($row - 1) * $column + 1) {
-//         .a-grid__item:nth-child(#{$index}) {
-//             @if($hasBorder) {
-//                 border-bottom: 1px solid #eee;
-//             }
-//         }
-//     }
-
-//     @for $index from 1 to $column {
-//         .a-grid__item:nth-child(#{$column}n + #{$index}) {
-//             @if($hasBorder) {
-//                 border-right: 1px solid #eee;
-//             }
-//         }
-//     }
-// }
-
 
 
 .a-grid-3-3 {

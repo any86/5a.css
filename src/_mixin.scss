@@ -151,7 +151,7 @@
             display: block;
             width: 200%;
             height: 200%;
-            transform: scaleY(0.5);
+            transform: scale(0.5);
             box-sizing: border-box;
             padding: 1px;
             transform-origin: 0 0;
@@ -168,7 +168,7 @@
         &:after {
             width: 300%;
             height: 300%;
-            transform: scaleY(0.33);
+            transform: scale(0.33);
         }
     }
 }
