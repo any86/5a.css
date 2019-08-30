@@ -7,7 +7,7 @@ $value in $theme-colors {
 
 @each $font-size in $font-sizes {
     $i :index($font-sizes, $font-size);
-    .title-#{$i},.text-size-#{$i} {
+    .font-#{$i},.text-size-#{$i} {
         font-size: $font-size;
     }
 }

@@ -14,13 +14,13 @@
 
     > .header {
       &__title {
-        @extend .title-3;
+        @extend .font-3;
         font-weight: bold;
         color: #000;
       }
 
       &__subtitle {
-        @extend .title-5;
+        @extend .font-5;
         color: $secondary;
       }
     }
