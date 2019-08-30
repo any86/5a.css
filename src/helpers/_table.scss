@@ -3,33 +3,37 @@ table.table {
     border-spacing: 0;
     border-collapse: collapse;
     background: #fff;
+
     tr {
         border-bottom: 1px solid #dbdbdb;
         width: 100%;
-        td,th{
-            padding:$space;
+
+        td,
+        th {
+            padding: $space;
         }
-        th{
+
+        th {
             text-align: start;
         }
     }
-    &.table-bordered{
+
+    &.table-bordered {
         border: 1px solid #dbdbdb;
     }
-    &.table-striped{
-        tbody tr:nth-of-type(2n+1){
-            background-color:  #f9f9f9;
+
+    &.table-striped {
+        tbody tr:nth-of-type(2n+1) {
+            background-color: #f9f9f9;
         }
-        
+
     }
 
     &.table-hover {
         tbody tr {
-          &:hover {
-            background-color: #dbdbdb;
-          }
+            &:hover {
+                background-color: #dbdbdb;
+            }
         }
-      }
+    }
 }
-
-

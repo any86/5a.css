@@ -1,8 +1,21 @@
+
 {
-  "name": "@3a/css",
+  "name": "@c3a/css",
+  "version": "0.0.1",
+  "main": "dist/main.css",
+  "directories": {
+    "example": "example"
+  },
+  "description": "兼容小程序的css库",
+  "files": [
+    "dist",
+    "src",
+    "fonts"
+  ],
   "scripts": {
     "build:wx": "node ./scripts/wx",
     "build": "node-sass ./src/main.scss ./dist/main.css",
+    "build:helpers": "node-sass ./src/helpers.scss ./dist/helpers.css",
     "dev": "npm run build -- --watch",
     "release:demo": "npm run build:wx && node ./scripts/demo.js"
   },
@@ -12,5 +25,20 @@
     "ionicons": "^4.6.2",
     "node-sass": "^4.12.0",
     "shelljs": "^0.8.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://any86@github.com/any86/3a.css.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "ui"
+  ],
+  "author": "Russell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/any86/3a.css/issues"
+  },
+  "homepage": "https://github.com/any86/3a.css#readme"
 }
