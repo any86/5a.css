@@ -2,17 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // &:before{
-    //     box-sizing: border-box;
-    // }
-    // &:after{
-    //     box-sizing: border-box;
-    // }
 }
 
 [v-cloak] {
     display: none;
 }
+
 
 // @import 'iconfont/iconfont.scss';
 @import 'node_modules/ionicons/dist/scss/ionicons.scss';
@@ -47,3 +42,18 @@
 @import 'components/_grid.scss';
 @import 'components/_steps.scss';
 @import 'components/_tag.scss';
+
+
+:root {
+    @each $name,
+    $color in $theme-colors {
+        --color-#{$name}: #{$color};
+    }
+    
+    --space: #{$space};
+    --radius: #{$radius};
+
+
+
+
+}
