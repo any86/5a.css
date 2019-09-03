@@ -2836,7 +2836,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
 
 a {
   text-decoration: none;
@@ -2885,8 +2885,8 @@ li {
 .d-inline {
   display: inline !important; }
 
-.d-inline-block, .a-collapse__item > .item__header > .header__icon-arrow, .a-input-reset, .a-tag {
-  display: inline-block; }
+.d-inline-block, .a-collapse__item > .item__header > .header__icon-arrow, .a-input-reset, .a-tag, .a-skeleton-circle {
+  display: inline-block !important; }
 
 .flex-1 {
   flex: 1; }
@@ -3507,6 +3507,27 @@ table.table {
 
 .v-align-middle, .a-steps__item > .item__cell {
   vertical-align: middle; }
+
+:root {
+  --color-primary: #3190ff;
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-info: #17a2b8;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+  --space: 8px;
+  --radius: 4px; }
 
 .a-collapse {
   overflow: hidden;
@@ -4598,6 +4619,26 @@ table.table {
   color: #343a40;
   background-color: #fff; }
 
+.a-skeleton-rect, .a-skeleton-circle {
+  overflow: hidden;
+  position: relative;
+  background: #e9ecef;
+  display: block;
+  height: 16px;
+  width: 100%;
+  animation: skeletonRect 2s linear infinite; }
+
+@keyframes skeletonRect {
+  50% {
+    opacity: 0.6; }
+  75% {
+    opacity: 0.6; } }
+
+.a-skeleton-circle {
+  border-radius: 100%;
+  height: 60px;
+  width: 60px; }
+
 :root {
   --color-primary: #3190ff;
   --color-secondary: #6c757d;
@@ -4607,5 +4648,14 @@ table.table {
   --color-danger: #dc3545;
   --color-light: #f8f9fa;
   --color-dark: #343a40;
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
   --space: 8px;
   --radius: 4px; }
