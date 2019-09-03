@@ -1,36 +1,47 @@
 .a-card {
-  width: 100%;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  background-color: $background-color;
-  border-radius: $radius * 2;
-  overflow: hidden;
-  &__image {
-    display: block;
-    width: 100%;
-  }
+    @extend .shadow-down-lg;
+    @extend .full-width;
 
-  &__header {
-    @extend .pt-2, .px-2;
+    background-color: $background-color;
+    border-radius: $radius * 2;
+    overflow: hidden;
 
-    > .header {
-      &__title {
-        @extend .font-3;
-        font-weight: bold;
-        color: #000;
-      }
-
-      &__subtitle {
-        @extend .font-5;
-        color: $secondary;
-      }
+    &__image {
+        @extend .d-block,
+        .full-width;
     }
-  }
-  &__content {
-    @extend .px-2, .pb-2, .pt-1, .text-size-5;
-    word-break: break-all;
-  }
 
-  &__button{
-      @extend .d-block, .px-2, .pb-2, .text-size-5, .text-info;
-  }
+    &__header {
+        @extend .pt-2,
+        .px-2;
+
+        >.header {
+            &__title {
+                @extend .font-3;
+                font-weight: bold;
+                color: $black;
+            }
+
+            &__subtitle {
+                @extend .font-5;
+                color: $secondary;
+            }
+        }
+    }
+
+    &__content {
+        @extend .px-2,
+        .pb-2,
+        .pt-1,
+        .text-size-5;
+        word-break: break-all;
+    }
+
+    &__button {
+        @extend .d-block,
+        .px-2,
+        .pb-2,
+        .text-size-5,
+        .text-info;
+    }
 }
