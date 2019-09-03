@@ -7,7 +7,8 @@
     <meta content=yes name=apple-mobile-web-app-capable>
     <meta content=yes name=apple-touch-fullscreen>
     <meta content="telephone=no,email=no" name=format-detection>
-    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name=viewport
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>3a.css</title>
     <!-- <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"> -->
@@ -20,136 +21,182 @@
         .item__content {
             text-transform: capitalize;
         }
+
+        .a-skeleton-rect,
+        .a-skeleton-circle {
+            overflow: hidden;
+            position: relative;
+            background: #e9ecef;
+            display: block;
+            height: 16px;
+            width: 100%;
+            animation: skeletonRect 2s linear infinite;
+        }
+
+        @keyframes skeletonRect {
+            50% {
+                opacity: 0.4;
+            }
+
+            75% {
+                opacity: 0.4;
+            }
+        }
+
+        .a-skeleton-circle {
+            border-radius: 100%;
+            height: 60px;
+            width: 60px;
+        }
+        .mt-1{margin-top:8px;}
+
+        .h {
+            display: none;
+        }
     </style>
 </head>
 
 <body class="bg-white">
-    <header class="a-nav-bar">
-        3a.css
-        <a class="a-nav-bar__icon-more"></a>
-    </header>
 
-    <dl class="a-list mt-1">
-
-        <dt class="a-list__title">
-            数据展示组件
-        </dt>
-
-        <dd class="a-list__item">
-            <a class="item__content" href="example/card.html">card(卡片)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-        <dd class="a-list__item">
-            <a class="item__content" href="example/list.html">list(列表)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-        <dd class="a-list__item">
-            <a class="item__content" href="example/table.html">table(表格)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-
-        <dd class="a-list__item">
-            <a class="item__content" href="example/collapse.html">collapse(折叠)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-
-        <dd class="a-list__item">
-            <a class="item__content" href="example/grid.html">grid(格)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
+    <article class="d-none">
+        <span class="a-skeleton-rect" style="height:50px;"></span>
+        <article style="padding:8px;">
+            <span class="a-skeleton-rect mt-1" style="width:30%;"></span>
+            <span class="a-skeleton-rect mt-1" style="height:36px;width:80%;"></span>
+            <span class="a-skeleton-rect mt-1" style="height:36px;width:60%;"></span>
+            <span class="a-skeleton-rect mt-1" style="height:36px;width:50%;"></span>
+            <span class="a-skeleton-rect mt-1" style="height:36px;width:40%;"></span>
+        </article>
+    </article>
 
 
-        <dd class="a-list__item">
-            <a class="item__content" href="example/tag.html">tag(标签)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
+    <main class="h d-block">
+        <header class="a-nav-bar">
+            3a.css
+            <a class="a-nav-bar__icon-more"></a>
+        </header>
 
-        <dd class="a-list__item">
-            <a class="item__content" href="example/steps.html">steps(步骤)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
+        <dl class="a-list mt-1">
 
-        <dd class="a-list__item">
-            <a class="item__content" href="example/dropdown.html">dropdown(下拉)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
+            <dt class="a-list__title">
+                数据展示组件
+            </dt>
 
-        <dt class="a-list__title">
-            表单组件
-        </dt>
-        <dd class="a-list__item">
-            <a class="item__content" href="example/button.html">button(按钮)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
+            <dd class="a-list__item">
+                <a class="item__content" href="example/card.html">card(卡片)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+            <dd class="a-list__item">
+                <a class="item__content" href="example/list.html">list(列表)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+            <dd class="a-list__item">
+                <a class="item__content" href="example/table.html">table(表格)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
 
-        <dd class="a-list__item">
-            <a class="item__content" href="example/input.html">input(输入框)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
+            <dd class="a-list__item">
+                <a class="item__content" href="example/collapse.html">collapse(折叠)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
 
-        <dd class="a-list__item">
-            <a class="item__content" href="example/checkbox.html">Checkbox(复选框)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-
-        <dd class="a-list__item">
-            <a class="item__content" href="example/radio.html">radio(单选框)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-
-        <dd class="a-list__item">
-            <a class="item__content" href="example/switch.html">switch(开关)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-
-        <dt class="a-list__title">
-            对话框组件
-        </dt>
-        <dd class="a-list__item">
-            <a class="item__content" href="example/backdrop.html">backdrop(幕布)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-
-        <dd class="a-list__item">
-            <a class="item__content" href="example/popup.html">Popup(弹出框)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-
-        <dd class="a-list__item">
-            <a class="item__content" href="example/tooltip.html">tooltip(提示)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-
-        <dd class="a-list__item">
-            <a class="item__content" href="example/toast.html">toast(轻提示)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-
-        <dt class="a-list__title">
-            辅助组件
-        </dt>
-        <dd class="a-list__item">
-            <a class="item__content" href="example/loading.html">loading(加载)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-
-        <dd class="a-list__item">
-            <a class="item__content" href="example/divider.html">divider(分割线)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
+            <dd class="a-list__item">
+                <a class="item__content" href="example/grid.html">grid(格)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
 
 
-        <dd class="a-list__item">
-            <a class="item__content" href="example/skeleton.html">skeleton(骨架)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
+            <dd class="a-list__item">
+                <a class="item__content" href="example/tag.html">tag(标签)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
 
-        <dd class="a-list__item">
-            <a class="item__content" href="example/searchBar.html">searchBar(搜索栏)</a>
-            <i class="icon ion-ios-arrow-forward"></i>
-        </dd>
-    </dl>
+            <dd class="a-list__item">
+                <a class="item__content" href="example/steps.html">steps(步骤)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
 
+            <dd class="a-list__item">
+                <a class="item__content" href="example/dropdown.html">dropdown(下拉)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dt class="a-list__title">
+                表单组件
+            </dt>
+            <dd class="a-list__item">
+                <a class="item__content" href="example/button.html">button(按钮)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dd class="a-list__item">
+                <a class="item__content" href="example/input.html">input(输入框)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dd class="a-list__item">
+                <a class="item__content" href="example/checkbox.html">Checkbox(复选框)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dd class="a-list__item">
+                <a class="item__content" href="example/radio.html">radio(单选框)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dd class="a-list__item">
+                <a class="item__content" href="example/switch.html">switch(开关)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dt class="a-list__title">
+                对话框组件
+            </dt>
+            <dd class="a-list__item">
+                <a class="item__content" href="example/backdrop.html">backdrop(幕布)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dd class="a-list__item">
+                <a class="item__content" href="example/popup.html">Popup(弹出框)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dd class="a-list__item">
+                <a class="item__content" href="example/tooltip.html">tooltip(提示)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dd class="a-list__item">
+                <a class="item__content" href="example/toast.html">toast(轻提示)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dt class="a-list__title">
+                辅助组件
+            </dt>
+            <dd class="a-list__item">
+                <a class="item__content" href="example/loading.html">loading(加载)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dd class="a-list__item">
+                <a class="item__content" href="example/divider.html">divider(分割线)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+
+            <dd class="a-list__item">
+                <a class="item__content" href="example/skeleton.html">skeleton(骨架)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+
+            <dd class="a-list__item">
+                <a class="item__content" href="example/searchBar.html">searchBar(搜索栏)</a>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </dd>
+        </dl>
+    </main>
 </body>
 
 </html>
