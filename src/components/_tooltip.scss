@@ -1,16 +1,17 @@
 .a-tooltip {
-    @extend .p-1, .text-size-5;
-    display: inline-block;
+    @extend .p-1, .text-size-5, .v-align-middle, .d-inline-flex, .align-items-center;
     position: absolute;
     background-color: $tooltip-color;
     border-radius: $radius;
-    word-break: keep-all;
+    word-break: break-word;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     z-index: $z-index-tooltip;
-    &:after {
+    color:$white;
+    max-width: 60%;
+    &:before {
+        @extend .d-block, .pos-a;
         content: '';
-        position: absolute;
-        display: block;
+        z-index: 1;
     }
 
     &--top {
@@ -18,7 +19,7 @@
         left: 50%;
         transform: translate(-50%, -100%);
 
-        &:after {
+        &:before {
             @include triangle(5px, $tooltip-color, bottom);
             bottom: 0;
             left: 50%;
@@ -32,7 +33,7 @@
         left: 50%;
         transform: translate(-50%, 100%);
 
-        &:after {
+        &:before {
             @include triangle(5px, $tooltip-color, top);
             top: 0;
             left: 50%;
@@ -45,7 +46,7 @@
         top: 50%;
         transform: translate(-100%, -50%);
 
-        &:after {
+        &:before {
             @include triangle(5px, $tooltip-color, right);
             top: 50%;
             right: 0;
@@ -58,7 +59,7 @@
         top: 50%;
         transform: translate(100%, -50%);
 
-        &:after {
+        &:before {
             @include triangle(5px, $tooltip-color, left);
             top: 50%;
             left: 0;

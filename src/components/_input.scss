@@ -1,0 +1,13 @@
+.a-input {
+  @extend .p-1, .font-5;
+  &__title{
+      font-weight: bold;
+  }
+  &__content {
+    @extend .d-flex, .align-items-center;
+    height: 2em;
+    > .input {
+      @extend .full-width, .flex-1;
+    }
+  }
+}

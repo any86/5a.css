@@ -12,6 +12,6 @@
         background-color: $gray-100;
     }
     &__btn{
-        @extend .ml-1;
+        @extend .ml-1, .font-5;
     }
 }

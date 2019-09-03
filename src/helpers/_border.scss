@@ -1,0 +1,5 @@
+@each $dir in $directionList {
+  .border-#{$dir}-#{1}px {
+    @include thinBorder( $dir);
+  }
+}

@@ -4,11 +4,11 @@
     }
 }
 
-@each $direction,
-$short in $directions {
+@each $directionMap,
+$short in $directionMaps {
     @for $i from 0 to 7 {
         .m#{$short}-#{$i} {
-            margin-#{$direction}: $space * $i !important;
+            margin-#{$directionMap}: $space * $i !important;
         }
     }
 }

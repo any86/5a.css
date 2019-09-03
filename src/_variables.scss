@@ -10,8 +10,8 @@ $animateDuration: 200ms;
 $background-color: #fff;
 
 // 方向
-$directions: ('top':'t', 'right':'r', 'bottom':'b', 'left': 'l');
-
+$directionMaps: ('top':'t', 'right':'r', 'bottom':'b', 'left': 'l');
+$directionList: (top, left, right, bottom);
 // zindex
 $z-index-backdrop:1000;
 $z-index-popup:1001;
