@@ -1,0 +1,14 @@
+:root {
+    @each $name,
+    $color in $theme-colors {
+        --color-#{$name}: #{$color};
+    }
+
+    @each $name,
+    $color in $grays {
+        --color-gray-#{$name}: #{$color};
+    }
+
+    --space: #{$space};
+    --radius: #{$radius};
+}

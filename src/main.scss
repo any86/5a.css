@@ -44,16 +44,4 @@
 @import 'components/_tag.scss';
 
 
-:root {
-    @each $name,
-    $color in $theme-colors {
-        --color-#{$name}: #{$color};
-    }
-    
-    --space: #{$space};
-    --radius: #{$radius};
-
-
-
-
-}
+@import 'cssVar.scss';
