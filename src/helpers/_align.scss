@@ -1,0 +1,20 @@
+align-items .a {
+    align-items: flex-end
+}
+
+
+@each $var in (center, baseline, stretch, flex-start, flex-end) {
+    .align-items-#{$var} {
+        align-items: $var;
+    }
+
+    .align-contents-#{$var} {
+        align-items: $var;
+    }
+
+    .align-self-#{$var} {
+        align-self: $var;
+    }
+}
+
+.v-align-middle{vertical-align: middle;}

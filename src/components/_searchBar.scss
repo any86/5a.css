@@ -1,0 +1,17 @@
+.a-search-bar {
+    @extend .d-flex;
+    @extend .full-width;
+    @extend .bg-white;
+    @extend .p-1;
+    @extend .align-items-center;
+
+    &__input {
+        @extend .full-width;
+        @extend .flex-1;
+        @extend .p-1;
+        background-color: $gray-100;
+    }
+    &__btn{
+        @extend .ml-1;
+    }
+}

@@ -5,6 +5,14 @@ $value in $theme-colors {
     }
 }
 
+.bg-black {
+    background-color: $black;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
 .bg-chessboard {
     @include bgChessboard()
 }
