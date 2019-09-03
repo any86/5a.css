@@ -7,7 +7,8 @@
     <meta content=yes name=apple-mobile-web-app-capable>
     <meta content=yes name=apple-touch-fullscreen>
     <meta content="telephone=no,email=no" name=format-detection>
-    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name=viewport
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Input</title>
     <link rel="stylesheet" href="../dist/main.css">
@@ -22,16 +23,29 @@
     </header>
     <!-- 头 -->
 
-    <dl class="a-list">
-        <dt class="a-list__title">常规</dt>
-        <dd class="a-list__item">
-            <label class="item__content">姓名 <input class="a-input-reset" type="text" placeholder="请输入姓名"></label>
-        </dd>
+    <div class="a-input border-bottom-1px">
+        <i class="ion-md-contact"></i> <input class="input" type="text" placeholder="请输入学号">
+    </div>
 
-        <dd class="a-list__item">
-            <label class="item__content">密码 <input class="a-input-reset" type="password" placeholder="请输入密码"></label>
-        </dd>
-    </dl>
+
+    <div class="a-input border-bottom-1px">
+        <p class="a-input__title">姓名<span class="text-danger"> *</span> </p>
+        <div class="a-input__content">
+            <input value="russell" class="input" type="text" placeholder="请输入姓名">
+            <i class="font-1 text-success ion-ios-checkmark"></i>
+        </div>
+    </div>
+
+
+    <div class="a-input border-bottom-1px">
+        <p class="a-input__title">密码<span class="text-danger"> *</span></p>
+        <div class="a-input__content">
+            <!-- <input class="input" type="password" placeholder="请输入密码"> -->
+            <input value="russell" class="input" type="password" placeholder="请输入密码">
+            <span class="a-tooltip a-tooltip--bottom"><i
+                    class="font-1  text-danger ion-ios-information-circle-outline mr-1"></i> 请输入密码!</span>
+        </div>
+    </div>
 
 </body>
 
