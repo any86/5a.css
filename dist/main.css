@@ -2847,6 +2847,10 @@ a {
 a, p, article, section, pre {
   font-size: 14px; }
 
+input {
+  outline: none;
+  border: 0 none; }
+
 li {
   list-style: none; }
 
@@ -2860,11 +2864,11 @@ li {
 * 棋盘背景
 * @param {Color} 背景色
 */
-.d-flex, .a-grid .a-grid__item > .item__content, .a-grid-3-3 .a-grid__item > .item__content, .a-grid-2-5 .a-grid__item > .item__content {
+.d-flex, .a-grid .a-grid__item > .item__content, .a-grid-3-3 .a-grid__item > .item__content, .a-grid-2-5 .a-grid__item > .item__content, .a-search-bar {
   display: flex; }
-  .d-flex.row, .a-grid .a-grid__item > .row.item__content, .a-grid-3-3 .a-grid__item > .row.item__content, .a-grid-2-5 .a-grid__item > .row.item__content {
+  .d-flex.row, .a-grid .a-grid__item > .row.item__content, .a-grid-3-3 .a-grid__item > .row.item__content, .a-grid-2-5 .a-grid__item > .row.item__content, .row.a-search-bar {
     flex-direction: row; }
-  .d-flex.column, .a-grid .a-grid__item > .column.item__content, .a-grid-3-3 .a-grid__item > .column.item__content, .a-grid-2-5 .a-grid__item > .column.item__content {
+  .d-flex.column, .a-grid .a-grid__item > .column.item__content, .a-grid-3-3 .a-grid__item > .column.item__content, .a-grid-2-5 .a-grid__item > .column.item__content, .column.a-search-bar {
     flex-direction: column; }
 
 .d-block, .a-card__button, .a-radio:after, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-steps__item > .item__middle > .circle {
@@ -2885,10 +2889,10 @@ li {
 .d-inline {
   display: inline !important; }
 
-.d-inline-block, .a-collapse__item > .item__header > .header__icon-arrow, .a-input-reset, .a-tag, .a-skeleton-circle {
+.d-inline-block, .a-collapse__item > .item__header > .header__icon-arrow, .a-tag, .a-skeleton-circle {
   display: inline-block !important; }
 
-.flex-1 {
+.flex-1, .a-search-bar__input {
   flex: 1; }
 
 .flex-2 {
@@ -3014,7 +3018,7 @@ li {
 .ml-0 {
   margin-left: 0px !important; }
 
-.ml-1, .a-list__item > .item__start, .a-list__item > .item__start + .item__content {
+.ml-1, .a-list__item > .item__start, .a-list__item > .item__start + .item__content, .a-search-bar__btn {
   margin-left: 8px !important; }
 
 .ml-2 {
@@ -3091,7 +3095,7 @@ li {
 .p-0 {
   padding: 0px !important; }
 
-.p-1, .a-popup, .a-tooltip, .a-steps__item, .a-steps__item > .item__cell {
+.p-1, .a-popup, .a-tooltip, .a-steps__item, .a-steps__item > .item__cell, .a-search-bar, .a-search-bar__input {
   padding: 8px !important; }
 
 .p-2 {
@@ -3205,7 +3209,7 @@ li {
   padding-left: 8px !important;
   padding-right: 8px !important; }
 
-.py-1, .a-input-reset {
+.py-1 {
   padding-top: 8px !important;
   padding-bottom: 8px !important; }
 
@@ -3261,7 +3265,7 @@ li {
   padding-left: 8px !important;
   padding-right: 8px !important; }
 
-.py-1, .a-input-reset {
+.py-1 {
   padding-top: 8px !important;
   padding-bottom: 8px !important; }
 
@@ -3341,7 +3345,7 @@ li {
 .font-4, .a-button, .a-steps__item > .item__end, .text-size-4 {
   font-size: 16px; }
 
-.font-5, .a-card__header > .header__subtitle, .a-steps__item > .item__cell, .text-size-5, .a-card__content, .a-card__button, .a-input-reset, .a-tooltip {
+.font-5, .a-card__header > .header__subtitle, .a-steps__item > .item__cell, .text-size-5, .a-card__content, .a-card__button, .a-tooltip {
   font-size: 14px; }
 
 .font-6, .a-steps__item--big > .item__middle > .circle, .text-size-6, .a-tag {
@@ -3413,6 +3417,12 @@ li {
 .bg-dark {
   background-color: #343a40 !important; }
 
+.bg-black {
+  background-color: #000; }
+
+.bg-white, .a-search-bar {
+  background-color: #fff; }
+
 .bg-chessboard {
   background-image: linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa), linear-gradient(45deg, #aaa 26%, transparent 26%, transparent 74%, #aaa 74%, #aaa);
   background-size: 10vw 10vw;
@@ -3472,6 +3482,57 @@ table.table {
 .f-r {
   float: right; }
 
+align-items .a {
+  align-items: flex-end; }
+
+.align-items-center, .a-search-bar {
+  align-items: center; }
+
+.align-contents-center {
+  align-items: center; }
+
+.align-self-center {
+  align-self: center; }
+
+.align-items-baseline {
+  align-items: baseline; }
+
+.align-contents-baseline {
+  align-items: baseline; }
+
+.align-self-baseline {
+  align-self: baseline; }
+
+.align-items-stretch {
+  align-items: stretch; }
+
+.align-contents-stretch {
+  align-items: stretch; }
+
+.align-self-stretch {
+  align-self: stretch; }
+
+.align-items-flex-start {
+  align-items: flex-start; }
+
+.align-contents-flex-start {
+  align-items: flex-start; }
+
+.align-self-flex-start {
+  align-self: flex-start; }
+
+.align-items-flex-end {
+  align-items: flex-end; }
+
+.align-contents-flex-end {
+  align-items: flex-end; }
+
+.align-self-flex-end {
+  align-self: flex-end; }
+
+.v-align-middle, .a-steps__item > .item__cell {
+  vertical-align: middle; }
+
 .radius-1, .a-tag {
   border-radius: 4px; }
 
@@ -3490,7 +3551,13 @@ table.table {
 .radius-6 {
   border-radius: 24px; }
 
-.full-width, .a-input-reset, .a-dropdown {
+.shadow-all, .a-dropdown {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(204, 204, 204, 0.05); }
+
+.shadow-down, .a-nav-bar {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125); }
+
+.full-width, .a-dropdown, .a-search-bar, .a-search-bar__input {
   width: 100% !important; }
 
 .full, .a-grid-3-3 .a-grid__item > .item__content {
@@ -3915,7 +3982,6 @@ table.table {
   line-height: 2.8em;
   font-size: 18px;
   font-weight: bold;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
   text-align: center;
   background-color: #fff; }
   .a-nav-bar__icon, .a-nav-bar__icon-arrow, .a-nav-bar__icon-more, .a-nav-bar--reverse .a-nav-bar__icon-arrow, .a-nav-bar--reverse .a-nav-bar__icon-more {
@@ -4005,10 +4071,6 @@ table.table {
     bottom: 0;
     left: 0;
     width: 60%; }
-
-.a-input-reset {
-  outline: none;
-  border: none; }
 
 .a-checkbox {
   box-sizing: content-box;
@@ -4236,8 +4298,7 @@ table.table {
   transform: translate(0, 100%);
   color: #000;
   background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(204, 204, 204, 0.05); }
+  border-radius: 4px; }
 
 .a-grid, .a-grid-3-3, .a-grid-2-5 {
   display: flex;
@@ -4638,6 +4699,9 @@ table.table {
   border-radius: 100%;
   height: 60px;
   width: 60px; }
+
+.a-search-bar__input {
+  background-color: #f8f9fa; }
 
 :root {
   --color-primary: #3190ff;
