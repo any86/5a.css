@@ -283,7 +283,7 @@
 .ion-ios-sad:before,
 .ion-ios-save:before,
 .ion-ios-school:before,
-.ion-ios-search:before,
+.ion-ios-search:before, .a-search-bar:before,
 .ion-ios-send:before,
 .ion-ios-settings:before,
 .ion-ios-share:before,
@@ -1511,7 +1511,7 @@
 .ion-ios-school:before {
   content: "\f209"; }
 
-.ion-ios-search:before {
+.ion-ios-search:before, .a-search-bar:before {
   content: "\f4a5"; }
 
 .ion-ios-send:before {
@@ -2864,11 +2864,11 @@ li {
 * 棋盘背景
 * @param {Color} 背景色
 */
-.d-flex, .a-input__content, .a-grid .a-grid__item > .item__content, .a-grid-3-3 .a-grid__item > .item__content, .a-grid-2-5 .a-grid__item > .item__content, .a-search-bar {
+.d-flex, .a-input__content, .a-grid .a-grid__item > .item__content, .a-grid-3-3 .a-grid__item > .item__content, .a-grid-2-5 .a-grid__item > .item__content {
   display: flex; }
-  .d-flex.row, .row.a-input__content, .a-grid .a-grid__item > .row.item__content, .a-grid-3-3 .a-grid__item > .row.item__content, .a-grid-2-5 .a-grid__item > .row.item__content, .row.a-search-bar {
+  .d-flex.row, .row.a-input__content, .a-grid .a-grid__item > .row.item__content, .a-grid-3-3 .a-grid__item > .row.item__content, .a-grid-2-5 .a-grid__item > .row.item__content {
     flex-direction: row; }
-  .d-flex.column, .column.a-input__content, .a-grid .a-grid__item > .column.item__content, .a-grid-3-3 .a-grid__item > .column.item__content, .a-grid-2-5 .a-grid__item > .column.item__content, .column.a-search-bar {
+  .d-flex.column, .column.a-input__content, .a-grid .a-grid__item > .column.item__content, .a-grid-3-3 .a-grid__item > .column.item__content, .a-grid-2-5 .a-grid__item > .column.item__content {
     flex-direction: column; }
 
 .d-block, .a-card__image, .a-card__button, .a-radio:after, .a-tooltip:before, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-steps__item > .item__middle > .circle {
@@ -2877,13 +2877,13 @@ li {
 .d-none, .a-steps__item:last-child > .item__middle > .circle:after {
   display: none !important; }
 
-.d-table, .a-steps {
+.d-table, .a-steps, .a-search-bar {
   display: table !important; }
 
 .d-table-row, .a-steps__item {
   display: table-row !important; }
 
-.d-table-cell, .a-steps__item > .item__cell {
+.d-table-cell, .a-steps__item > .item__cell, .a-search-bar:before, .a-search-bar__input, .a-search-bar__btn {
   display: table-cell !important; }
 
 .d-inline {
@@ -2895,7 +2895,7 @@ li {
 .d-inline-flex, .a-tooltip {
   display: inline-flex !important; }
 
-.flex-1, .a-input__content__input, .a-search-bar__input {
+.flex-1, .a-input__content__input {
   flex: 1; }
 
 .flex-2 {
@@ -3208,7 +3208,7 @@ li {
   padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
-.px-1, .a-dropdown {
+.px-1, .a-dropdown, .a-search-bar__btn {
   padding-left: 8px !important;
   padding-right: 8px !important; }
 
@@ -3264,7 +3264,7 @@ li {
   padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
-.px-1, .a-dropdown {
+.px-1, .a-dropdown, .a-search-bar__btn {
   padding-left: 8px !important;
   padding-right: 8px !important; }
 
@@ -3339,7 +3339,7 @@ li {
 .font-1, .a-input__content__icon, .text-size-1 {
   font-size: 24px; }
 
-.font-2, .text-size-2 {
+.font-2, .a-search-bar:before, .text-size-2 {
   font-size: 20px; }
 
 .font-3, .a-list__title, .a-card__header > .header__title, .a-popup__header, .text-size-3 {
@@ -3650,7 +3650,7 @@ align-items .a {
 .v-align-middle, .a-tooltip, .a-steps__item > .item__cell {
   vertical-align: middle; }
 
-.t-align-center, .a-input__content__icon {
+.t-align-center, .a-input__content__icon, .a-search-bar:before, .a-search-bar__btn {
   text-align: center; }
 
 .radius-1, .a-tag {
@@ -3697,6 +3697,9 @@ align-items .a {
 
 .v-align-middle, .a-tooltip, .a-steps__item > .item__cell {
   vertical-align: middle; }
+
+.parent-color, .a-search-bar:before, .a-search-bar__input {
+  color: currentColor; }
 
 :root {
   --color-primary: #3190ff;
@@ -4824,5 +4827,14 @@ align-items .a {
   height: 60px;
   width: 60px; }
 
+.a-search-bar:before {
+  vertical-align: middle;
+  background-color: #f8f9fa;
+  width: 30px; }
+
 .a-search-bar__input {
   background-color: #f8f9fa; }
+
+.a-search-bar__btn {
+  word-break: keep-all;
+  width: 1%; }
