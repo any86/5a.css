@@ -1,17 +1,38 @@
 .a-search-bar {
-    @extend .d-flex;
+    @extend .d-table;
     @extend .full-width;
     @extend .bg-white;
     @extend .p-1;
     @extend .align-items-center;
 
+    // 放大镜
+    &:before {
+        @extend .ion-ios-search,
+        .parent-color,
+        .d-table-cell,
+        .t-align-center,
+        .font-2;
+        vertical-align: middle;
+        background-color: $gray-100;
+        width: 30px;
+    }
+
     &__input {
+        @extend .d-table-cell;
         @extend .full-width;
-        @extend .flex-1;
-        @extend .p-1;
+        @extend .p-1,
+        .parent-color;
         background-color: $gray-100;
     }
-    &__btn{
-        @extend .ml-1, .font-5;
+
+    &__btn {
+        @extend .d-table-cell,
+        .t-align-center,
+        .px-1,
+        .ml-1,
+        .font-5;
+        word-break: keep-all;
+        // http://liaolushen.github.io/2015/09/12/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-1-table-cell-width/
+        width: 1%;
     }
 }
