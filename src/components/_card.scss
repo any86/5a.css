@@ -1,9 +1,8 @@
 .a-card {
     @extend .shadow-down-lg;
     @extend .full-width;
-
     background-color: $background-color;
-    border-radius: $radius * 2;
+    border-radius: $radius;
     overflow: hidden;
 
     &__image {
@@ -23,8 +22,7 @@
             }
 
             &__subtitle {
-                @extend .font-5;
-                color: $secondary;
+                @extend .font-5, .text-secondary;
             }
         }
     }

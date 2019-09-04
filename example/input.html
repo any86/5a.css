@@ -7,8 +7,7 @@
     <meta content=yes name=apple-mobile-web-app-capable>
     <meta content=yes name=apple-touch-fullscreen>
     <meta content="telephone=no,email=no" name=format-detection>
-    <meta name=viewport
-        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Input</title>
     <link rel="stylesheet" href="../dist/main.css">
@@ -24,15 +23,17 @@
     <!-- 头 -->
 
     <div class="a-input border-bottom-1px">
-        <i class="ion-md-contact"></i> <input class="input" type="text" placeholder="请输入学号">
+        <div class="a-input__content">
+            <i class="ion-md-contact a-input__content__icon mr-1"></i>
+            <input class="a-input__content__input" type="text" placeholder="请输入学号">
+        </div>
     </div>
-
 
     <div class="a-input border-bottom-1px">
         <p class="a-input__title">姓名<span class="text-danger"> *</span> </p>
         <div class="a-input__content">
-            <input value="russell" class="input" type="text" placeholder="请输入姓名">
-            <i class="font-1 text-success ion-ios-checkmark"></i>
+            <input value="russell" class="a-input__content__input" type="text" placeholder="请输入姓名">
+            <i class="a-input__content__icon text-success ion-ios-checkmark-circle-outline"></i>
         </div>
     </div>
 
@@ -41,9 +42,35 @@
         <p class="a-input__title">密码<span class="text-danger"> *</span></p>
         <div class="a-input__content">
             <!-- <input class="input" type="password" placeholder="请输入密码"> -->
-            <input value="russell" class="input" type="password" placeholder="请输入密码">
-            <span class="a-tooltip a-tooltip--bottom"><i
-                    class="font-1  text-danger ion-ios-information-circle-outline mr-1"></i> 请输入密码!</span>
+            <input value="russell" class="a-input__content__input" type="password" placeholder="请输入密码">
+            <span class="a-tooltip a-tooltip--bottom"><i class="font-1  text-danger ion-ios-information-circle-outline mr-1"></i> 请输入密码!</span>
+            <i class="a-input__content__icon ion-ios-close"></i>
+            <i class="a-input__content__icon text-warning ion-ios-information-circle-outline"></i>
+        </div>
+    </div>
+
+    <div class="a-input border-bottom-1px">
+        <p class="a-input__title">班级<span class="text-danger"> *</span></p>
+        <div class="a-input__content">
+            <input value="russell" class="a-input__content__input" type="password" placeholder="请输入班级">
+            <i class="a-input__content__icon text-danger ion-ios-close-circle-outline"></i>
+        </div>
+    </div>
+
+
+    <div class="a-input border-bottom-1px">
+            <p class="a-input__title">家庭住址<span class="text-danger"> *</span></p>
+            <div class="a-input__content">
+                <input value="russell" class="a-input__content__input" type="password" placeholder="请输入家庭住址">
+                <i class="a-input__content__icon a-loading-android-half "></i>
+            </div>
+        </div>
+
+
+    <div class="a-input border-bottom-1px">
+        <div class="a-input__content">
+            <span class="a-input__content__title-inline">标题在一行</span>
+            <input class="a-input__content__input" type="text" placeholder="请输入特长">
         </div>
     </div>
 
