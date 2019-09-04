@@ -2,9 +2,12 @@
     width: 100% !important;
 }
 
-.full{
+.full {
     position: absolute;
-    top:0;left:0;right:0;bottom:0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .center-block {
@@ -12,8 +15,17 @@
     margin-right: auto !important;
     display: block !important;
 }
-.v-align-middle{
+
+.v-align-middle {
     vertical-align: middle;
 }
 
-.parent-color{color: currentColor;}
+.parent-color {
+    color: currentColor;
+}
+
+.ovh {
+    overflow: hidden;
+}
+
+

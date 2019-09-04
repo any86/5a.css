@@ -1,0 +1,34 @@
+.a-picker-view {
+    @extend .ovh,
+    .pos-r, .d-flex, .bg-white;
+
+    &__content {
+        @extend .flex-1;
+        &__item {
+            @extend .px-1, .font-4,
+            .t-align-center;
+            height: 44px;
+            line-height: 44px;
+        }
+    }
+
+    &__mask {
+        @extend .full;
+        background-size: 100% 44px;
+        background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4)), linear-gradient(0deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4));
+        background-repeat: no-repeat;
+        background-position: top, bottom;
+        backface-visibility: hidden;
+        pointer-events: none;
+    }
+
+    &__indicator{
+        @extend .pos-a;
+        @include thinBorder((top,bottom));
+        top:0;
+        bottom:0;
+        margin: auto;
+        height: 44px;
+        width:100%;
+    }
+}
