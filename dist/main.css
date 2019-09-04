@@ -2836,7 +2836,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
 
 a {
   text-decoration: none;
@@ -2895,7 +2895,7 @@ li {
 .d-inline-flex, .a-tooltip {
   display: inline-flex !important; }
 
-.flex-1, .a-input__content > .input, .a-search-bar__input {
+.flex-1, .a-input__content__input, .a-search-bar__input {
   flex: 1; }
 
 .flex-2 {
@@ -2979,7 +2979,7 @@ li {
 .mr-0 {
   margin-right: 0px !important; }
 
-.mr-1, .a-button--loading::before {
+.mr-1, .a-button--loading::before, .a-input__content__title-inline {
   margin-right: 8px !important; }
 
 .mr-2 {
@@ -3315,7 +3315,7 @@ li {
 .text-primary {
   color: #3190ff !important; }
 
-.text-secondary {
+.text-secondary, .a-card__header > .header__subtitle {
   color: #6c757d !important; }
 
 .text-success {
@@ -3336,7 +3336,7 @@ li {
 .text-dark {
   color: #343a40 !important; }
 
-.font-1, .text-size-1 {
+.font-1, .a-input__content__icon, .text-size-1 {
   font-size: 24px; }
 
 .font-2, .text-size-2 {
@@ -3348,7 +3348,7 @@ li {
 .font-4, .a-button, .a-steps__item > .item__end, .text-size-4 {
   font-size: 16px; }
 
-.font-5, .a-card__header > .header__subtitle, .a-input, .a-steps__item > .item__cell, .a-search-bar__btn, .text-size-5, .a-card__content, .a-card__button, .a-tooltip {
+.font-5, .a-card__header > .header__subtitle, .a-input, .a-input__content__input, .a-steps__item > .item__cell, .a-search-bar__btn, .text-size-5, .a-card__content, .a-card__button, .a-tooltip {
   font-size: 14px; }
 
 .font-6, .a-steps__item--big > .item__middle > .circle, .text-size-6, .a-tag {
@@ -3395,6 +3395,12 @@ li {
 
 .text-lg {
   font-size: 64px; }
+
+.font-lg {
+  font-size: 64px; }
+
+.font-bold, .a-input__content__title-inline {
+  font-weight: bold; }
 
 .bg-primary {
   background-color: #3190ff !important; }
@@ -3644,6 +3650,9 @@ align-items .a {
 .v-align-middle, .a-tooltip, .a-steps__item > .item__cell {
   vertical-align: middle; }
 
+.t-align-center, .a-input__content__icon {
+  text-align: center; }
+
 .radius-1, .a-tag {
   border-radius: 4px; }
 
@@ -3671,7 +3680,7 @@ align-items .a {
 .shadow-down-lg, .a-card {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12); }
 
-.full-width, .a-card, .a-card__image, .a-input__content > .input, .a-dropdown, .a-search-bar, .a-search-bar__input {
+.full-width, .a-card, .a-card__image, .a-input__content__input, .a-dropdown, .a-search-bar, .a-search-bar__input {
   width: 100% !important; }
 
 .full, .a-grid-3-3 .a-grid__item > .item__content {
@@ -4075,13 +4084,11 @@ align-items .a {
 
 .a-card {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden; }
   .a-card__header > .header__title {
     font-weight: bold;
     color: #000; }
-  .a-card__header > .header__subtitle {
-    color: #6c757d; }
   .a-card__content {
     word-break: break-all; }
 
@@ -4186,6 +4193,8 @@ align-items .a {
 
 .a-input__content {
   height: 2em; }
+  .a-input__content__icon {
+    width: 24px; }
 
 .a-checkbox {
   box-sizing: content-box;
