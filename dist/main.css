@@ -3458,7 +3458,8 @@ table.table {
     background-color: #dbdbdb; }
 
 .border-top-1px {
-  border-top: 1px solid #ccc; }
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .border-top-1px {
       position: relative;
@@ -3477,15 +3478,18 @@ table.table {
       transform-origin: 0 0;
       pointer-events: none;
       border: 0 solid #ccc;
-      border-top-width: 1px; } }
+      border-top-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .border-top-1px:after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
 
 .border-left-1px {
-  border-left: 1px solid #ccc; }
+  border-left: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .border-left-1px {
       position: relative;
@@ -3504,15 +3508,18 @@ table.table {
       transform-origin: 0 0;
       pointer-events: none;
       border: 0 solid #ccc;
-      border-left-width: 1px; } }
+      border-left-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .border-left-1px:after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
 
 .border-right-1px {
-  border-right: 1px solid #ccc; }
+  border-right: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .border-right-1px {
       position: relative;
@@ -3531,15 +3538,18 @@ table.table {
       transform-origin: 0 0;
       pointer-events: none;
       border: 0 solid #ccc;
-      border-right-width: 1px; } }
+      border-right-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .border-right-1px:after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
 
 .border-bottom-1px {
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .border-bottom-1px {
       position: relative;
@@ -3558,9 +3568,50 @@ table.table {
       transform-origin: 0 0;
       pointer-events: none;
       border: 0 solid #ccc;
-      border-bottom-width: 1px; } }
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .border-bottom-1px:after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.33); } }
+
+.border-1px {
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  border-radius: 100px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .border-1px {
+      position: relative;
+      border-top: none;
+      border-left: none;
+      border-bottom: none;
+      border-right: none; }
+    .border-1px:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #aaa;
+      border-top-width: 1px;
+      border-left-width: 1px;
+      border-bottom-width: 1px;
+      border-right-width: 1px;
+      border-radius: 200px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .border-1px:after {
+      border-radius: 300px;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
@@ -4054,7 +4105,8 @@ align-items .a {
     height: 1em; }
 
 .a-list__item + .a-list__item > .item__content {
-  border-top: 1px solid #ccc; }
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .a-list__item + .a-list__item > .item__content {
       position: relative;
@@ -4073,9 +4125,11 @@ align-items .a {
       transform-origin: 0 0;
       pointer-events: none;
       border: 0 solid #ccc;
-      border-top-width: 1px; } }
+      border-top-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .a-list__item + .a-list__item > .item__content:after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
@@ -4446,7 +4500,8 @@ align-items .a {
 
 .a-grid-3-3 .a-grid__item:nth-child(1) {
   border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .a-grid-3-3 .a-grid__item:nth-child(1) {
       position: relative;
@@ -4467,16 +4522,19 @@ align-items .a {
       pointer-events: none;
       border: 0 solid #ccc;
       border-right-width: 1px;
-      border-bottom-width: 1px; } }
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .a-grid-3-3 .a-grid__item:nth-child(1):after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
 
 .a-grid-3-3 .a-grid__item:nth-child(2) {
   border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .a-grid-3-3 .a-grid__item:nth-child(2) {
       position: relative;
@@ -4497,15 +4555,18 @@ align-items .a {
       pointer-events: none;
       border: 0 solid #ccc;
       border-right-width: 1px;
-      border-bottom-width: 1px; } }
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .a-grid-3-3 .a-grid__item:nth-child(2):after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
 
 .a-grid-3-3 .a-grid__item:nth-child(3) {
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .a-grid-3-3 .a-grid__item:nth-child(3) {
       position: relative;
@@ -4524,16 +4585,19 @@ align-items .a {
       transform-origin: 0 0;
       pointer-events: none;
       border: 0 solid #ccc;
-      border-bottom-width: 1px; } }
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .a-grid-3-3 .a-grid__item:nth-child(3):after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
 
 .a-grid-3-3 .a-grid__item:nth-child(4) {
   border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .a-grid-3-3 .a-grid__item:nth-child(4) {
       position: relative;
@@ -4554,16 +4618,19 @@ align-items .a {
       pointer-events: none;
       border: 0 solid #ccc;
       border-right-width: 1px;
-      border-bottom-width: 1px; } }
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .a-grid-3-3 .a-grid__item:nth-child(4):after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
 
 .a-grid-3-3 .a-grid__item:nth-child(5) {
   border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .a-grid-3-3 .a-grid__item:nth-child(5) {
       position: relative;
@@ -4584,15 +4651,18 @@ align-items .a {
       pointer-events: none;
       border: 0 solid #ccc;
       border-right-width: 1px;
-      border-bottom-width: 1px; } }
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .a-grid-3-3 .a-grid__item:nth-child(5):after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
 
 .a-grid-3-3 .a-grid__item:nth-child(6) {
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .a-grid-3-3 .a-grid__item:nth-child(6) {
       position: relative;
@@ -4611,15 +4681,18 @@ align-items .a {
       transform-origin: 0 0;
       pointer-events: none;
       border: 0 solid #ccc;
-      border-bottom-width: 1px; } }
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .a-grid-3-3 .a-grid__item:nth-child(6):after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
 
 .a-grid-3-3 .a-grid__item:nth-child(7) {
-  border-right: 1px solid #ccc; }
+  border-right: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .a-grid-3-3 .a-grid__item:nth-child(7) {
       position: relative;
@@ -4638,15 +4711,18 @@ align-items .a {
       transform-origin: 0 0;
       pointer-events: none;
       border: 0 solid #ccc;
-      border-right-width: 1px; } }
+      border-right-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .a-grid-3-3 .a-grid__item:nth-child(7):after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
 
 .a-grid-3-3 .a-grid__item:nth-child(8) {
-  border-right: 1px solid #ccc; }
+  border-right: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .a-grid-3-3 .a-grid__item:nth-child(8) {
       position: relative;
@@ -4665,9 +4741,11 @@ align-items .a {
       transform-origin: 0 0;
       pointer-events: none;
       border: 0 solid #ccc;
-      border-right-width: 1px; } }
+      border-right-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .a-grid-3-3 .a-grid__item:nth-child(8):after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
@@ -4857,6 +4935,7 @@ align-items .a {
 .a-picker-view__indicator {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -4882,9 +4961,11 @@ align-items .a {
       pointer-events: none;
       border: 0 solid #ccc;
       border-top-width: 1px;
-      border-bottom-width: 1px; } }
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .a-picker-view__indicator:after {
+      border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
       transform: scale(0.33); } }
