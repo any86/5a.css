@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://any86@github.com/any86/3a.css.git"
+    "url": "git+https://any86@github.com/any86/5a.css.git"
   },
   "keywords": [
     "css",
@@ -38,7 +38,7 @@
   "author": "Russell",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/any86/3a.css/issues"
+    "url": "https://github.com/any86/5a.css/issues"
   },
-  "homepage": "https://github.com/any86/3a.css#readme"
+  "homepage": "https://github.com/any86/5a.css#readme"
 }
