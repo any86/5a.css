@@ -3,3 +3,8 @@
     @include thinBorder( $dir);
   }
 }
+
+
+.border-#{1}px{
+  @include thinBorder((top,left,bottom,right), #aaa, 100px);
+}
