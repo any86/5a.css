@@ -1,0 +1,14 @@
+// 评分
+.a-rate {
+  @extend .font-1, .d-inline-flex;
+  justify-content: space-around;
+  color: $yellow;
+  &__item {
+    @extend .d-block;
+    color:currentColor;
+  }
+
+  &__item + &__item {
+    @extend .ml-1;
+  }
+}
