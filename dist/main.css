@@ -2886,11 +2886,11 @@ li {
 * 棋盘背景
 * @param {Color} 背景色
 */
-.d-flex, .a-input__content, .a-grid .a-grid__item > .item__content, .a-grid-3-3 .a-grid__item > .item__content, .a-grid-2-5 .a-grid__item > .item__content, .a-picker-view {
+.d-flex, .a-input__content, .a-grid .a-grid__item > .item__content, .a-grid-3-3 .a-grid__item > .item__content, .a-grid-2-5 .a-grid__item > .item__content, .a-picker-view, .a-tab__content {
   display: flex; }
-  .d-flex.row, .row.a-input__content, .a-grid .a-grid__item > .row.item__content, .a-grid-3-3 .a-grid__item > .row.item__content, .a-grid-2-5 .a-grid__item > .row.item__content, .row.a-picker-view {
+  .d-flex.row, .row.a-input__content, .a-grid .a-grid__item > .row.item__content, .a-grid-3-3 .a-grid__item > .row.item__content, .a-grid-2-5 .a-grid__item > .row.item__content, .row.a-picker-view, .row.a-tab__content {
     flex-direction: row; }
-  .d-flex.column, .column.a-input__content, .a-grid .a-grid__item > .column.item__content, .a-grid-3-3 .a-grid__item > .column.item__content, .a-grid-2-5 .a-grid__item > .column.item__content, .column.a-picker-view {
+  .d-flex.column, .column.a-input__content, .a-grid .a-grid__item > .column.item__content, .a-grid-3-3 .a-grid__item > .column.item__content, .a-grid-2-5 .a-grid__item > .column.item__content, .column.a-picker-view, .column.a-tab__content {
     flex-direction: column; }
 
 .d-block, .a-card__image, .a-card__button, .a-radio:after, .a-tooltip:before, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-steps__item > .item__middle > .circle {
@@ -3123,7 +3123,7 @@ li {
 .p-1, .a-popup, .a-input, .a-tooltip, .a-steps__item, .a-steps__item > .item__cell, .a-search-bar, .a-search-bar__input {
   padding: 8px !important; }
 
-.p-2, .a-button--block, .a-button--full {
+.p-2, .a-button--block, .a-button--full, .a-tab__content__item {
   padding: 16px !important; }
 
 .p-3 {
@@ -3361,7 +3361,7 @@ li {
 .text-white, .a-tooltip {
   color: #fff; }
 
-.text-black {
+.text-black, .a-tab__content__item--active {
   color: #000; }
 
 .font-1, .a-input__content__icon, .text-size-1 {
@@ -3427,7 +3427,7 @@ li {
 .font-lg {
   font-size: 64px; }
 
-.font-bold, .a-input__content__title-inline {
+.font-bold, .a-input__content__title-inline, .a-tab__content__item--active {
   font-weight: bold; }
 
 .bg-primary {
@@ -3656,10 +3656,10 @@ table.table {
 .rotate-270 {
   transform: rotate(270deg); }
 
-.pos-r, .a-button-group, .a-button, .a-grid .a-grid__item, .a-grid-3-3 .a-grid__item, .a-grid-2-5 .a-grid__item, .a-steps__item > .item__cell, .a-picker-view {
+.pos-r, .a-button-group, .a-button, .a-grid .a-grid__item, .a-grid-3-3 .a-grid__item, .a-grid-2-5 .a-grid__item, .a-steps__item > .item__cell, .a-picker-view, .a-tab {
   position: relative; }
 
-.pos-a, .pos-a-tl, .a-tooltip, .a-tooltip:before, .a-dropdown, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-picker-view__indicator {
+.pos-a, .pos-a-tl, .a-tooltip, .a-tooltip:before, .a-dropdown, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-picker-view__indicator, .a-tab__indicator {
   position: absolute !important; }
 
 .pos-f {
@@ -3729,7 +3729,7 @@ align-items .a {
 .v-align-middle, .a-button, .a-tooltip, .a-steps__item > .item__cell {
   vertical-align: middle; }
 
-.t-align-center, .a-input__content__icon, .a-search-bar:before, .a-search-bar__btn, .a-picker-view__content__item {
+.t-align-center, .a-input__content__icon, .a-search-bar:before, .a-search-bar__btn, .a-picker-view__content__item, .a-tab__content__item {
   text-align: center; }
 
 .radius-1, .a-tooltip, .a-tag {
@@ -3780,7 +3780,7 @@ align-items .a {
 .parent-color, .a-search-bar:before, .a-search-bar__input {
   color: currentColor; }
 
-.ovh, .a-picker-view {
+.ovh, .a-picker-view, .a-tab {
   overflow: hidden; }
 
 :root {
@@ -4987,3 +4987,45 @@ align-items .a {
       width: 300%;
       height: 300%;
       transform: scale(0.3333); } }
+
+.a-tab {
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .a-tab {
+      position: relative;
+      border-bottom: none; }
+    .a-tab:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #ccc;
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .a-tab:after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.3333); } }
+  .a-tab__content {
+    flex-wrap: nowrap; }
+    .a-tab__content__item {
+      flex-grow: 1;
+      flex-shrink: 0;
+      color: #6c757d; }
+  .a-tab__indicator {
+    left: 100px;
+    bottom: 0;
+    height: 2px;
+    width: 100px;
+    background-color: #3190ff; }
