@@ -9,15 +9,17 @@ const {
 const fileName = argv[2];
 const title = argv[3]
 
-const scssFile = `./src/components/${fileName}.scss`;
+const scssFile = `./src/components/_${fileName}.scss`;
 const htmlFile = `./example/${fileName}.html`;
 const indexFile = `./index.html`;
+const mainScss = `./src/main.scss`;
 
 shell.touch(scssFile);
 shell.touch(htmlFile);
 fs.writeFileSync(scssFile, `// ${title}\r\n`);
 fs.writeFileSync(htmlFile, genHtml(`${fileName}(${title})`));
 
+fs.appendFileSync(mainScss, `\r\n@import 'components/_${fileName}.scss';`);
 
 // 增加连接到index.html
 const content = fs.readFileSync(indexFile, 'utf8');

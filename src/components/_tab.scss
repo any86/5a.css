@@ -1,0 +1,29 @@
+// 标签页
+.a-tab{
+    @include thinBorder();
+    @extend .ovh, .pos-r;
+    &__content{
+        @extend .d-flex;
+        flex-wrap: nowrap;
+
+        &__item{
+            @extend .p-2, .t-align-center;
+            flex-grow: 1;
+            flex-shrink: 0;
+            color:$secondary;
+        }
+        &__item--active{
+            @extend .font-bold, .text-black;
+        }
+
+    }
+
+    &__indicator{
+        @extend .pos-a;
+        left:100px;
+        bottom:0;
+        height: 2px;
+        width:100px;
+        background-color: $primary;
+    }
+}
