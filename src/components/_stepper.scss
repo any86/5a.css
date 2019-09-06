@@ -1,0 +1,22 @@
+// 步进器
+.a-stepper {
+  @extend .d-inline-flex, .radius-1;
+  border: 1px solid $gray-300;
+  %icon {
+    @extend .d-block, .t-align-center;
+    width: $stepper-width;
+    height: $stepper-width;
+  }
+
+  &__minus {
+    @extend .ion-ios-remove, .font-1, %icon;
+  }
+
+  &__input {
+    @extend %icon, .font-4;
+  }
+
+  &__plus {
+    @extend .ion-ios-add, .font-1, %icon;
+  }
+}

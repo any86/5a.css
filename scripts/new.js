@@ -19,7 +19,7 @@ shell.touch(htmlFile);
 fs.writeFileSync(scssFile, `// ${title}\r\n`);
 fs.writeFileSync(htmlFile, genHtml(`${fileName}(${title})`));
 
-fs.appendFileSync(mainScss, `@import 'components/_${fileName}.scss';`);
+fs.appendFileSync(mainScss, `\r@import 'components/_${fileName}.scss';`);
 
 // 增加连接到index.html
 const content = fs.readFileSync(indexFile, 'utf8');
