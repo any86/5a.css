@@ -13,6 +13,7 @@
     "fonts"
   ],
   "scripts": {
+    "new": "node ./scripts/new",
     "build:wx": "node ./scripts/wx",
     "build": "node-sass ./src/main.scss ./dist/main.css",
     "build:helpers": "node-sass ./src/helpers.scss ./dist/helpers.css",
