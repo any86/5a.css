@@ -8,7 +8,7 @@
   display: none; }
 
 /*!
-  Ionicons, v4.6.2
+  Ionicons, v4.6.3
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
   https://twitter.com/benjsperry  https://twitter.com/ionicframework
   MIT License: https://github.com/driftyco/ionicons
@@ -2847,7 +2847,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
 
 a {
   text-decoration: none;
@@ -2893,7 +2893,7 @@ li {
   .d-flex.column, .column.a-input__content, .a-grid .a-grid__item > .column.item__content, .a-grid-3-3 .a-grid__item > .column.item__content, .a-grid-2-5 .a-grid__item > .column.item__content, .column.a-picker-view, .column.a-tab__content {
     flex-direction: column; }
 
-.d-block, .a-card__image, .a-card__button, .a-radio:after, .a-tooltip:before, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-steps__item > .item__middle > .circle {
+.d-block, .a-card__image, .a-card__button, .a-radio:after, .a-tooltip:before, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-steps__item > .item__middle > .circle, .a-rate__item {
   display: block !important; }
 
 .d-none, .a-steps__item:last-child > .item__middle > .circle:after {
@@ -2914,7 +2914,7 @@ li {
 .d-inline-block, .a-collapse__item > .item__header > .header__icon-arrow, .a-button, .a-tag, .a-skeleton-circle {
   display: inline-block !important; }
 
-.d-inline-flex {
+.d-inline-flex, .a-rate {
   display: inline-flex !important; }
 
 .flex-1, .a-input__content__input, .a-picker-view__content {
@@ -3043,7 +3043,7 @@ li {
 .ml-0 {
   margin-left: 0px !important; }
 
-.ml-1, .a-list__item > .item__start, .a-list__item > .item__start + .item__content, .a-search-bar__btn {
+.ml-1, .a-list__item > .item__start, .a-list__item > .item__start + .item__content, .a-search-bar__btn, .a-rate__item + .a-rate__item {
   margin-left: 8px !important; }
 
 .ml-2 {
@@ -3364,7 +3364,7 @@ li {
 .text-black, .a-tab__content__item--active {
   color: #000; }
 
-.font-1, .a-input__content__icon, .text-size-1 {
+.font-1, .a-input__content__icon, .a-rate, .text-size-1 {
   font-size: 24px; }
 
 .font-2, .a-search-bar:before, .text-size-2 {
@@ -5029,3 +5029,9 @@ align-items .a {
     height: 2px;
     width: 100px;
     background-color: #3190ff; }
+
+.a-rate {
+  justify-content: space-around;
+  color: #ffc107; }
+  .a-rate__item {
+    color: currentColor; }
