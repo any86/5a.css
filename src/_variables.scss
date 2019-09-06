@@ -59,8 +59,8 @@ $grays: map-merge(("100": $gray-100,
     $grays);
 
 $blue: #3190ff !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
+$indigo: #7a30f1 !default;
+$purple: #9e71ef !default;
 $pink: #e83e8c !default;
 $red: #dc3545 !default;
 // $red: #f44336 !default;
@@ -119,7 +119,7 @@ $backgroundColor:$white;
 // ========== 组件相关 ==========
 
 // button
-$button-radius:$radius*2;
+$button-radius:$radius;
 
 // list
 $space-multiple:2;

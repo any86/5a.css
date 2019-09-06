@@ -5,6 +5,10 @@ $value in $theme-colors {
     }
 }
 
+.text-white{color:$white};
+.text-black{color:$black};
+
+
 @each $font-size in $font-sizes {
     $i :index($font-sizes, $font-size);
     .font-#{$i},.text-size-#{$i} {
