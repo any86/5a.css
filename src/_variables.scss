@@ -10,16 +10,21 @@ $animateDuration: 200ms;
 $background-color: #fff;
 
 // 方向
-$directionMaps: ('top':'t', 'right':'r', 'bottom':'b', 'left': 'l');
+$directionMaps: (
+  "top": "t",
+  "right": "r",
+  "bottom": "b",
+  "left": "l"
+);
 $directionList: (top, left, right, bottom);
 // zindex
-$z-index-backdrop:1000;
-$z-index-popup:1001;
-$z-index-tooltip:1002;
-$z-index-dropdown:1003;
+$z-index-backdrop: 1000;
+$z-index-popup: 1001;
+$z-index-tooltip: 1002;
+$z-index-dropdown: 1003;
 // 字体大小
 // $font-size-base:1rem;
-$font-size-base:16px;
+$font-size-base: 16px;
 $font-size-1: $font-size-base * 1.5;
 $font-size-2: $font-size-base * 1.25;
 $font-size-3: $font-size-base * 1.125;
@@ -27,10 +32,14 @@ $font-size-4: $font-size-base;
 $font-size-5: $font-size-base * 0.875;
 $font-size-6: $font-size-base * 0.75;
 // 字体集合
-$font-sizes: ($font-size-1, $font-size-2, $font-size-3, $font-size-4, $font-size-5, $font-size-6);
-
-
-
+$font-sizes: (
+  $font-size-1,
+  $font-size-2,
+  $font-size-3,
+  $font-size-4,
+  $font-size-5,
+  $font-size-6
+);
 
 // 颜色
 $white: #fff !default;
@@ -47,16 +56,20 @@ $black: #000 !default;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(("100": $gray-100,
-        "200": $gray-200,
-        "300": $gray-300,
-        "400": $gray-400,
-        "500": $gray-500,
-        "600": $gray-600,
-        "700": $gray-700,
-        "800": $gray-800,
-        "900": $gray-900),
-    $grays);
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
 
 $blue: #3190ff !default;
 $indigo: #7a30f1 !default;
@@ -71,24 +84,26 @@ $green: #28a745 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
-
-
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$colors: map-merge(("blue": $blue,
-        "indigo": $indigo,
-        "purple": $purple,
-        "pink": $pink,
-        "red": $red,
-        "orange": $orange,
-        "yellow": $yellow,
-        "green": $green,
-        "teal": $teal,
-        "cyan": $cyan,
-        "white": $white,
-        "gray": $gray-600,
-        "gray-dark": $gray-800),
-    $colors);
+$colors: map-merge(
+  (
+    "blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray-600,
+    "gray-dark": $gray-800
+  ),
+  $colors
+);
 
 $primary: $blue !default;
 $secondary: $gray-600 !default;
@@ -101,58 +116,58 @@ $dark: $gray-800 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge(("primary": $primary,
-        "secondary": $secondary,
-        "success": $success,
-        "info": $info,
-        "warning": $warning,
-        "danger": $danger,
-        "light": $light,
-        "dark": $dark),
-    $theme-colors);
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark
+  ),
+  $theme-colors
+);
 
-$backgroundColor:$white;
-
-
-
+$backgroundColor: $white;
 
 // ========== 组件相关 ==========
 
 // button
-$button-radius:$radius;
+$button-radius: $radius;
 
 // list
-$space-multiple:2;
+$space-multiple: 2;
 
 // backdrop
 $backdrop-background-color: rgba(0, 0, 0, 0.6);
 
 // popup
-$popup-background-color:$background-color;
+$popup-background-color: $background-color;
 
 // collapse
-$collapse-title-font-size:16px;
+$collapse-title-font-size: 16px;
 
 // checkbox
-$checkbox-size:24px !default;
+$checkbox-size: 24px !default;
 
 // radio
 $radio-size: 24px !default;
 
 // switch
-$switch-size:24px;
-$switch-border-color:$gray-300;
-
+$switch-size: 24px;
+$switch-border-color: $gray-300;
 
 // table
 $table-border-color: #ddd;
-$table-striped-color:#f9f9f9;
+$table-striped-color: #f9f9f9;
 
 // tooltip
-$tooltip-color:rgba(0,0,0,0.6);
+$tooltip-color: rgba(0, 0, 0, 0.6);
 
 // dropdown
-$dropdown-color:$black;
+$dropdown-color: $black;
 
 // steps
 $steps-normal-color: $gray-400;
@@ -161,9 +176,8 @@ $steps-circle-width: 10px;
 // stepper
 $stepper-width: 30px;
 
-
-
-
+// backdrop
+$backdrop-width: 42px;
 
 // // Set a specific jump point for requesting color jumps
 // $theme-color-interval:      8% !default;
@@ -174,7 +188,6 @@ $stepper-width: 30px;
 // // Customize the light and dark text colors for use in our YIQ color contrast function.
 // $yiq-text-dark:             $gray-900 !default;
 // $yiq-text-light:            $white !default;
-
 
 // // Options
 // //
@@ -191,7 +204,6 @@ $stepper-width: 30px;
 // $enable-responsive-font-sizes:                false !default;
 // $enable-validation-icons:                     true !default;
 // $enable-deprecation-messages:                 true !default;
-
 
 // // Spacing
 // //
@@ -223,7 +235,6 @@ $stepper-width: 30px;
 // $body-bg:                   $white !default;
 // $body-color:                $gray-900 !default;
 
-
 // // Links
 // //
 // // Style anchor elements.
@@ -244,7 +255,6 @@ $stepper-width: 30px;
 
 // $paragraph-margin-bottom:   1rem !default;
 
-
 // // Grid breakpoints
 // //
 // // Define the minimum dimensions at which your layout will change,
@@ -261,7 +271,6 @@ $stepper-width: 30px;
 // @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 // @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
-
 // // Grid containers
 // //
 // // Define the maximum width of `.container` for different screen sizes.
@@ -275,7 +284,6 @@ $stepper-width: 30px;
 
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
 
-
 // // Grid columns
 // //
 // // Set the number of columns and specify the width of the gutters.
@@ -283,11 +291,9 @@ $stepper-width: 30px;
 // $grid-columns:                12 !default;
 // $grid-gutter-width:           30px !default;
 
-
 // // Container padding
 
 // $container-padding-x: $grid-gutter-width / 2 !default;
-
 
 // // Components
 // //
@@ -420,7 +426,6 @@ $stepper-width: 30px;
 
 // $hr-margin-y:                 $spacer !default;
 
-
 // // Tables
 // //
 // // Customizes the `.table` component with basic values, each used across all table variations.
@@ -455,7 +460,6 @@ $stepper-width: 30px;
 // $table-bg-level:              -9 !default;
 // $table-border-level:          -6 !default;
 
-
 // // Buttons + Forms
 // //
 // // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
@@ -481,7 +485,6 @@ $stepper-width: 30px;
 // $input-btn-line-height-lg:    $line-height-lg !default;
 
 // $input-btn-border-width:      $border-width !default;
-
 
 // // Buttons
 // //
@@ -524,7 +527,6 @@ $stepper-width: 30px;
 // $btn-border-radius-sm:        $border-radius-sm !default;
 
 // $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
-
 
 // // Forms
 
@@ -721,7 +723,6 @@ $stepper-width: 30px;
 // $custom-file-button-color:          $custom-file-color !default;
 // $custom-file-button-bg:             $input-group-addon-bg !default;
 
-
 // // Form validation
 
 // $form-feedback-margin-top:          $form-text-margin-top !default;
@@ -763,7 +764,6 @@ $stepper-width: 30px;
 // $zindex-popover:                    1060 !default;
 // $zindex-tooltip:                    1070 !default;
 
-
 // // Navs
 
 // $nav-link-padding-y:                .5rem !default;
@@ -784,7 +784,6 @@ $stepper-width: 30px;
 
 // $nav-divider-color:                 $gray-200 !default;
 // $nav-divider-margin-y:              $spacer / 2 !default;
-
 
 // // Navbar
 
@@ -823,7 +822,6 @@ $stepper-width: 30px;
 // $navbar-dark-brand-color:                 $navbar-dark-active-color !default;
 // $navbar-dark-brand-hover-color:           $navbar-dark-active-color !default;
 
-
 // // Dropdowns
 // //
 // // Dropdown menu container and contents.
@@ -856,7 +854,6 @@ $stepper-width: 30px;
 
 // $dropdown-header-color:             $gray-600 !default;
 
-
 // // Pagination
 
 // $pagination-padding-y:              .5rem !default;
@@ -887,7 +884,6 @@ $stepper-width: 30px;
 // $pagination-disabled-bg:            $white !default;
 // $pagination-disabled-border-color:  $gray-300 !default;
 
-
 // // Cards
 
 // $card-spacer-y:                     .75rem !default;
@@ -909,7 +905,6 @@ $stepper-width: 30px;
 // $card-columns-count:                3 !default;
 // $card-columns-gap:                  1.25rem !default;
 // $card-columns-margin:               $card-spacer-y !default;
-
 
 // // Tooltips
 
@@ -934,7 +929,6 @@ $stepper-width: 30px;
 // $form-feedback-tooltip-line-height:   $line-height-base !default;
 // $form-feedback-tooltip-opacity:       $tooltip-opacity !default;
 // $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
-
 
 // // Popovers
 
@@ -962,7 +956,6 @@ $stepper-width: 30px;
 
 // $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
 
-
 // // Toasts
 
 // $toast-max-width:                   350px !default;
@@ -980,7 +973,6 @@ $stepper-width: 30px;
 // $toast-header-background-color:     rgba($white, .85) !default;
 // $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 
-
 // // Badges
 
 // $badge-font-size:                   75% !default;
@@ -989,7 +981,6 @@ $stepper-width: 30px;
 // $badge-padding-y:                   .25em !default;
 // $badge-padding-x:                   .5em !default;
 // $badge-border-radius:               $border-radius !default;
-
 
 // // Modals
 
@@ -1029,7 +1020,6 @@ $stepper-width: 30px;
 // $modal-show-transform:              none !default;
 // $modal-transition:                  transform .3s ease-out !default;
 
-
 // // Alerts
 // //
 // // Define alert colors, border radius, and padding.
@@ -1045,7 +1035,6 @@ $stepper-width: 30px;
 // $alert-border-level:                -9 !default;
 // $alert-color-level:                 6 !default;
 
-
 // // Progress bars
 
 // $progress-height:                   1rem !default;
@@ -1057,7 +1046,6 @@ $stepper-width: 30px;
 // $progress-bar-bg:                   theme-color("primary") !default;
 // $progress-bar-animation-timing:     1s linear infinite !default;
 // $progress-bar-transition:           width .6s ease !default;
-
 
 // // List group
 
@@ -1084,7 +1072,6 @@ $stepper-width: 30px;
 // $list-group-action-active-color:    $body-color !default;
 // $list-group-action-active-bg:       $gray-200 !default;
 
-
 // // Image thumbnails
 
 // $thumbnail-padding:                 .25rem !default;
@@ -1094,12 +1081,10 @@ $stepper-width: 30px;
 // $thumbnail-border-radius:           $border-radius !default;
 // $thumbnail-box-shadow:              0 1px 2px rgba($black, .075) !default;
 
-
 // // Figures
 
 // $figure-caption-font-size:          90% !default;
 // $figure-caption-color:              $gray-600 !default;
-
 
 // // Breadcrumbs
 
@@ -1115,7 +1100,6 @@ $stepper-width: 30px;
 // $breadcrumb-divider:                quote("/") !default;
 
 // $breadcrumb-border-radius:          $border-radius !default;
-
 
 // // Carousel
 
@@ -1143,7 +1127,6 @@ $stepper-width: 30px;
 // $carousel-transition-duration:       .6s !default;
 // $carousel-transition:                transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 
-
 // // Spinners
 
 // $spinner-width:         2rem !default;
@@ -1154,14 +1137,12 @@ $stepper-width: 30px;
 // $spinner-height-sm:       $spinner-width-sm !default;
 // $spinner-border-width-sm: .2em !default;
 
-
 // // Close
 
 // $close-font-size:                   $font-size-base * 1.5 !default;
 // $close-font-weight:                 $font-weight-bold !default;
 // $close-color:                       $black !default;
 // $close-text-shadow:                 0 1px 0 $white !default;
-
 
 // // Code
 

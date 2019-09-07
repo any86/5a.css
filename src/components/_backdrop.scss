@@ -8,17 +8,14 @@
     background: $backdrop-background-color;
 
     &__button-close {
-        @extend .ion-ios-close;
-        position: absolute;
-        top: $space;
-        right: $space;
-        color: $white;
-        width: 42px;
-        height: 42px;
-        line-height: 42px;
-        font-size: 42px;
-        // border-radius: 42px;
-        text-align: center;
-        // border: 1px solid #fff;
+        @extend .ion-ios-close, .t-align-center, .text-white, .pos-a;
+        left: 0;
+        right: 0;
+        bottom:$space;
+        margin:auto;
+        width: $backdrop-width;
+        height: $backdrop-width;
+        line-height: $backdrop-width;
+        font-size: $backdrop-width;
     }
 }
