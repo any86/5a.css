@@ -55,6 +55,7 @@
         > .circle {
           background-color: $primary !important;
           color: $white !important;
+          border-color:$primary !important;
           &:after {
             background-color: $primary !important;
           }

@@ -1,7 +1,10 @@
+// 单位尺寸
+$unit:4px;
+
 // 间距
-$space: 8px;
+$space: $unit * 2;
 // 单位圆角
-$radius: 4px;
+$radius: $unit;
 
 // 动画时间
 $animateDuration: 200ms;
@@ -24,7 +27,7 @@ $z-index-tooltip: 1002;
 $z-index-dropdown: 1003;
 // 字体大小
 // $font-size-base:1rem;
-$font-size-base: 16px;
+$font-size-base: $unit * 4;
 $font-size-1: $font-size-base * 1.5;
 $font-size-2: $font-size-base * 1.25;
 $font-size-3: $font-size-base * 1.125;
@@ -147,16 +150,16 @@ $backdrop-background-color: rgba(0, 0, 0, 0.6);
 $popup-background-color: $background-color;
 
 // collapse
-$collapse-title-font-size: 16px;
+$collapse-title-font-size: $unit*4;
 
 // checkbox
-$checkbox-size: 24px !default;
+$checkbox-size: $unit*6 !default;
 
 // radio
-$radio-size: 24px !default;
+$radio-size: $unit*6 !default;
 
 // switch
-$switch-size: 24px;
+$switch-size: $unit*6;
 $switch-border-color: $gray-300;
 
 // table
@@ -171,17 +174,17 @@ $dropdown-color: $black;
 
 // steps
 $steps-normal-color: $gray-400;
-$steps-circle-width: 10px;
+$steps-circle-width: $unit*2.5;
 
 // stepper
-$stepper-width: 30px;
+$stepper-width: $unit*6;
 
 // backdrop
-$backdrop-width: 42px;
+$backdrop-width: $unit*12;
 
 
 // pickerView
-$picker-view-width:44px;
+$picker-view-width:$unit*11;
 
 // // Set a specific jump point for requesting color jumps
 // $theme-color-interval:      8% !default;
