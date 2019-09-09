@@ -5,6 +5,14 @@ $value in $theme-colors {
     }
 }
 
+
+@each $key,
+$var in $grays {
+    .bg-gray-#{$key} {
+        background-color: $var;
+    }
+}
+
 .bg-black {
     background-color: $black;
 }

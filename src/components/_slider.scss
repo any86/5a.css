@@ -1,0 +1,34 @@
+// 滑块
+.a-slider {
+    @extend .d-block,
+    .bg-gray-300,
+    .text-primary,
+    .pos-r;
+    border-radius: 9999px;
+
+    &__progress {
+        background-color: currentColor;
+        height: $slider-height;
+        width: 0;
+        border-radius: 9999px;
+    }
+
+    &__indicator {
+        @extend .pos-a,
+        .shadow-all;
+        width: $slider-circle-width;
+        height: $slider-circle-width;
+        z-index: 1;
+        border-radius: 100%;
+        top: 50%;
+        left: 0;
+        background-color: rgba($white, 0.9);
+        transform: translate(-50%, -50%);
+
+        &__tip {
+            @extend .a-tooltip,
+            .a-tooltip--top;
+            white-space: nowrap;
+        }
+    }
+}

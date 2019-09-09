@@ -45,7 +45,7 @@ $font-sizes: (
 );
 
 // 颜色
-$white: #fff !default;
+$white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -55,7 +55,7 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black: #000 !default;
+$black:    #000 !default;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -185,6 +185,20 @@ $backdrop-width: $unit*12;
 
 // pickerView
 $picker-view-width:$unit*11;
+
+// slider
+$slider-height:$unit*2;
+$slider-circle-width:$unit*7;
+
+
+
+
+
+
+
+
+
+
 
 // // Set a specific jump point for requesting color jumps
 // $theme-color-interval:      8% !default;
