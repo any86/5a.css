@@ -2,8 +2,8 @@
 * 溢出省略号
 * @param {Number} 行数
 */
-@mixin ellipsis($row_count: 1) {
-    @if $row_count <=1 {
+@mixin ellipsis($rowCount: 1) {
+    @if $rowCount <=1 {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -14,7 +14,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: $row_count;
+        -webkit-line-clamp: $rowCount;
         -webkit-box-orient: vertical;
     }
 }

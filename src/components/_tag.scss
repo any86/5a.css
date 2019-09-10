@@ -1,16 +1,19 @@
 .a-tag{
     padding:$space/2;
-    @extend  .d-inline-block, .radius-1, .text-size-6;
+    @extend  .d-inline-block, .text-size-6;
+    
 }
 
 @each $k, $color in $theme-colors {
     .a-tag--#{$k} {
         color: color-yiq($color);
         background-color: $color;
+        @include thinBorder((top, right, bottom,left), $color, $space);
     }
 
     .a-tag--#{$k}.a-tag--outline{
-        border:1px solid $color;
+        // border:1px solid $color;
+        @include thinBorder((top, right, bottom,left), $color, $space);
         color: $color;
         background-color:$white;
     }

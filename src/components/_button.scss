@@ -12,7 +12,10 @@
 }
 
 .a-button {
-    @extend .font-5, .v-align-middle, .d-inline-block, .pos-r;
+    @extend .font-5,
+    .v-align-middle,
+    .d-inline-block,
+    .pos-r;
     margin: 0;
     // -webkit-appearance: button;
     text-align: center;
@@ -26,6 +29,8 @@
     color: #000;
     line-height: 1;
     transition: box-shadow 200ms;
+    border-width: 1px;
+    border-style: solid;
 
     &::after {
         content: ''
@@ -33,7 +38,9 @@
 
     &--block,
     &--full {
-        @extend .font-4, .full-width, .p-2;
+        @extend .font-4,
+        .full-width,
+        .p-2;
         border-radius: $button-radius;
     }
 
@@ -69,6 +76,7 @@ $color in $theme-colors {
     .a-button--#{$k} {
         color: color-yiq($color);
         background-color: $color;
+        border-color: $color;
 
         &:active {
             background-color: darken($color, 6%);
@@ -83,6 +91,17 @@ $color in $theme-colors {
         &[disabled] {
             background-color: lighten($color, 20%);
             touch-action: none;
+        }
+    }
+
+    // 镂空
+    .a-button--#{$k}.a-button--outline {
+        border-color: $color;
+        color: $color;
+        background-color: transparent !important;
+        &:active {
+            color: darken($color, 20%);
+            background-color: rgba(lighten($color, 1%), 0.06) !important;
         }
     }
 }
