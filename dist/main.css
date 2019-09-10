@@ -3358,7 +3358,7 @@ li {
 .text-dark {
   color: #343a40 !important; }
 
-.text-white, .a-backdrop__button-close, .a-tooltip, .a-slider__indicator__tip {
+.text-white, .a-backdrop__button-close, .a-tooltip, .a-slider__indicator__tip, .a-badge {
   color: #fff; }
 
 .text-black, .a-tab__content__item--active {
