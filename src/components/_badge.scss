@@ -1,7 +1,8 @@
 // 标记
 .a-badge{
-    @extend .pos-a, .px-1, .font-5;
+    @extend .pos-a, .font-6;
     z-index: 2;
+    padding: 0 6px;
     box-sizing:content-box;
     border-radius: 9999px;
     right:0;
