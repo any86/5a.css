@@ -3230,7 +3230,7 @@ li {
   padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
-.px-1, .a-dropdown, .a-search-bar__btn, .a-picker-view__content__item, .a-badge {
+.px-1, .a-dropdown, .a-search-bar__btn, .a-picker-view__content__item {
   padding-left: 8px !important;
   padding-right: 8px !important; }
 
@@ -3286,7 +3286,7 @@ li {
   padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
-.px-1, .a-dropdown, .a-search-bar__btn, .a-picker-view__content__item, .a-badge {
+.px-1, .a-dropdown, .a-search-bar__btn, .a-picker-view__content__item {
   padding-left: 8px !important;
   padding-right: 8px !important; }
 
@@ -3376,10 +3376,10 @@ li {
 .font-4, .a-button--block, .a-button--full, .a-steps__item > .item__end, .a-picker-view__content__item, .a-stepper__input, .text-size-4 {
   font-size: 16px; }
 
-.font-5, .a-button, .a-card__header > .header__subtitle, .a-input, .a-input__content__input, .a-steps__item > .item__cell, .a-search-bar__btn, .a-badge, .text-size-5, .a-card__content, .a-card__button, .a-tooltip, .a-slider__indicator__tip {
+.font-5, .a-button, .a-card__header > .header__subtitle, .a-input, .a-input__content__input, .a-steps__item > .item__cell, .a-search-bar__btn, .text-size-5, .a-card__content, .a-card__button, .a-tooltip, .a-slider__indicator__tip {
   font-size: 14px; }
 
-.font-6, .a-steps__item--big > .item__middle > .circle, .text-size-6, .a-tag {
+.font-6, .a-steps__item--big > .item__middle > .circle, .a-badge, .text-size-6, .a-tag {
   font-size: 12px; }
 
 .text-align-left {
@@ -5746,6 +5746,7 @@ align-items .a {
 
 .a-badge {
   z-index: 2;
+  padding: 0 6px;
   box-sizing: content-box;
   border-radius: 9999px;
   right: 0;
