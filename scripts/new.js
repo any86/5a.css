@@ -16,8 +16,8 @@ const mainScss = `./src/main.scss`;
 
 shell.touch(scssFile);
 shell.touch(htmlFile);
-fs.writeFileSync(scssFile, `// ${title}\r\n`);
-fs.writeFileSync(htmlFile, genHtml(`${fileName}(${title})`));
+fs.writeFileSync(scssFile, `// ${title}\r.a-${fileName}{\r\r}`);
+fs.writeFileSync(htmlFile, genHtml(fileName, title));
 
 fs.appendFileSync(mainScss, `\r@import 'components/_${fileName}.scss';`);
 
