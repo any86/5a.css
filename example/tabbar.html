@@ -9,7 +9,7 @@
     <meta content="telephone=no,email=no" name=format-detection>
     <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>badge(标记)</title>
+    <title>tabbar(标签栏)</title>
     <link rel="stylesheet" href="../dist/main.css">
 
 </head>
@@ -18,32 +18,24 @@
     <!-- 头 -->
     <header class="a-nav-bar">
         <a href="../index.html" class="a-nav-bar__icon-arrow"></a>
-        badge(标记)
+        tabbar(标签栏)
     </header>
     <!-- 头 -->
 
 
-    <article class="px-1 py-2">
-        <button class="a-button a-button--primary py-1 px-3">
-            好的 <span class="a-badge bg-danger">5</span>
-        </button>
-
-
-
-        <button class="a-button a-button--primary py-1 px-3">
-            好的 <span class="a-badge bg-success">5</span>
-        </button>
-
-
-
-        <button class="a-button a-button--warning py-1 px-3">
-            好的 <span class="a-badge bg-danger"></span>
-        </button>
-
-
-        <button class="a-button a-button--warning a-button--outline a-button--block mt-3">
-            好的 <span class="a-badge bg-primary">8</span>
-        </button>
+    <article>
+        <div class="a-tabbar">
+            <div class="a-tabbar__item">
+                <i class="a-tabbar__item__icon ion-ios-pulse"></i>
+                <p>新闻</p>
+            </div>
+            <div class="a-tabbar__item"><i class="a-tabbar__item__icon ion-ios-flame"></i>热点</div>
+            <div class="a-tabbar__item"><i class="a-tabbar__item__icon ion-ios-cart"><span class="a-tabbar__item__icon__badge">9</span></i>购物车
+            </div>
+            <div class="a-tabbar__item"><i class="a-tabbar__item__icon ion-ios-person">
+                    <span class="a-tabbar__item__icon__badge"></span>
+                </i>我</div>
+        </div>
     </article>
 
 </body>

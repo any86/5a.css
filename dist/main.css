@@ -2886,14 +2886,14 @@ li {
 * 棋盘背景
 * @param {Color} 背景色
 */
-.d-flex, .a-input__content, .a-grid .a-grid__item > .item__content, .a-grid-3-3 .a-grid__item > .item__content, .a-grid-2-5 .a-grid__item > .item__content, .a-picker-view, .a-tab__content {
+.d-flex, .a-input__content, .a-grid .a-grid__item > .item__content, .a-grid-3-3 .a-grid__item > .item__content, .a-grid-2-5 .a-grid__item > .item__content, .a-picker-view, .a-tab__content, .a-tabbar, .a-tabbar__item {
   display: flex; }
-  .d-flex.row, .row.a-input__content, .a-grid .a-grid__item > .row.item__content, .a-grid-3-3 .a-grid__item > .row.item__content, .a-grid-2-5 .a-grid__item > .row.item__content, .row.a-picker-view, .row.a-tab__content {
+  .d-flex.row, .row.a-input__content, .a-grid .a-grid__item > .row.item__content, .a-grid-3-3 .a-grid__item > .row.item__content, .a-grid-2-5 .a-grid__item > .row.item__content, .row.a-picker-view, .row.a-tab__content, .row.a-tabbar, .row.a-tabbar__item {
     flex-direction: row; }
-  .d-flex.column, .column.a-input__content, .a-grid .a-grid__item > .column.item__content, .a-grid-3-3 .a-grid__item > .column.item__content, .a-grid-2-5 .a-grid__item > .column.item__content, .column.a-picker-view, .column.a-tab__content {
+  .d-flex.column, .column.a-input__content, .a-grid .a-grid__item > .column.item__content, .a-grid-3-3 .a-grid__item > .column.item__content, .a-grid-2-5 .a-grid__item > .column.item__content, .column.a-picker-view, .column.a-tab__content, .column.a-tabbar, .column.a-tabbar__item {
     flex-direction: column; }
 
-.d-block, .a-card__image, .a-card__button, .a-radio:after, .a-tooltip:before, .a-slider__indicator__tip:before, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-steps__item > .item__middle > .circle, .a-rate__item, .a-stepper .a-stepper__minus, .a-stepper .a-stepper__input, .a-stepper .a-stepper__plus, .a-slider {
+.d-block, .a-card__image, .a-card__button, .a-radio:after, .a-tooltip:before, .a-slider__indicator__tip:before, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-steps__item > .item__middle > .circle, .a-rate__item, .a-stepper .a-stepper__minus, .a-stepper .a-stepper__input, .a-stepper .a-stepper__plus, .a-slider, .a-tabbar__item__icon {
   display: block !important; }
 
 .d-none, .a-steps__item:last-child > .item__middle > .circle:after {
@@ -3358,13 +3358,13 @@ li {
 .text-dark {
   color: #343a40 !important; }
 
-.text-white, .a-backdrop__button-close, .a-tooltip, .a-slider__indicator__tip, .a-badge {
+.text-white, .a-backdrop__button-close, .a-tooltip, .a-slider__indicator__tip, .a-badge, .a-tabbar__item__icon__badge {
   color: #fff; }
 
 .text-black, .a-tab__content__item--active {
   color: #000; }
 
-.font-1, .a-input__content__icon, .a-rate, .a-stepper__minus, .a-stepper__plus, .text-size-1 {
+.font-1, .a-input__content__icon, .a-rate, .a-stepper__minus, .a-stepper__plus, .a-tabbar__item__icon, .text-size-1 {
   font-size: 24px; }
 
 .font-2, .a-search-bar:before, .text-size-2 {
@@ -3379,7 +3379,7 @@ li {
 .font-5, .a-button, .a-card__header > .header__subtitle, .a-input, .a-input__content__input, .a-steps__item > .item__cell, .a-search-bar__btn, .text-size-5, .a-card__content, .a-card__button, .a-tooltip, .a-slider__indicator__tip {
   font-size: 14px; }
 
-.font-6, .a-steps__item--big > .item__middle > .circle, .a-badge, .text-size-6, .a-tag {
+.font-6, .a-steps__item--big > .item__middle > .circle, .a-badge, .a-tabbar__item__icon__badge, .text-size-6, .a-tag {
   font-size: 12px; }
 
 .text-align-left {
@@ -3448,7 +3448,7 @@ li {
 .bg-danger {
   background-color: #dc3545 !important; }
 
-.bg-light {
+.bg-light, .a-tabbar__item:active {
   background-color: #f8f9fa !important; }
 
 .bg-dark {
@@ -3484,7 +3484,7 @@ li {
 .bg-black {
   background-color: #000; }
 
-.bg-white, .a-search-bar, .a-picker-view {
+.bg-white, .a-search-bar, .a-picker-view, .a-tabbar {
   background-color: #fff; }
 
 .bg-chessboard {
@@ -3683,13 +3683,13 @@ table.table {
 .rotate-270 {
   transform: rotate(270deg); }
 
-.pos-r, .a-button-group, .a-button, .a-grid .a-grid__item, .a-grid-3-3 .a-grid__item, .a-grid-2-5 .a-grid__item, .a-steps__item > .item__cell, .a-picker-view, .a-tab, .a-slider {
+.pos-r, .a-button-group, .a-button, .a-grid .a-grid__item, .a-grid-3-3 .a-grid__item, .a-grid-2-5 .a-grid__item, .a-steps__item > .item__cell, .a-picker-view, .a-tab, .a-slider, .a-tabbar__item, .a-tabbar__item__icon {
   position: relative; }
 
-.pos-a, .pos-a-tl, .a-backdrop__button-close, .a-tooltip, .a-slider__indicator__tip, .a-tooltip:before, .a-slider__indicator__tip:before, .a-dropdown, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-picker-view__indicator, .a-tab__indicator, .a-slider__indicator, .a-badge, .a-badge-dot {
+.pos-a, .pos-a-tl, .a-backdrop__button-close, .a-tooltip, .a-slider__indicator__tip, .a-tooltip:before, .a-slider__indicator__tip:before, .a-dropdown, .a-steps__item > .item__middle > .circle:after, .a-steps__item + .a-steps__item > .item__middle > .circle:before, .a-steps__item + .a-steps__item > .item__middle > .circle:after, .a-picker-view__indicator, .a-tab__indicator, .a-slider__indicator, .a-badge, .a-tabbar__item__icon__badge {
   position: absolute !important; }
 
-.pos-f {
+.pos-f, .a-tabbar {
   position: fixed; }
 
 .pos-s {
@@ -3756,7 +3756,7 @@ align-items .a {
 .v-align-middle, .a-button, .a-tooltip, .a-slider__indicator__tip, .a-steps__item > .item__cell {
   vertical-align: middle; }
 
-.t-align-center, .a-backdrop__button-close, .a-input__content__icon, .a-search-bar:before, .a-search-bar__btn, .a-picker-view__content__item, .a-tab__content__item, .a-stepper .a-stepper__minus, .a-stepper .a-stepper__input, .a-stepper .a-stepper__plus {
+.t-align-center, .a-backdrop__button-close, .a-input__content__icon, .a-search-bar:before, .a-search-bar__btn, .a-picker-view__content__item, .a-tab__content__item, .a-stepper .a-stepper__minus, .a-stepper .a-stepper__input, .a-stepper .a-stepper__plus, .a-tabbar__item {
   text-align: center; }
 
 .radius-1, .a-tooltip, .a-slider__indicator__tip, .a-stepper {
@@ -3783,10 +3783,13 @@ align-items .a {
 .shadow-down, .a-nav-bar, .a-tooltip, .a-slider__indicator__tip {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125); }
 
+.shadow-up, .a-tabbar {
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.06); }
+
 .shadow-down-lg, .a-card {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12); }
 
-.full-width, .a-button--block, .a-button--full, .a-card, .a-card__image, .a-input__content__input, .a-dropdown, .a-search-bar, .a-search-bar__input, .a-picker-view__indicator {
+.full-width, .a-button--block, .a-button--full, .a-card, .a-card__image, .a-input__content__input, .a-dropdown, .a-search-bar, .a-search-bar__input, .a-picker-view__indicator, .a-tabbar {
   width: 100% !important; }
 
 .full, .a-grid-3-3 .a-grid__item > .item__content, .a-picker-view__mask {
@@ -5744,26 +5747,39 @@ align-items .a {
     .a-slider__indicator__tip {
       white-space: nowrap; }
 
-.a-badge {
+.a-badge, .a-tabbar__item__icon__badge {
+  background-color: #dc3545;
   z-index: 2;
-  padding: 0 6px;
+  padding: 0 5px;
+  min-height: 10px;
   box-sizing: content-box;
   border-radius: 9999px;
   right: 0;
   top: 0;
-  height: 18px;
-  line-height: 18px;
+  line-height: 16px;
   text-align: center;
   white-space: nowrap;
   transform: translate(50%, -50%); }
 
-.a-badge-dot {
-  z-index: 2;
-  box-sizing: content-box;
-  border-radius: 9999px;
-  right: 0;
-  top: 0;
-  width: 8px;
-  height: 8px;
-  line-height: 2px;
-  transform: translate(50%, -50%); }
+.a-tabbar {
+  left: 0;
+  bottom: 0;
+  height: 60px; }
+  .a-tabbar__item {
+    flex: 1;
+    flex-flow: column;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    color: currentColor; }
+    .a-tabbar__item:active {
+      transition: transform 200ms; }
+      .a-tabbar__item:active .a-tabbar__item__icon {
+        transform: scale(0.92); }
+    .a-tabbar__item__icon {
+      align-self: center;
+      height: 30px;
+      width: 30px; }
+      .a-tabbar__item__icon__badge {
+        top: 4px; }
