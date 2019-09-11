@@ -7,7 +7,7 @@
     .shadow-up;
     left: 0;
     bottom: 0;
-    height: 60px;
+    height: $tabbar-height;
 
     &__item {
         @extend .t-align-center,
@@ -21,16 +21,25 @@
         justify-content: center;
         color: currentColor;
 
+        &:active {
+            @extend .bg-light;
+            transition: transform $animateDuration;
+            .a-tabbar__item__icon{
+                transform: scale(0.92);
+            }
+        }
+
         &__icon {
             @extend .d-block,
             .font-1,
             .pos-r;
             align-self: center;
-            height: 30px;
-            width: 30px;
-            &__badge{
+            height: $tabbar-height/2;
+            width: $tabbar-height/2;
+
+            &__badge {
                 @extend .a-badge;
-                top:4px;
+                top: $tabbar-badge-offset-top;
             }
         }
     }
