@@ -2,14 +2,15 @@
 .a-badge {
     @extend .pos-a,
     .font-6, .text-white;
+    background-color: $danger;
     z-index: 2;
-    padding: 0 6px;
+    padding: 0 5px;
+    min-height: 10px;
     box-sizing: content-box;
     border-radius: 9999px;
     right: 0;
     top: 0;
-    height: 18px;
-    line-height: 18px;
+    line-height: 16px;
     text-align: center;
     white-space: nowrap;
     transform: translate(50%, -50%);

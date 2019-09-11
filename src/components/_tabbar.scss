@@ -1,0 +1,37 @@
+// 标签栏
+.a-tabbar {
+    @extend .d-flex,
+    .pos-f,
+    .full-width,
+    .bg-white,
+    .shadow-up;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+
+    &__item {
+        @extend .t-align-center,
+        .d-flex,
+        .pos-r;
+        flex: 1;
+        flex-flow: column;
+        height: 100%;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        color: currentColor;
+
+        &__icon {
+            @extend .d-block,
+            .font-1,
+            .pos-r;
+            align-self: center;
+            height: 30px;
+            width: 30px;
+            &__badge{
+                @extend .a-badge;
+                top:4px;
+            }
+        }
+    }
+}
