@@ -1,30 +1,19 @@
 // 标记
 .a-badge {
     @extend .pos-a,
-    .font-6, .text-white;
+    .font-6,
+    .text-white;
     background-color: $danger;
     z-index: 2;
-    padding: 0 5px;
-    min-height: 10px;
+    padding: 0 $badge-padding-y;
+    // 为了内容为空的时候形成圆形
+    min-height: $badge-padding-y*2;
     box-sizing: content-box;
     border-radius: 9999px;
     right: 0;
     top: 0;
-    line-height: 16px;
+    line-height: $badge-height;
     text-align: center;
     white-space: nowrap;
-    transform: translate(50%, -50%);
-}
-
-.a-badge-dot {
-    @extend .pos-a;
-    z-index: 2;
-    box-sizing: content-box;
-    border-radius: 9999px;
-    right: 0;
-    top: 0;
-    width: 8px;
-    height: 8px;
-    line-height: 2px;
     transform: translate(50%, -50%);
 }
