@@ -6,6 +6,7 @@
     background-color: $white;
     border: 1px solid $primary;
     vertical-align: middle;
+
     >.ion-ios-checkmark {
         width: $checkbox-size;
         height: $checkbox-size;
@@ -19,8 +20,10 @@
 
     &--checked {
         >.ion-ios-checkmark {
+            @extend .font-1;
+            font-weight: bold;
             color: $primary;
-            transform: scale(2);
+            transform: scale(1);
         }
     }
 
