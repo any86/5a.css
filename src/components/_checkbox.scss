@@ -1,4 +1,5 @@
 .a-checkbox {
+    @extend .ovh;
     box-sizing: content-box;
     display: inline-block;
     border-radius: $radius;
@@ -14,15 +15,18 @@
         text-align: center;
         transform: scale(0);
         transform-origin: center center;
-        transition: transform 200ms, color 200ms;
+        transition: transform $animateDuration, color $animateDuration;
         display: inline-block;
     }
 
     &--checked {
         >.ion-ios-checkmark {
-            @extend .font-1;
+            @extend .d-block;
+            width: $checkbox-size;
+            height: $checkbox-size;
             font-weight: bold;
             color: $primary;
+            font-size: $checkbox-size;
             transform: scale(1);
         }
     }
@@ -36,4 +40,8 @@
             color: lighten($dark, 60%);
         }
     }
+}
+
+.a-checkbox--circle{
+    border-radius: 100%;
 }
