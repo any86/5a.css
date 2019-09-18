@@ -6,14 +6,15 @@
 
 @each $k, $color in $theme-colors {
     .a-tag--#{$k} {
+        @extend .radius-1;
         color: color-yiq($color);
         background-color: $color;
-        @include thinBorder((top, right, bottom,left), $color, $space);
+        border:1px solid $color;
+        // @include thinBorder((top, right, bottom,left), $color, $space);
     }
 
     .a-tag--#{$k}.a-tag--outline{
-        // border:1px solid $color;
-        @include thinBorder((top, right, bottom,left), $color, $space);
+        // @include thinBorder((top, right, bottom,left), $color, $space);
         color: $color;
         background-color:$white;
     }
