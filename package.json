@@ -1,7 +1,7 @@
 
 {
-  "name": "@c3a/css",
-  "version": "0.0.2",
+  "name": "@5a/css",
+  "version": "0.0.1",
   "main": "dist/main.css",
   "directories": {
     "example": "example"
@@ -13,6 +13,7 @@
     "fonts"
   ],
   "scripts": {
+    "release": "npm pub --access public",
     "new": "node ./scripts/new",
     "build:wx": "node ./scripts/wx",
     "build": "node-sass ./src/main.scss ./dist/main.css",
