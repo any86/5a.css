@@ -1,4 +1,6 @@
-@import '../variables';
+@import '../_variables';
+@import '../_mixins';
+
 .a-grid {
     display: flex;
     flex-wrap: wrap;

@@ -1,5 +1,4 @@
-@import '../variables';
-@import "node_modules/ionicons/dist/scss/ionicons.scss";
+@import '../_variables';
 .a-backdrop {
     position: fixed;
     z-index: $z-index-backdrop;
@@ -10,7 +9,6 @@
     background: $backdrop-background-color;
 
     &__button-close {
-        @extend .ion-ios-close;
         position: absolute;
         text-align: center;
         color:$white;

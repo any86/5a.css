@@ -1,7 +1,5 @@
 // 步进器
-// 评分
-@import '../variables';
-@import "node_modules/ionicons/dist/scss/ionicons.scss";
+@import "../_variables";
 .a-stepper {
   display: inline-flex;
   border-radius: $radius;
@@ -12,18 +10,13 @@
     width: $stepper-width;
   }
 
-  &__minus {
+  &__minus,  &__plus {
     font-size: $font-size-1;
-    @extend .ion-ios-remove, %icon;
+    @extend %icon;
   }
 
   &__input {
     @extend %icon;
     font-size: $font-size-4;
-  }
-
-  &__plus {
-    @extend .ion-ios-add, %icon;
-    font-size: $font-size-1;
   }
 }

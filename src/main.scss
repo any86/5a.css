@@ -13,7 +13,7 @@
 
 @import "_variables.scss";
 @import "_function.scss";
-@import "_mixin.scss";
+@import "_mixins.scss";
 @import "_reset.scss";
 
 // helpers
@@ -51,4 +51,4 @@
 @import 'components/_slider.scss';
 @import 'components/_badge.scss';
 @import 'components/_tabbar.scss';
-// @import 'components/_indexList.scss';
+@import 'components/_indexList.scss';

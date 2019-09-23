@@ -1,10 +1,8 @@
 const sass = require('node-sass');
 const fs = require('fs');
-const rimraf = require('rimraf');
 const mime = require('mime-types')
 const ICON_CSS_PATH = 'node_modules/ionicons/dist/scss/ionicons.scss';
 const FONT_URL = 'node_modules/ionicons/dist/fonts/ionicons.ttf';
-const DIST = './dist/wx/';
 const {
     genFontCss
 } = require('./iconToDataURL');
@@ -32,7 +30,9 @@ let fileNames = fs.readdirSync('./src/components');
 fileNames.forEach(name => {
     if (name.includes('.scss')) {
         const componentName = name.replace(/_|.scss/g, '');
-        renderToWXSS(componentName);
+        if ('icon' === componentName) {
+            renderToWXSS(componentName);
+        }
     }
 
 });
@@ -40,36 +40,56 @@ fileNames.forEach(name => {
 function renderToWXSS(componentName) {
     const result = sass.renderSync({
         file: `./src/components/_${componentName}.scss`,
-        outFile: `${DIST}${componentName}.wxss`,
+        outFile: `./dist/${componentName}.wxss`,
         // outputStyle: 'compressed',
         // sourceMap: true,
         importer: [(url, prev) => {
             if ('icon' === componentName) {
                 // 第一次运行
-                if (url.includes('ionicons-common')) {
-                    return {
-                        contents: genFontCss(FONT_URL) + fs.readFileSync(url, 'utf8')
-                    }
+                if(url.includes('ionicons-common')){
+                    return {contents:genFontCss(FONT_URL) + fs.readFileSync(url,'utf8')}
                 };
-                return {
-                    contents: fs.readFileSync(url, 'utf8')
-                }
+                return {contents:fs.readFileSync(url,'utf8')}
             }
             return null;
         }]
 
     });
-    try {
-        fs.statSync('./dist/');
-    } catch {
-        fs.mkdirSync('./dist/');
-    }
-    try {
 
-        fs.statSync(DIST);
+    try {
+        const stat = fs.statSync('./dist');
     } catch (error) {
-        fs.mkdirSync(DIST);
+        fs.mkdirSync('./dist');
     }
 
-    fs.writeFileSync(`${DIST}${componentName}.wxss`, result.css);
+    fs.writeFileSync(`./dist/${componentName}.wxss`, result.css);
+
 }
+
+
+/*
+
+const result = sass.renderSync({
+    file: './src/main.scss',
+    outFile: './dist/main.css',
+    outputStyle: 'compressed',
+    // sourceMap: true,
+    importer: [(url, prev) => {
+        if (-1 !== ICON_CSS_PATH.indexOf(url)) {
+            return {
+                contents: replaceBase64()
+            };
+        }
+        return null;
+    }]
+});
+
+try {
+    const stat = fs.statSync('./dist');
+} catch (error) {
+    fs.mkdirSync('./dist');
+}
+
+fs.writeFileSync('./dist/main.wxss', result.css);
+
+*/

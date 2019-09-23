@@ -1,4 +1,5 @@
-@import '../variables';
+@import '../_variables';
+@import '../_mixins';
 .a-picker-view {
     overflow: hidden;
     position: relative;

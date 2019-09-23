@@ -1,19 +1,21 @@
 // 索引列表
+@import '../_variables';
 .a-index-list{
-    @extend .pos-r;
+    position: relative;
     height: 100%;
     &__bar{
-        @extend .pos-a;
+        position: absolute;
         right:0;
         top:50%;
         bottom:0;
         transform: translateY(-50%);
         &__item{
-            @extend  .pl-2, .font-3;
+            padding-left: $space *2 ;
+            font-size: $font-size-3;
             line-height: 24px;
             &--acitve{
                 transition: color $animateDuration;
-                @extend .text-primary;
+                color:$primary;
             }
 
         }

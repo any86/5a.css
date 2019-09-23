@@ -1,16 +1,16 @@
 // 评分
-@import '../variables';
+@import '../_variables';
 .a-rate {
   font-size: $font-size-1;
   display: inline-flex;
   justify-content: space-around;
   color: $yellow;
   &__item {
-    @extend .d-block;
+    display: block;
     color:currentColor;
   }
 
   &__item + &__item {
-    @extend .ml-1;
+    margin-left: $space;
   }
 }

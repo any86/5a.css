@@ -1,6 +1,6 @@
 // 标签页
-@import '../variables';
-@import '../_mixin';
+@import '../_variables';
+@import '../_mixins';
 
 .a-tab{
     @include thinBorder();

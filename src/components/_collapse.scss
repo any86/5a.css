@@ -1,6 +1,4 @@
-@import '../variables';
-@import "node_modules/ionicons/dist/scss/ionicons.scss";
-
+@import '../_variables';
 .a-collapse {
     overflow: hidden;
     border-bottom: 1px solid $gray-300;
@@ -19,7 +17,6 @@
             font-weight: bold;
 
             >.header__icon-arrow {
-                @extend .ion-ios-arrow-forward;
                 display: inline-block;
                 transition: transform $animateDuration;
                 width: 1.3em;

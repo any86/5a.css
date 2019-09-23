@@ -1,4 +1,3 @@
-
 {
   "name": "@5a/css",
   "version": "0.0.1",
@@ -16,7 +15,7 @@
     "sass": "node-sass",
     "release": "npm pub --access public",
     "new": "node ./scripts/new",
-    "build:wx": "node ./scripts/wx",
+    "build:wx": "rimraf ./dist/wx && node ./scripts/wx",
     "build": "node-sass ./src/main.scss ./dist/main.css",
     "build:helpers": "node-sass ./src/helpers.scss ./dist/helpers.css",
     "dev": "npm run build -- --watch",
@@ -43,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/any86/5a.css/issues"
   },
-  "homepage": "https://github.com/any86/5a.css#readme"
+  "homepage": "https://github.com/any86/5a.css#readme",
+  "dependencies": {
+    "rimraf": "^3.0.0"
+  }
 }

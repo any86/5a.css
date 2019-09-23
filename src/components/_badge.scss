@@ -1,20 +1,7 @@
 // 标记
-@import '../variables';
+@import '../_variables';
+@import '../_mixins';
+
 .a-badge {
-    position: absolute;
-    font-size:$font-size-6;
-    color:$white;
-    background-color: $danger;
-    z-index: 2;
-    padding: 0 $badge-padding-y;
-    // 为了内容为空的时候形成圆形
-    min-height: $badge-padding-y*2;
-    box-sizing: content-box;
-    border-radius: 9999px;
-    right: 0;
-    top: 0;
-    line-height: $badge-height;
-    text-align: center;
-    white-space: nowrap;
-    transform: translate(50%, -50%);
+    @include badge;
 }

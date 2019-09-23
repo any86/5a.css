@@ -1,6 +1,6 @@
 // 滑块
-@import '../variables';
-@import '_tooltip';
+@import '../_variables';
+@import '../_mixins';
 
 .a-slider {
     display: block;
@@ -29,9 +29,7 @@
         transform: translate(-50%, -50%);
 
         &__tip {
-
-            @extend .a-tooltip,
-            .a-tooltip--top;
+            @include tooltip;
             white-space: nowrap;
         }
     }

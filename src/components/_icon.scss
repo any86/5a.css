@@ -1,6 +1,21 @@
-.a-icon {
+@import "node_modules/ionicons/dist/scss/ionicons-common.scss";
+@import "node_modules/ionicons/dist/scss/ionicons-icons.scss";
+
+.ion {
     display: inline-block;
-    vertical-align: middle;
-    // vertical-align: -0.14em;
-    align-self: center;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+// .ion {
+//     // vertical-align: -0.14em;
+//     // align-self: center;
+// }

@@ -1,6 +1,6 @@
 // 标签栏
-@import '../variables';
-@import '_badge';
+@import '../_variables';
+@import '../_mixins';
 
 .a-tabbar {
     display: flex;
@@ -27,7 +27,6 @@
         &:active {
             background-color: $light;
             transition: transform $animateDuration;
-
             .a-tabbar__item__icon {
                 transform: scale(0.92);
             }
@@ -42,7 +41,7 @@
             width: $tabbar-height/2;
 
             &__badge {
-                @extend .a-badge;
+                @include badge;
                 top: $tabbar-badge-offset-top;
             }
         }
