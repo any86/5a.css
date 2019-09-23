@@ -1,21 +1,29 @@
 // 步进器
+// 评分
+@import '../variables';
+@import "node_modules/ionicons/dist/scss/ionicons.scss";
 .a-stepper {
-  @extend .d-inline-flex, .radius-1;
+  display: inline-flex;
+  border-radius: $radius;
   border: 1px solid $gray-300;
   %icon {
-    @extend .d-block, .t-align-center;
+    display: block;
+    text-align: center;
     width: $stepper-width;
   }
 
   &__minus {
-    @extend .ion-ios-remove, .font-1, %icon;
+    font-size: $font-size-1;
+    @extend .ion-ios-remove, %icon;
   }
 
   &__input {
-    @extend %icon, .font-4;
+    @extend %icon;
+    font-size: $font-size-4;
   }
 
   &__plus {
-    @extend .ion-ios-add, .font-1, %icon;
+    @extend .ion-ios-add, %icon;
+    font-size: $font-size-1;
   }
 }

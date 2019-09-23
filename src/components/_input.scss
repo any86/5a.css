@@ -1,28 +1,30 @@
+@import '../variables';
 .a-input {
-    @extend .p-1,
-    .font-5;
+    padding: $space;
+    font-size: $font-size-5;
 
     &__title {
         font-weight: bold;
     }
 
     &__content {
-        @extend .d-flex,
-        .align-items-center;
+        display: flex;
+        align-items: center;
         height: 2em;
         &__title-inline{
-            @extend .mr-1, .font-bold;
+            margin-right: $space;
+            font-weight: bold;
         }
         &__input {
-            @extend .full-width,
-            .flex-1,
-            .font-5;
+            width: 100%;
+            flex:1;
+            font-size:$font-size-5;
         }
 
         &__icon {
-            @extend .font-1, .t-align-center;
+            font-size:$font-size-1;
+            text-align: center;
             width:$font-size-1;
-
         }
     }
 }

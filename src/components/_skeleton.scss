@@ -1,3 +1,4 @@
+@import '../variables';
 .a-skeleton-rect {
     overflow: hidden;
     position: relative;
@@ -21,8 +22,8 @@
 
 // 圆形
 .a-skeleton-circle {
-    @extend .a-skeleton-rect,
-    .d-inline-block;
+    @extend .a-skeleton-rect;
+    display: inline-block;
     border-radius: 100%;
     height: 60px;
     width: 60px;

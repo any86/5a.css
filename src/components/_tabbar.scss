@@ -1,18 +1,21 @@
 // 标签栏
+@import '../variables';
+@import '_badge';
+
 .a-tabbar {
-    @extend .d-flex,
-    .pos-f,
-    .full-width,
-    .bg-white,
-    .shadow-up;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: $white;
+    box-shadow: $shadow-up;
     left: 0;
     bottom: 0;
     height: $tabbar-height;
 
     &__item {
-        @extend .t-align-center,
-        .d-flex,
-        .pos-r;
+        text-align: center;
+        display: flex;
+        position: relative;
         flex: 1;
         flex-flow: column;
         height: 100%;
@@ -22,17 +25,18 @@
         color: currentColor;
 
         &:active {
-            @extend .bg-light;
+            background-color: $light;
             transition: transform $animateDuration;
-            .a-tabbar__item__icon{
+
+            .a-tabbar__item__icon {
                 transform: scale(0.92);
             }
         }
 
         &__icon {
-            @extend .d-block,
-            .font-1,
-            .pos-r;
+            display: block;
+            font-size: $font-size-1;
+            position: relative;
             align-self: center;
             height: $tabbar-height/2;
             width: $tabbar-height/2;

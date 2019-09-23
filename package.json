@@ -13,6 +13,7 @@
     "fonts"
   ],
   "scripts": {
+    "sass": "node-sass",
     "release": "npm pub --access public",
     "new": "node ./scripts/new",
     "build:wx": "node ./scripts/wx",

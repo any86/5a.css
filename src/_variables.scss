@@ -13,11 +13,10 @@ $animateDuration: 200ms;
 $background-color: #fff;
 
 // 方向
-$directionMaps: (
-  "top": "t",
-  "right": "r",
-  "bottom": "b",
-  "left": "l"
+$directionMaps: ("top": "t",
+    "right": "r",
+    "bottom": "b",
+    "left": "l"
 );
 $directionList: (top, left, right, bottom);
 // zindex
@@ -35,17 +34,15 @@ $font-size-4: $font-size-base;
 $font-size-5: $font-size-base * 0.875;
 $font-size-6: $font-size-base * 0.75;
 // 字体集合
-$font-sizes: (
-  $font-size-1,
-  $font-size-2,
-  $font-size-3,
-  $font-size-4,
-  $font-size-5,
-  $font-size-6
-);
+$font-sizes: ($font-size-1,
+    $font-size-2,
+    $font-size-3,
+    $font-size-4,
+    $font-size-5,
+    $font-size-6);
 
 // 颜色
-$white:    #fff !default;
+$white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -55,24 +52,20 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black: #000 !default;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(
-  (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-  ),
-  $grays
-);
+$grays: map-merge(("100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900),
+    $grays);
 
 $blue: #3190ff !default;
 $indigo: #7a30f1 !default;
@@ -89,24 +82,20 @@ $cyan: #17a2b8 !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$colors: map-merge(
-  (
-    "blue": $blue,
-    "indigo": $indigo,
-    "purple": $purple,
-    "pink": $pink,
-    "red": $red,
-    "orange": $orange,
-    "yellow": $yellow,
-    "green": $green,
-    "teal": $teal,
-    "cyan": $cyan,
-    "white": $white,
-    "gray": $gray-600,
-    "gray-dark": $gray-800
-  ),
-  $colors
-);
+$colors: map-merge(("blue": $blue,
+        "indigo": $indigo,
+        "purple": $purple,
+        "pink": $pink,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "cyan": $cyan,
+        "white": $white,
+        "gray": $gray-600,
+        "gray-dark": $gray-800),
+    $colors);
 
 $primary: $blue !default;
 $secondary: $gray-600 !default;
@@ -119,21 +108,29 @@ $dark: $gray-800 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge(
-  (
-    "primary": $primary,
-    "secondary": $secondary,
-    "success": $success,
-    "info": $info,
-    "warning": $warning,
-    "danger": $danger,
-    "light": $light,
-    "dark": $dark
-  ),
-  $theme-colors
-);
+$theme-colors: map-merge(("primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark),
+    $theme-colors);
 
 $backgroundColor: $white;
+
+// 阴影
+$shadow-all:0 2px 8px rgba(#000, 0.1),
+0 0 0 1px rgba(#ccc, 0.05);
+
+$shadow-down: 0 1px 3px rgba(#000, .125);
+
+$shadow-up: 0 -1px 3px rgba(#000, .06);
+
+$shadow-down-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+
 
 // ========== 组件相关 ==========
 // button

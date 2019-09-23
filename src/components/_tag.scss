@@ -1,22 +1,25 @@
-.a-tag{
-    padding:$space/2;
-    @extend  .d-inline-block, .text-size-6;
-    
+@import '../variables';
+
+.a-tag {
+    padding: $space/2;
+    display: inline-block;
+    font-size: $font-size-6;
 }
 
-@each $k, $color in $theme-colors {
+@each $k,
+$color in $theme-colors {
     .a-tag--#{$k} {
-        @extend .radius-1;
+        border-radius: $radius;
         color: color-yiq($color);
         background-color: $color;
-        border:1px solid $color;
+        border: 1px solid $color;
         // @include thinBorder((top, right, bottom,left), $color, $space);
     }
 
-    .a-tag--#{$k}.a-tag--outline{
+    .a-tag--#{$k}.a-tag--outline {
         // @include thinBorder((top, right, bottom,left), $color, $space);
         color: $color;
-        background-color:$white;
+        background-color: $white;
     }
 
 }

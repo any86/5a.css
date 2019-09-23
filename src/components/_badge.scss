@@ -1,8 +1,9 @@
 // 标记
+@import '../variables';
 .a-badge {
-    @extend .pos-a,
-    .font-6,
-    .text-white;
+    position: absolute;
+    font-size:$font-size-6;
+    color:$white;
     background-color: $danger;
     z-index: 2;
     padding: 0 $badge-padding-y;

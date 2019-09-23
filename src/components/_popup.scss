@@ -1,9 +1,8 @@
+@import '../variables';
 .a-popup {
-    @extend .p-1;
+    padding: $space;
     position: fixed !important;
     z-index: $z-index-popup;
-    // border-radius: $radius;
-    // @include border-1px((top),#ccc, 0);
     background-color: $popup-background-color;
     overflow: hidden;
     &--top{
@@ -38,6 +37,7 @@
 
 
     &__header{
-        @extend .font-3, .m-1;
+        font-size: $font-size-3;
+        margin-left: $space;
     }
 }

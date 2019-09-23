@@ -1,9 +1,12 @@
 // 滑块
+@import '../variables';
+@import '_tooltip';
+
 .a-slider {
-    @extend .d-block,
-    .bg-gray-300,
-    .text-primary,
-    .pos-r;
+    display: block;
+    background-color: $gray-300;
+    color:$primary;
+    position: relative;
     border-radius: 9999px;
 
     &__progress {
@@ -14,8 +17,8 @@
     }
 
     &__indicator {
-        @extend .pos-a,
-        .shadow-all;
+        position: absolute;
+        box-shadow: $shadow-all;
         width: $slider-circle-width;
         height: $slider-circle-width;
         z-index: 1;
@@ -26,6 +29,7 @@
         transform: translate(-50%, -50%);
 
         &__tip {
+
             @extend .a-tooltip,
             .a-tooltip--top;
             white-space: nowrap;

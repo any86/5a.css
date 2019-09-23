@@ -1,18 +1,4 @@
-// $size:6px;
-
-// .b-radio{
-//     display: block;
-//     height:0.8em;
-//     width: 0.8em;
-//     border-radius: 0.8em;
-//     background:$white;
-//     box-shadow:0 0 0 $size $white,  0 0 0 $size+1px $primary;
-//     transition: all 200ms;
-// }
-
-// .b-radio--checked{
-//     background:$primary;
-// }
+@import '../variables';
 
 .a-radio {
     box-sizing: content-box;
@@ -28,7 +14,7 @@
     &:after {
         content: '';
         margin: auto;
-        @extend .d-block;
+        display: block;
         border-radius: $radio-size/2;
         height: $radio-size/2;
         width: $radio-size/2;

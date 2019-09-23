@@ -1,135 +1,146 @@
+@import '../variables';
+
 %line {
-  @extend .d-block, .pos-a;
-  background-color: $gray-400;
-  content: "";
-  width: 1px;
-  z-index: 1;
-  left: 0;
-  right: 0;
-  margin: auto;
+    display: block;
+    position: absolute;
+    background-color: $gray-400;
+    content: "";
+    width: 1px;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .a-steps {
-  @extend .d-table;
+    display: table;
 
-  &__item {
-    @extend .d-table-row, .p-1;
+    &__item {
+        display: table-row;
+        padding: $space;
 
-    > .item__cell {
-      @extend .d-table-cell, .v-align-middle, .p-1, .font-5, .pos-r;
-    }
-
-    > .item__start {
-      word-break: keep-all;
-      white-space: nowrap;
-      text-align: end;
-    }
-
-    // 75
-    > .item__middle {
-      > .circle {
-        color: $steps-normal-color !important;
-        &:after {
-          @extend %line;
-          bottom: 0;
-          height: calc(50% - #{$steps-circle-width / 2});
+        >.item__cell {
+            position: relative;
+            display: table-cell;
+            vertical-align: middle;
+            padding: $space;
+            font-size: $font-size-5;
         }
 
-        @extend .d-block;
-        margin: auto;
-        width: $steps-circle-width;
-        height: $steps-circle-width;
-        border-radius: 100%;
-        border: 1px solid $steps-normal-color !important;
-        background-color: transparent !important;
-      }
-    }
-
-    > .item__end {
-      @extend .font-4;
-    }
-
-    // 当前项的下线是灰色
-    &--active {
-      > .item__middle {
-        > .circle {
-          background-color: $primary !important;
-          color: $white !important;
-          border-color:$primary !important;
-          &:after {
-            background-color: $primary !important;
-          }
-        }
-      }
-    }
-
-    // 当前项后面的项目的上/下线是灰色
-    &--active ~ & {
-      > .item__middle {
-        > .circle {
-          color: $white !important;
-          background-color: $primary !important;
-          border-color: $primary !important;
-          &:after,
-          &:before {
-            background-color: $primary !important;
-          }
-        }
-      }
-    }
-  }
-
-  // 非首位
-  &__item + &__item {
-    > .item__middle {
-      > .circle {
-        &:before {
-          @extend %line;
-          top: 0;
-          height: calc(50% - #{$steps-circle-width / 2});
+        >.item__start {
+            word-break: keep-all;
+            white-space: nowrap;
+            text-align: end;
         }
 
-        &:after {
-          @extend %line;
-          bottom: 0;
-          height: calc(50% - #{$steps-circle-width / 2});
+        // 75
+        >.item__middle {
+            >.circle {
+                color: $steps-normal-color !important;
+
+                &:after {
+                    @extend %line;
+                    bottom: 0;
+                    height: calc(50% - #{$steps-circle-width / 2});
+                }
+
+                display: block;
+                margin: auto;
+                width: $steps-circle-width;
+                height: $steps-circle-width;
+                border-radius: 100%;
+                border: 1px solid $steps-normal-color !important;
+                background-color: transparent !important;
+            }
         }
-      }
+
+        >.item__end {
+            font-size: $font-size-4;
+        }
+
+        // 当前项的下线是灰色
+        &--active {
+            >.item__middle {
+                >.circle {
+                    background-color: $primary !important;
+                    color: $white !important;
+                    border-color: $primary !important;
+
+                    &:after {
+                        background-color: $primary !important;
+                    }
+                }
+            }
+        }
+
+        // 当前项后面的项目的上/下线是灰色
+        &--active~& {
+            >.item__middle {
+                >.circle {
+                    color: $white !important;
+                    background-color: $primary !important;
+                    border-color: $primary !important;
+
+                    &:after,
+                    &:before {
+                        background-color: $primary !important;
+                    }
+                }
+            }
+        }
     }
-  }
 
-  // 去掉尾部线
-  &__item:last-child {
-    > .item__middle {
-      > .circle {
-        &:after {
-          @extend .d-none;
+    // 非首位
+    &__item+&__item {
+        >.item__middle {
+            >.circle {
+                &:before {
+                    @extend %line;
+                    top: 0;
+                    height: calc(50% - #{$steps-circle-width / 2});
+                }
+
+                &:after {
+                    @extend %line;
+                    bottom: 0;
+                    height: calc(50% - #{$steps-circle-width / 2});
+                }
+            }
         }
-      }
     }
-  }
 
-  // 大圆
-  &__item--big {
-    > .item__middle {
-      > .circle {
-        @extend .font-6;
-        width: $steps-circle-width * 2;
-        height: $steps-circle-width * 2;
-        line-height: $steps-circle-width * 2;
-        color: $primary;
-        text-align: center;
-      }
-
-      > .circle {
-        &:before {
-          height: calc(50% - #{$steps-circle-width}) !important;
+    // 去掉尾部线
+    &__item:last-child {
+        >.item__middle {
+            >.circle {
+                &:after {
+                    display: none;
+                }
+            }
         }
-
-        &:after {
-          height: calc(50% - #{$steps-circle-width}) !important;
-        }
-      }
     }
-  }
+
+    // 大圆
+    &__item--big {
+        >.item__middle {
+            >.circle {
+                font-size: $font-size-6;
+                width: $steps-circle-width * 2;
+                height: $steps-circle-width * 2;
+                line-height: $steps-circle-width * 2;
+                color: $primary;
+                text-align: center;
+            }
+
+            >.circle {
+                &:before {
+                    height: calc(50% - #{$steps-circle-width}) !important;
+                }
+
+                &:after {
+                    height: calc(50% - #{$steps-circle-width}) !important;
+                }
+            }
+        }
+    }
 }

@@ -1,14 +1,14 @@
+@import '../variables';
 .a-grid {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 
     .a-grid__item {
-        @extend .text-align-center,
-        .pos-r;
-
+        text-align: center;
+        position: relative;
         >.item__content {
-            @extend .d-flex;
+            display: flex;
             flex-flow: column;
             align-items: center;
             justify-content: center;
@@ -31,7 +31,7 @@
         >.item__content {
 
             @if($isSquare) {
-                @extend .full;
+                width:100%
             }
         }
     }

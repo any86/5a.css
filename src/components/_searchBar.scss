@@ -1,36 +1,38 @@
+@import '../variables';
+@import "node_modules/ionicons/dist/scss/ionicons.scss";
 .a-search-bar {
-    @extend .d-table;
-    @extend .full-width;
-    @extend .bg-white;
-    @extend .p-1;
-    @extend .align-items-center;
-
+    display: table;
+    width: 100%;
+    background-color: $white;
+    padding: $space;
+    align-items: center;
     // 放大镜
     &:before {
-        @extend .ion-ios-search,
-        .parent-color,
-        .d-table-cell,
-        .t-align-center,
-        .font-2;
+        @extend .ion-ios-search;
+        color: currentColor;
+        display: table-cell;
+        text-align: center;
+        font-size:$font-size-2;
         vertical-align: middle;
         background-color: $gray-100;
         width: 30px;
     }
 
     &__input {
-        @extend .d-table-cell;
-        @extend .full-width;
-        @extend .p-1,
-        .parent-color;
+        display: table;
+        width: 100%;
+        padding:$space;
+        color: currentColor;
         background-color: $gray-100;
     }
 
     &__btn {
-        @extend .d-table-cell,
-        .t-align-center,
-        .px-1,
-        .ml-1,
-        .font-5;
+        display: table-cell;
+        text-align: center;
+        padding-right: $space;
+        padding-left: $space;
+        margin-left: $space;
+        font-size:$font-size-5;
         word-break: keep-all;
         // http://liaolushen.github.io/2015/09/12/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-1-table-cell-width/
         width: 1%;

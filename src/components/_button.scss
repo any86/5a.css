@@ -1,5 +1,9 @@
+@import '../variables';
+@import '_loading';
+
+
 .a-button-group {
-    @extend .pos-r;
+    position: relative;
     display: flex;
 }
 
@@ -12,10 +16,10 @@
 }
 
 .a-button {
-    @extend .font-5,
-    .v-align-middle,
-    .d-inline-block,
-    .pos-r;
+    position: relative;
+    font-size: $font-size-5;
+    vertical-align: middle;
+    display: inline-block;
     margin: 0;
     // -webkit-appearance: button;
     text-align: center;
@@ -38,9 +42,9 @@
 
     &--block,
     &--full {
-        @extend .font-4,
-        .full-width,
-        .p-2;
+        font-size: $font-size-4;
+        width: 100%;
+        padding: $space*2;
         border-radius: $button-radius;
     }
 
@@ -59,6 +63,7 @@
 
     &--loading {
         &::before {
+
             @extend .a-loading-android-half,
             .mr-1;
             content: '';

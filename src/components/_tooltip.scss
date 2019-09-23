@@ -1,21 +1,25 @@
+
+
+@import '../variables';
+@import '../mixin';
 // 内容的宽度收到相对位置关系的父元素的宽度影响, 所以使用的时候最好值把tip放在body的第一级子元素
 .a-tooltip {
-    @extend .p-1,
-    .text-size-5,
-    .v-align-middle,
-    .shadow-down,
-    .pos-a,
-    .text-white,
-    .radius-1,
-    .align-items-center;
+    position: absolute;
+    color: $white;
+    padding: $space;
+    font-size: $font-size-5;
+    vertical-align: middle;
+    box-shadow: $shadow-down;
+    border-radius: $radius;
+    align-items: center;
     z-index: $z-index-tooltip;
     background-color: $tooltip-color;
     max-width: 200px;
     white-space: pre-wrap;
 
     &:before {
-        @extend .d-block,
-        .pos-a;
+        display: block;
+        position: absolute;
         content: '';
         z-index: 1;
     }
