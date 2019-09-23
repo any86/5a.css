@@ -28,7 +28,7 @@ function replaceBase64(){
 const result = sass.renderSync({
     file: './src/main.scss',
     outFile: './dist/main.css',
-    // outputStyle: 'compressed',
+    outputStyle: 'compressed',
     // sourceMap: true,
     importer: [(url, prev) => {
         if (-1 !== ICON_CSS_PATH.indexOf(url)) {
@@ -46,7 +46,7 @@ try {
     fs.mkdirSync('./dist');
 }
 
-fs.writeFileSync('./dist/main.css', result.css);
+fs.writeFileSync('./dist/main.wxss', result.css);
 
 // console.log(result)
 
