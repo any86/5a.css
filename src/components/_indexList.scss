@@ -1,0 +1,21 @@
+// 索引列表
+.a-index-list{
+    @extend .pos-r;
+    height: 100%;
+    &__bar{
+        @extend .pos-a;
+        right:0;
+        top:50%;
+        bottom:0;
+        transform: translateY(-50%);
+        &__item{
+            @extend  .pl-2, .font-3;
+            line-height: 24px;
+            &--acitve{
+                transition: color $animateDuration;
+                @extend .text-primary;
+            }
+
+        }
+    }
+}
