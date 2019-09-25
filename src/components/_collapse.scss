@@ -6,7 +6,7 @@
     &__item {
         border-top: 1px solid $gray-300;
 
-        >.item__header {
+        &__header {
             display: flex;
             align-items: center;
             align-content: center;
@@ -16,7 +16,7 @@
             cursor: pointer;
             font-weight: bold;
 
-            >.header__icon-arrow {
+            &__icon-arrow {
                 display: inline-block;
                 transition: transform $animateDuration;
                 width: 1.3em;
@@ -25,7 +25,7 @@
             }
         }
 
-        >.item__body {
+        &__body {
             display: none;
             padding: $space;
             font-size: 14px;
@@ -35,16 +35,16 @@
     // 展开情况下
     &__item {
         &--open {
-            >.item__header {
+            .a-collapse__item__header {
                 border-bottom: 1px solid $gray-300;
 
-                >.header__icon-arrow {
+                .a-collapse__item__icon-arrow {
                     transform: rotate(90deg);
                     transform-origin: center center;
                 }
             }
 
-            >.item__body {
+            .a-collapse__item__body {
                 display: block;
             }
         }
@@ -56,13 +56,13 @@
         border-bottom: 1px solid $gray-300;
 
         .a-collapse__item {
-            >.item__header {
+            &__header {
                 border: none;
                 background-color: transparent;
                 padding: $space;
             }
 
-            >.item__body {
+            &__body {
                 padding: 0 $space $space $space;
             }
         }

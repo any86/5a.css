@@ -5,11 +5,19 @@
     position: absolute;
     background-color: $gray-400;
     content: "";
-    width: 1px;
+    width: $steps-line-width;
     z-index: 1;
     left: 0;
     right: 0;
     margin: auto;
+}
+
+%cell {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding: $space;
+    font-size: $font-size-5;
 }
 
 .a-steps {
@@ -19,25 +27,23 @@
         display: table-row;
         padding: $space;
 
-        >.item__cell {
-            position: relative;
-            display: table-cell;
-            vertical-align: middle;
-            padding: $space;
-            font-size: $font-size-5;
+        &__start,
+        &__middle,
+        &__end {
+            @extend %cell;
         }
 
-        >.item__start {
+
+        &__start {
             word-break: keep-all;
             white-space: nowrap;
             text-align: end;
         }
 
         // 75
-        >.item__middle {
-            >.circle {
+        &__middle {
+            .a-steps__item__middle__circle {
                 color: $steps-normal-color !important;
-
                 &:after {
                     @extend %line;
                     bottom: 0;
@@ -54,18 +60,17 @@
             }
         }
 
-        >.item__end {
+        &__end {
             font-size: $font-size-4;
         }
 
         // 当前项的下线是灰色
         &--active {
-            >.item__middle {
-                >.circle {
+            .a-steps__item__middle {
+                .a-steps__item__middle__circle {
                     background-color: $primary !important;
                     color: $white !important;
                     border-color: $primary !important;
-
                     &:after {
                         background-color: $primary !important;
                     }
@@ -75,8 +80,8 @@
 
         // 当前项后面的项目的上/下线是灰色
         &--active~& {
-            >.item__middle {
-                >.circle {
+            .a-steps__item__middle {
+                .a-steps__item__middle__circle {
                     color: $white !important;
                     background-color: $primary !important;
                     border-color: $primary !important;
@@ -92,8 +97,8 @@
 
     // 非首位
     &__item+&__item {
-        >.item__middle {
-            >.circle {
+        .a-steps__item__middle {
+            .a-steps__item__middle__circle {
                 &:before {
                     @extend %line;
                     top: 0;
@@ -111,8 +116,8 @@
 
     // 去掉尾部线
     &__item:last-child {
-        >.item__middle {
-            >.circle {
+        .a-steps__item__middle {
+            .a-steps__item__middle__circle {
                 &:after {
                     display: none;
                 }
@@ -122,8 +127,8 @@
 
     // 大圆
     &__item--big {
-        >.item__middle {
-            >.circle {
+        .a-steps__item__middle {
+            .a-steps__item__middle__circle {
                 font-size: $font-size-6;
                 width: $steps-circle-width * 2;
                 height: $steps-circle-width * 2;
@@ -132,7 +137,7 @@
                 text-align: center;
             }
 
-            >.circle {
+            .a-steps__item__middle__circle {
                 &:before {
                     height: calc(50% - #{$steps-circle-width}) !important;
                 }

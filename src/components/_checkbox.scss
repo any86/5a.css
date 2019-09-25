@@ -10,7 +10,7 @@
     border: 1px solid $primary;
     vertical-align: middle;
 
-    >.icon-tick {
+    &__icon {
         width: $checkbox-size;
         height: $checkbox-size;
         line-height: $checkbox-size;
@@ -22,7 +22,7 @@
     }
 
     &--checked {
-        >.icon-tick {
+        .a-checkbox__icon {
             display: block;
             width: $checkbox-size;
             height: $checkbox-size;
@@ -38,12 +38,12 @@
         border-color: lighten($dark, 60%);
         background-color: lighten($dark, 70%);
 
-        >.icon-tick {
+        .a-checkbox__icon {
             color: lighten($dark, 60%);
         }
     }
 }
 
-.a-checkbox--circle{
+.a-checkbox--circle {
     border-radius: 100%;
 }

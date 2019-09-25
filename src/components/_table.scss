@@ -1,4 +1,5 @@
 @import '../_variables';
+
 .a-table {
     display: table;
     width: 100%;
@@ -14,23 +15,23 @@
         }
     }
 
-    .tr {
+    &__tr {
         display: table-row;
         width: 100%;
         padding: $space;
 
-        .td,
-        .th {
+        &__td,
+        &__th {
             display: table-cell;
             vertical-align: middle;
             padding: $space;
         }
 
-        .td {
+        &__td {
             border-top: 1px solid $table-border-color;
         }
 
-        .th {
+        &__th {
             word-break: keep-all;
             font-weight: bold;
         }
