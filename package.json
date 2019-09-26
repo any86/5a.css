@@ -1,6 +1,6 @@
 {
   "name": "@5a/css",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "main": "dist/main.css",
   "directories": {
     "example": "example"
@@ -17,7 +17,7 @@
     "new": "node ./scripts/new",
     "build:wx": "rimraf ./dist/wx && node ./scripts/wx",
     "build": "node-sass ./src/main.scss ./dist/main.css",
-    "build:helpers": "node-sass ./src/helpers.scss ./dist/helpers.css",
+    "build:helpers": "node-sass ./src/helpers.scss ./dist/helpers.css  --output-style compressed",
     "dev": "npm run build -- --watch",
     "release:demo": "npm run build:wx && node ./scripts/demo.js"
   },
