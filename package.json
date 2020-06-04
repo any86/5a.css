@@ -2,6 +2,8 @@
   "name": "@5a/css",
   "version": "0.0.4",
   "main": "dist/main.css",
+  "unpkg": "dist/main.css",
+  "jsdelivr": "dist/main.css",
   "directories": {
     "example": "example"
   },
