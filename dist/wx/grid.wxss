@@ -1,0 +1,296 @@
+@charset "UTF-8";
+/**
+* 溢出省略号
+* @param {Number} 行数
+*/
+/**
+* 等边三角形
+* @param {String} 尺寸
+* @param {Color} 颜色
+* @param {String} 方向
+*/
+/**
+* 真.1px边框
+* {List}: 多个方向边框, 默认值为bottom, 你可以根据需要传入(top, left, bottom, right) 4个方向;
+* {Color} 边框的颜色, 默认#ccc;
+* {List} 4个圆角半径, 默认0;
+* {String} 一个高级设置, 一般都不需要改动, 由于细边框的实现使用了css的伪类, 所以为了规避可能出现的样式冲突, 我们可以自己指定使用:after还是:before, 默认after;
+*/
+/**
+* 棋盘背景
+* @param {Color} 背景色
+*/
+.a-grid, .a-grid-3-3, .a-grid-2-5 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+  .a-grid__item {
+    text-align: center;
+    position: relative; }
+    .a-grid__item__content {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center; }
+
+.a-grid-3-3 .a-grid__item {
+  flex-basis: 33.33333%;
+  padding-bottom: 33.33333%;
+  height: 0; }
+  .a-grid-3-3 .a-grid__item__content {
+    width: 100%; }
+
+.a-grid-3-3 .a-grid__item:nth-child(1) {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .a-grid-3-3 .a-grid__item:nth-child(1) {
+      position: relative;
+      border-right: none;
+      border-bottom: none; }
+    .a-grid-3-3 .a-grid__item:nth-child(1):after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #ccc;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .a-grid-3-3 .a-grid__item:nth-child(1):after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.3333); } }
+
+.a-grid-3-3 .a-grid__item:nth-child(2) {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .a-grid-3-3 .a-grid__item:nth-child(2) {
+      position: relative;
+      border-right: none;
+      border-bottom: none; }
+    .a-grid-3-3 .a-grid__item:nth-child(2):after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #ccc;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .a-grid-3-3 .a-grid__item:nth-child(2):after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.3333); } }
+
+.a-grid-3-3 .a-grid__item:nth-child(3) {
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .a-grid-3-3 .a-grid__item:nth-child(3) {
+      position: relative;
+      border-bottom: none; }
+    .a-grid-3-3 .a-grid__item:nth-child(3):after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #ccc;
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .a-grid-3-3 .a-grid__item:nth-child(3):after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.3333); } }
+
+.a-grid-3-3 .a-grid__item:nth-child(4) {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .a-grid-3-3 .a-grid__item:nth-child(4) {
+      position: relative;
+      border-right: none;
+      border-bottom: none; }
+    .a-grid-3-3 .a-grid__item:nth-child(4):after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #ccc;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .a-grid-3-3 .a-grid__item:nth-child(4):after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.3333); } }
+
+.a-grid-3-3 .a-grid__item:nth-child(5) {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .a-grid-3-3 .a-grid__item:nth-child(5) {
+      position: relative;
+      border-right: none;
+      border-bottom: none; }
+    .a-grid-3-3 .a-grid__item:nth-child(5):after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #ccc;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .a-grid-3-3 .a-grid__item:nth-child(5):after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.3333); } }
+
+.a-grid-3-3 .a-grid__item:nth-child(6) {
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .a-grid-3-3 .a-grid__item:nth-child(6) {
+      position: relative;
+      border-bottom: none; }
+    .a-grid-3-3 .a-grid__item:nth-child(6):after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #ccc;
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .a-grid-3-3 .a-grid__item:nth-child(6):after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.3333); } }
+
+.a-grid-3-3 .a-grid__item:nth-child(7) {
+  border-right: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .a-grid-3-3 .a-grid__item:nth-child(7) {
+      position: relative;
+      border-right: none; }
+    .a-grid-3-3 .a-grid__item:nth-child(7):after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #ccc;
+      border-right-width: 1px;
+      border-radius: 0 0 0 0; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .a-grid-3-3 .a-grid__item:nth-child(7):after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.3333); } }
+
+.a-grid-3-3 .a-grid__item:nth-child(8) {
+  border-right: 1px solid #ccc;
+  border-radius: 0 0 0 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .a-grid-3-3 .a-grid__item:nth-child(8) {
+      position: relative;
+      border-right: none; }
+    .a-grid-3-3 .a-grid__item:nth-child(8):after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #ccc;
+      border-right-width: 1px;
+      border-radius: 0 0 0 0; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .a-grid-3-3 .a-grid__item:nth-child(8):after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.3333); } }
+
+.a-grid-2-5 .a-grid__item {
+  flex-basis: 20%; }

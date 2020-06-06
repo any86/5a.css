@@ -1,0 +1,21 @@
+.a-table {
+  display: table;
+  width: 100%;
+  background-color: #fff; }
+  .a-table--border {
+    border: 1px solid #ddd; }
+  .a-table--striped .tr:nth-of-type(2n) {
+    background-color: #f9f9f9; }
+  .a-table__tr {
+    display: table-row;
+    width: 100%;
+    padding: 8px; }
+    .a-table__tr__td, .a-table__tr__th {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 8px; }
+    .a-table__tr__td {
+      border-top: 1px solid #ddd; }
+    .a-table__tr__th {
+      word-break: keep-all;
+      font-weight: bold; }

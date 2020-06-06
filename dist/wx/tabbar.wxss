@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/**
+* 溢出省略号
+* @param {Number} 行数
+*/
+/**
+* 等边三角形
+* @param {String} 尺寸
+* @param {Color} 颜色
+* @param {String} 方向
+*/
+/**
+* 真.1px边框
+* {List}: 多个方向边框, 默认值为bottom, 你可以根据需要传入(top, left, bottom, right) 4个方向;
+* {Color} 边框的颜色, 默认#ccc;
+* {List} 4个圆角半径, 默认0;
+* {String} 一个高级设置, 一般都不需要改动, 由于细边框的实现使用了css的伪类, 所以为了规避可能出现的样式冲突, 我们可以自己指定使用:after还是:before, 默认after;
+*/
+/**
+* 棋盘背景
+* @param {Color} 背景色
+*/
+.a-tabbar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.06);
+  left: 0;
+  bottom: 0;
+  height: 60px; }
+  .a-tabbar__item {
+    text-align: center;
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-flow: column;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    color: currentColor; }
+    .a-tabbar__item:active {
+      background-color: #f8f9fa;
+      transition: transform 200ms; }
+      .a-tabbar__item:active .a-tabbar__item__icon {
+        transform: scale(0.92); }
+    .a-tabbar__item__icon {
+      display: block;
+      font-size: 24px;
+      position: relative;
+      align-self: center;
+      height: 30px;
+      width: 30px; }
+      .a-tabbar__item__icon__badge {
+        position: absolute;
+        font-size: 12px;
+        font-style: normal;
+        color: #fff;
+        background-color: #dc3545;
+        z-index: 2;
+        padding: 0 5px;
+        min-height: 10px;
+        box-sizing: content-box;
+        border-radius: 9999px;
+        right: 0;
+        top: 0;
+        line-height: 16px;
+        text-align: center;
+        white-space: nowrap;
+        transform: translate(50%, -50%);
+        top: 4px; }

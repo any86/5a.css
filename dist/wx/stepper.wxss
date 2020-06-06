@@ -1,0 +1,12 @@
+.a-stepper {
+  display: inline-flex;
+  border-radius: 4px;
+  border: 1px solid #dee2e6; }
+  .a-stepper .a-stepper__minus, .a-stepper .a-stepper__plus, .a-stepper .a-stepper__input {
+    display: block;
+    text-align: center;
+    width: 24px; }
+  .a-stepper__minus, .a-stepper__plus {
+    font-size: 24px; }
+  .a-stepper__input {
+    font-size: 16px; }

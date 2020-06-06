@@ -1,0 +1,23 @@
+.a-divider {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  color: #343a40;
+  border-color: rgba(52, 58, 64, 0.4);
+  border-style: solid;
+  border-width: 0; }
+  .a-divider::after, .a-divider::before {
+    content: '';
+    flex: 1;
+    border-color: inherit;
+    border-style: inherit;
+    border-width: 0 0 1px 0;
+    transform: scaleY(0.5) translateY(-50%); }
+  .a-divider::before {
+    margin-right: 24px; }
+  .a-divider::after {
+    margin-left: 24px; }
+  .a-divider--left::before {
+    max-width: 10%; }
+  .a-divider--right::after {
+    max-width: 10%; }

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/**
+* 溢出省略号
+* @param {Number} 行数
+*/
+/**
+* 等边三角形
+* @param {String} 尺寸
+* @param {Color} 颜色
+* @param {String} 方向
+*/
+/**
+* 真.1px边框
+* {List}: 多个方向边框, 默认值为bottom, 你可以根据需要传入(top, left, bottom, right) 4个方向;
+* {Color} 边框的颜色, 默认#ccc;
+* {List} 4个圆角半径, 默认0;
+* {String} 一个高级设置, 一般都不需要改动, 由于细边框的实现使用了css的伪类, 所以为了规避可能出现的样式冲突, 我们可以自己指定使用:after还是:before, 默认after;
+*/
+/**
+* 棋盘背景
+* @param {Color} 背景色
+*/
+.a-toast {
+  position: absolute;
+  display: inline-block;
+  max-width: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 14px; }
+  .a-toast__icon {
+    display: inline;
+    vertical-align: middle;
+    font-size: 2em;
+    line-height: 0.6em; }
+    .a-toast__icon:before {
+      line-height: 0.6em; }
+  .a-toast--block .a-toast__icon {
+    display: block !important;
+    margin: auto;
+    font-size: 5em !important;
+    line-height: 0.6em; }
+    .a-toast--block .a-toast__icon:before {
+      line-height: 0.6em; }
+  .a-toast--loading .a-toast__icon {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    border-radius: 1em;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: transparent currentColor transparent transparent;
+    animation: rotate 0.6s linear infinite;
+    vertical-align: middle;
+    margin-bottom: 8px;
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 0.5em;
+    border-width: 0.05em; }

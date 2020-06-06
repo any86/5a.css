@@ -1,0 +1,29 @@
+.a-search-bar {
+  display: table;
+  width: 100%;
+  background-color: #fff;
+  padding: 8px;
+  align-items: center; }
+  .a-search-bar__icon-search {
+    color: currentColor;
+    display: table-cell;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: middle;
+    background-color: #f8f9fa;
+    width: 30px; }
+  .a-search-bar__input {
+    display: table;
+    width: 100%;
+    padding: 8px;
+    color: currentColor;
+    background-color: #f8f9fa; }
+  .a-search-bar__btn {
+    display: table-cell;
+    text-align: center;
+    padding-right: 8px;
+    padding-left: 8px;
+    margin-left: 8px;
+    font-size: 14px;
+    word-break: keep-all;
+    width: 1%; }

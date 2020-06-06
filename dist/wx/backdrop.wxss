@@ -1,0 +1,20 @@
+.a-backdrop {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); }
+  .a-backdrop__button-close {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    margin: auto;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 48px; }

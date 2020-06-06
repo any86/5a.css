@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/**
+* 溢出省略号
+* @param {Number} 行数
+*/
+/**
+* 等边三角形
+* @param {String} 尺寸
+* @param {Color} 颜色
+* @param {String} 方向
+*/
+/**
+* 真.1px边框
+* {List}: 多个方向边框, 默认值为bottom, 你可以根据需要传入(top, left, bottom, right) 4个方向;
+* {Color} 边框的颜色, 默认#ccc;
+* {List} 4个圆角半径, 默认0;
+* {String} 一个高级设置, 一般都不需要改动, 由于细边框的实现使用了css的伪类, 所以为了规避可能出现的样式冲突, 我们可以自己指定使用:after还是:before, 默认after;
+*/
+/**
+* 棋盘背景
+* @param {Color} 背景色
+*/
+.a-tab {
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0;
+  position: relative;
+  overflow: hidden; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .a-tab {
+      position: relative;
+      border-bottom: none; }
+    .a-tab:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      padding: 1px;
+      transform-origin: 0 0;
+      pointer-events: none;
+      border: 0 solid #ccc;
+      border-bottom-width: 1px;
+      border-radius: 0 0 0 0; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .a-tab:after {
+      border-radius: 0 0 0 0;
+      width: 300%;
+      height: 300%;
+      transform: scale(0.3333); } }
+  .a-tab__content {
+    display: flex;
+    flex-wrap: nowrap; }
+    .a-tab__content__item {
+      padding: 16px;
+      text-align: center;
+      flex-grow: 1;
+      flex-shrink: 0;
+      color: #6c757d; }
+    .a-tab__content__item--active {
+      font-weight: bold;
+      color: #000; }
+  .a-tab__indicator {
+    position: absolute;
+    left: 100px;
+    bottom: 0;
+    height: 2px;
+    width: 100px;
+    background-color: #3190ff; }

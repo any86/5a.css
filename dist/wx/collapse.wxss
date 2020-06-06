@@ -1,0 +1,40 @@
+.a-collapse {
+  overflow: hidden;
+  border-bottom: 1px solid #dee2e6; }
+  .a-collapse__item {
+    border-top: 1px solid #dee2e6; }
+    .a-collapse__item__header {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      background-color: #f8f9fa;
+      padding: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold; }
+      .a-collapse__item__header__icon-arrow {
+        display: inline-block;
+        transition: transform 200ms;
+        width: 1.3em;
+        height: 1.3em;
+        text-align: center; }
+    .a-collapse__item__body {
+      display: none;
+      padding: 8px;
+      font-size: 14px; }
+  .a-collapse__item--open .a-collapse__item__header {
+    border-bottom: 1px solid #dee2e6; }
+    .a-collapse__item--open .a-collapse__item__header .a-collapse__item__icon-arrow {
+      transform: rotate(90deg);
+      transform-origin: center center; }
+  .a-collapse__item--open .a-collapse__item__body {
+    display: block; }
+  .a-collapse--simplify {
+    border: none;
+    border-bottom: 1px solid #dee2e6; }
+    .a-collapse--simplify .a-collapse__item__header {
+      border: none;
+      background-color: transparent;
+      padding: 8px; }
+    .a-collapse--simplify .a-collapse__item__body {
+      padding: 0 8px 8px 8px; }

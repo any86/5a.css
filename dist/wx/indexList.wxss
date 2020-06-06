@@ -1,0 +1,16 @@
+.a-index-list {
+  position: relative;
+  height: 100%; }
+  .a-index-list__bar {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    transform: translateY(-50%); }
+    .a-index-list__bar__item {
+      padding-left: 16px;
+      font-size: 18px;
+      line-height: 24px; }
+      .a-index-list__bar__item--acitve {
+        transition: color 200ms;
+        color: #3190ff; }

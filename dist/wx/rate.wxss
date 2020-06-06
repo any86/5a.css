@@ -1,0 +1,10 @@
+.a-rate {
+  font-size: 24px;
+  display: inline-flex;
+  justify-content: space-around;
+  color: #ffc107; }
+  .a-rate__item {
+    display: block;
+    color: currentColor; }
+  .a-rate__item + .a-rate__item {
+    margin-left: 8px; }
