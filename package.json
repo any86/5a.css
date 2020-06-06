@@ -1,6 +1,6 @@
 {
   "name": "@5a/css",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "dist/main.css",
   "unpkg": "dist/main.css",
   "jsdelivr": "dist/main.css",
