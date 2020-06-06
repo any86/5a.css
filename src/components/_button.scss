@@ -23,7 +23,9 @@
     margin: 0;
     // -webkit-appearance: button;
     text-align: center;
-    padding: $space;
+    padding: 0 $space;
+    min-height: 44px;
+    min-width: 44px;
     box-sizing: border-box;
     border: 0 none;
     user-select: none;
@@ -40,8 +42,8 @@
         content: "";
     }
 
-    &+.a-button{
-      margin-right: $space;
+    & + .a-button {
+        margin-left: $space;
     }
 
     &--block,
