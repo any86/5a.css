@@ -1,6 +1,6 @@
 {
   "name": "@5a/css",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/main.css",
   "unpkg": "dist/main.css",
   "jsdelivr": "dist/main.css",
@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "sass": "node-sass",
-    "release": "npm run build:wx && npm run build && npm pub --access public",
+    "release": "standard-version && npm run build:wx && npm run build && npm pub --access public",
     "new": "node ./scripts/new",
     "build:wx": "rimraf ./dist/wx && node ./scripts/wx",
     "build": "node-sass ./src/main.scss ./dist/main.css",
@@ -28,7 +28,8 @@
     "gh-pages": "^2.1.0",
     "ionicons": "^4.6.2",
     "node-sass": "^4.12.0",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "standard-version": "^8.0.0"
   },
   "repository": {
     "type": "git",
