@@ -3,104 +3,108 @@
 @import "../_functions";
 
 .a-button-group {
-  position: relative;
-  display: flex;
+    position: relative;
+    display: flex;
 }
 
 .a-button-group--block {
-  border-radius: $button-radius;
+    border-radius: $button-radius;
 
-  .a-button {
-    border-radius: 0 !important;
-  }
+    .a-button {
+        border-radius: 0 !important;
+    }
 }
 
 .a-button {
-  position: relative;
-  font-size: $font-size-5;
-  vertical-align: middle;
-  display: inline-block;
-  margin: 0;
-  // -webkit-appearance: button;
-  text-align: center;
-  padding: $space/2 $space;
-  box-sizing: border-box;
-  border: 0 none;
-  user-select: none;
-  outline: none;
-  border-radius: $button-radius;
-  background: #fff;
-  color: #000;
-  line-height: 1;
-  transition: box-shadow 200ms;
-  border-width: 1px;
-  border-style: solid;
-
-  &::after {
-    content: "";
-  }
-
-  &--block,
-  &--full {
-    font-size: $font-size-4;
-    width: 100%;
-    padding: $space * 2;
+    position: relative;
+    font-size: $font-size-5;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0;
+    // -webkit-appearance: button;
+    text-align: center;
+    padding: $space;
+    box-sizing: border-box;
+    border: 0 none;
+    user-select: none;
+    outline: none;
     border-radius: $button-radius;
-  }
+    background: #fff;
+    color: #000;
+    line-height: 1;
+    transition: box-shadow 200ms;
+    border-width: 1px;
+    border-style: solid;
 
-  &--full {
-    border-radius: 0 !important;
-  }
-
-  &--rounded {
-    border-radius: 99999px;
-  }
-
-  &--round {
-    border-radius: 99999px;
-  }
-
-  &--loading {
-    &::before {
-      @include loading-half-circle;
-      margin-right: $space;
-      content: "";
-      height: 0.6em;
-      width: 0.6em;
+    &::after {
+        content: "";
     }
-  }
+
+    &+.a-button{
+      margin-right: $space;
+    }
+
+    &--block,
+    &--full {
+        font-size: $font-size-4;
+        width: 100%;
+        padding: $space * 2;
+        border-radius: $button-radius;
+    }
+
+    &--full {
+        border-radius: 0 !important;
+    }
+
+    &--rounded {
+        border-radius: 99999px;
+    }
+
+    &--round {
+        border-radius: 99999px;
+    }
+
+    &--loading {
+        &::before {
+            @include loading-half-circle;
+            margin-right: $space;
+            content: "";
+            height: 0.6em;
+            width: 0.6em;
+        }
+    }
 }
 
 @each $k, $color in $theme-colors {
-  .a-button--#{$k} {
-    color: color-yiq($color);
-    background-color: $color;
-    border-color: $color;
+    .a-button--#{$k} {
+        color: color-yiq($color);
+        background-color: $color;
+        border-color: $color;
 
-    &:active {
-      background-color: darken($color, 6%);
-      box-shadow: 0 0 0 3px rgba($color, 0.4);
+        &:active {
+            background-color: darken($color, 6%);
+            box-shadow: 0 0 0 3px rgba($color, 0.4);
+        }
+
+        &:not(.a-button--full):focus {
+            z-index: 1;
+            // box-shadow: 0 0 0 3px rgba($color, .4);
+        }
+
+        &[disabled] {
+            background-color: lighten($color, 20%);
+            touch-action: none;
+        }
     }
 
-    &:not(.a-button--full):focus {
-      z-index: 1;
-      // box-shadow: 0 0 0 3px rgba($color, .4);
+    // 镂空
+    .a-button--#{$k}.a-button--outline {
+        border-color: $color;
+        color: $color;
+        background-color: transparent !important;
+        &:active {
+            color: darken($color, 20%);
+            background-color: rgba(lighten($color, 1%), 0.06) !important;
+        }
     }
-
-    &[disabled] {
-      background-color: lighten($color, 20%);
-      touch-action: none;
-    }
-  }
-
-  // 镂空
-  .a-button--#{$k}.a-button--outline {
-    border-color: $color;
-    color: $color;
-    background-color: transparent !important;
-    &:active {
-      color: darken($color, 20%);
-      background-color: rgba(lighten($color, 1%), 0.06) !important;
-    }
-  }
 }
