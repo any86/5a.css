@@ -1,6 +1,6 @@
 {
   "name": "@5a/css",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/main.css",
   "unpkg": "dist/main.css",
   "jsdelivr": "dist/main.css",
@@ -15,13 +15,12 @@
   ],
   "scripts": {
     "sass": "node-sass",
-    "release": "standard-version && npm run build:wx && npm run build && npm pub --access public",
+    "release": "standard-version && npm run build:wx && npm run build && npm pub --access public && node ./scripts/demo.js",
     "new": "node ./scripts/new",
     "build:wx": "rimraf ./dist/wx && node ./scripts/wx",
     "build": "node-sass ./src/main.scss ./dist/main.css",
     "build:helpers": "node-sass ./src/helpers.scss ./dist/helpers.css  --output-style compressed",
-    "dev": "npm run build -- --watch",
-    "release:demo": "npm run build:wx && node ./scripts/demo.js"
+    "dev": "npm run build -- --watch"
   },
   "devDependencies": {
     "chalk": "^2.4.2",
