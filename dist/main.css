@@ -2850,7 +2850,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; }
 
 a {
   text-decoration: none;
@@ -4037,7 +4037,9 @@ align-items .a {
   display: inline-block;
   margin: 0;
   text-align: center;
-  padding: 4px 8px;
+  padding: 0 8px;
+  min-height: 44px;
+  min-width: 44px;
   box-sizing: border-box;
   border: 0 none;
   user-select: none;
@@ -4051,6 +4053,8 @@ align-items .a {
   border-style: solid; }
   .a-button::after {
     content: ""; }
+  .a-button + .a-button {
+    margin-left: 8px; }
   .a-button--block, .a-button--full {
     font-size: 16px;
     width: 100%;
@@ -4306,14 +4310,14 @@ align-items .a {
     width: 1em;
     height: 1em; }
 
-.a-list__item:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+.a-list__item + .a-list__item .a-list__item__content {
+  border-top: 1px solid #ccc;
   border-radius: 0 0 0 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    .a-list__item:not(:last-child) {
+    .a-list__item + .a-list__item .a-list__item__content {
       position: relative;
-      border-bottom: none; }
-    .a-list__item:not(:last-child):after {
+      border-top: none; }
+    .a-list__item + .a-list__item .a-list__item__content:after {
       content: "";
       position: absolute;
       top: 0;
@@ -4327,10 +4331,10 @@ align-items .a {
       transform-origin: 0 0;
       pointer-events: none;
       border: 0 solid #ccc;
-      border-bottom-width: 1px;
+      border-top-width: 1px;
       border-radius: 0 0 0 0; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    .a-list__item:not(:last-child):after {
+    .a-list__item + .a-list__item .a-list__item__content:after {
       border-radius: 0 0 0 0;
       width: 300%;
       height: 300%;
