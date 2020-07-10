@@ -5,6 +5,10 @@
 .a-button-group {
     position: relative;
     display: flex;
+    align-items: flex-start;
+    .a-button + .a-button {
+        margin-left: 0;
+    }
 }
 
 .a-button-group--block {
@@ -25,8 +29,8 @@
     text-align: center;
     padding: 0 $space;
     min-height: 44px;
+    min-width: 46px;
     line-height: 44px;
-    min-width: 44px;
     box-sizing: border-box;
     border: 0 none;
     user-select: none;
@@ -34,7 +38,6 @@
     border-radius: $button-radius;
     background: #fff;
     color: #000;
-    line-height: 1;
     transition: box-shadow 200ms;
     border-width: 1px;
     border-style: solid;
@@ -42,7 +45,6 @@
     &::after {
         content: "";
     }
-
     & + .a-button {
         margin-left: $space;
     }
@@ -51,8 +53,12 @@
     &--full {
         font-size: $font-size-4;
         width: 100%;
-        padding: $space * 2;
+        padding: 0 $space * 2;
         border-radius: $button-radius;
+        margin-left: 0;
+        &.a-button + .a-button {
+            margin-left: 0;
+        }
     }
 
     &--full {

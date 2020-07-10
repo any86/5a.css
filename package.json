@@ -19,9 +19,8 @@
     "new": "node ./scripts/new",
     "copy-fonts":"node ./scripts/copyFonts",
     "build:wx": "rimraf ./dist/wx && node ./scripts/wx",
-    "build": "rimraf dist && npm run copy-fonts && node ./scripts/buildCss",
-    "build:helpers": "node-sass ./src/helpers.scss ./dist/helpers.css  --output-style compressed",
-    "dev": "npm run build -- --watch"
+    "build": "rimraf dist && npm run copy-fonts && node ./scripts/build",
+    "dev": "node-sass src/main.scss dist/css/main.css --watch"
   },
   "devDependencies": {
     "chalk": "^2.4.2",
