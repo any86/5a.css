@@ -34,7 +34,6 @@ fileNames.forEach(name => {
         const componentName = name.replace(/_|.scss/g, '');
         renderToWXSS(componentName);
     }
-
 });
 
 function renderToWXSS(componentName) {

@@ -1,3 +1,6 @@
+/**
+ * 生成新的demo模板页面
+ */
 const shell = require('shelljs');
 const chalk = require('chalk');
 const fs = require('fs');
