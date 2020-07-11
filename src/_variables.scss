@@ -33,6 +33,7 @@ $font-size-3: $font-size-base * 1.125;
 $font-size-4: $font-size-base;
 $font-size-5: $font-size-base * 0.875;
 $font-size-6: $font-size-base * 0.75;
+
 // 字体集合
 $font-sizes: ($font-size-1,
     $font-size-2,
@@ -93,15 +94,16 @@ $colors: map-merge(("blue": $blue,
         "teal": $teal,
         "cyan": $cyan,
         "white": $white,
+        "black":$black,
         "gray": $gray-600,
         "gray-dark": $gray-800),
     $colors);
 
-$primary: $blue !default;
+$primary: #ff0258 !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;
-$warning: $yellow !default;
+$warning: $orange !default;
 $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
@@ -115,7 +117,9 @@ $theme-colors: map-merge(("primary": $primary,
         "warning": $warning,
         "danger": $danger,
         "light": $light,
-        "dark": $dark),
+        "dark": $dark,
+        "black":$black
+        ),
     $theme-colors);
 
 $backgroundColor: $white;
