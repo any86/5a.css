@@ -1,8 +1,9 @@
 @import "../_variables";
 @import "../_mixins";
 @import "../_functions";
-
+$size:44px;
 .a-button {
+    box-sizing: border-box;
     cursor: pointer;
     position: relative;
     font-size: $font-size-5;
@@ -13,10 +14,9 @@
     // -webkit-appearance: button;
     text-align: center;
     padding: 0 $space;
-    height: 44px;
-    min-width: 46px;
-    line-height: 44px;
-    box-sizing: border-box;
+    height: $size;
+    min-width: $size;
+    line-height: $size;
     border: 0 none;
     user-select: none;
     outline: none;
@@ -27,12 +27,19 @@
     border-width: 1px;
     border-style: solid;
 
-    &::after {
-        content: "";
+    & + .a-button--full {
+        margin-left: 0;
+        margin-top:$space;
     }
-    & + .a-button {
+    & + .a-button--block {
+        margin-left: 0;
+        margin-top:$space;
+    }
+
+    & + .a-button:not(.a-button--block) {
         margin-left: $space;
     }
+
 
     &--block,
     &--full {
@@ -49,7 +56,11 @@
 
     &--full {
         border-radius: 0 !important;
+        margin:0;
     }
+
+
+
 
     &--rounded {
         border-radius: 99999px;
