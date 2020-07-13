@@ -3,6 +3,7 @@
 @import "../_functions";
 $size:44px;
 .a-button {
+    touch-action: manipulation;
     box-sizing: border-box;
     cursor: pointer;
     position: relative;
