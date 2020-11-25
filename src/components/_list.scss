@@ -13,7 +13,7 @@
 
     &__item {
         display: flex;
-
+        background-color: $white;
         &__start {
             // 内部间隙因子
             margin-left: $space;
