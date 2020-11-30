@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Button</title>
-    <link rel="stylesheet" href="../dist/main.css">
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <style>
+        .show-all-buttons{
+            flex-wrap: wrap;
+            
+        }
+        .show-all-buttons>.a-button {
+            margin-bottom:8px;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,24 +25,39 @@
         Button
     </header>
     <!-- 头 -->
+    <h3 class="mt-1 p-1">多种颜色</h3>
+    <section class="p-1 d-flex show-all-buttons">
+        <button class="a-button a-button--primary ">primary</button>
+        <span class="a-button a-button--secondary ">secondary</span>
+        <button class="a-button a-button--success ">success</button>
+        <button class="a-button a-button--warning ">warning</button>
+        <button class="a-button a-button--danger ">danger</button>
+        <span class="a-button a-button--info ">info</span>
+        <button class="a-button a-button--black ">black</button>
+        <button class="a-button a-button--dark ">dark</button>
+        <span class="a-button a-button--light ">light</span>
+    </section>
 
+    <h3 class="mt-1 p-1">禁用</h3>
+    <section class="p-1 d-flex show-all-buttons">
+        <button class="a-button a-button--primary a-button--disabled">primary</button>
+        <span class="a-button a-button--secondary a-button--disabled">secondary</span>
+        <button class="a-button a-button--success a-button--disabled">success</button>
+        <button class="a-button a-button--warning a-button--disabled">warning</button>
+        <button class="a-button a-button--danger a-button--disabled">danger</button>
+        <span class="a-button a-button--info a-button--disabled">info</span>
+        <button class="a-button a-button--black a-button--disabled">black</button>
+        <button class="a-button a-button--dark a-button--disabled">dark</button>
+        <span class="a-button a-button--light a-button--disabled">light</span>
+    </section>
 
-    <h3 class="mt-2 p-1">按钮组(a-button-group)</h3>
-    <div class="a-button-group a-button-group--block mt-2">
-        <button class="a-button a-button--primary a-button--full  a-button--rounded">primary</button>
-        <button class="a-button a-button--success a-button--full">success</button>
-    </div>
-
-    <h3 class="mt-6 p-1">不同type代表不同颜色</h3>
-    <section class="p-1">
-        <button class="a-button a-button--info  mt-2">info</button>
-        <button class="a-button a-button--secondary  mt-2">secondary</button>
-        <button class="a-button a-button--light  mt-2">light</button>
-        <button class="a-button a-button--dark  a-button--rounded  mt-2">
-            <i class="ion-md-checkmark"></i>
+    <h3 class="mt-6 p-1">内容也可以是图标</h3>
+    <section class="p-1   mt-2">
+        <button class="a-button a-button--dark  a-button--rounded">
+            <i class="ion-md-checkmark font-1"></i>
         </button>
-        <button class="a-button a-button--danger  mt-2">
-            <i class="ion-md-close"></i>
+        <button class="a-button a-button--danger">
+            <i class="ion-md-close font-1"></i>
         </button>
     </section>
 
@@ -41,7 +65,7 @@
     <section class="p-1">
         <button class="a-button a-button--warning a-button--block a-button--loading">
             warning</button>
-        <button class="a-button a-button--danger  a-button--block mt-2">danger</button>
+        <button class="a-button a-button--danger  a-button--block">danger</button>
     </section>
 
 
@@ -52,23 +76,31 @@
 
         <button class="a-button a-button--secondary a-button--outline a-button--block mt-2">secondary</button>
 
-        <button class="a-button a-button--success a-button--outline a-button--block mt-2">success</button>
+        <button class="a-button a-button--success a-button--outline a-button--block">success</button>
 
-        <button class="a-button a-button--info a-button--outline a-button--block mt-2">info</button>
+        <button class="a-button a-button--info a-button--outline a-button--block">info</button>
 
-        <button class="a-button a-button--warning a-button--block a-button--loading a-button--outline mt-2">
+        <button class="a-button a-button--warning a-button--block a-button--loading a-button--outline">
             warning</button>
-        <button class="a-button a-button--danger a-button--outline a-button--block mt-2">danger</button>
+        <button class="a-button a-button--danger a-button--outline a-button--block">danger</button>
 
-        <button class="a-button a-button--dark a-button--outline a-button--block mt-2">dark</button>
+        <button class="a-button a-button--dark a-button--outline a-button--block">dark</button>
 
 
+        <button class="a-button a-button--light a-button--outline a-button--block">light</button>
     </section>
 
     <h3 class="mt-3">"light"一般用在暗色背景下</h3>
     <section class="bg-dark p-1">
-        <button class="a-button a-button--light a-button--outline a-button--block mt-2">light</button>
+        <button class="a-button a-button--light a-button--outline a-button--block">light</button>
     </section>
+
+
+    <h3 class="mt-2 p-1">按钮组(a-button-group)</h3>
+    <div class="a-button-group mt-2">
+        <button class="a-button a-button--warning">加入购物车</button>
+        <button class="a-button a-button--primary">立即购买</button>
+    </div>
 
 </body>
 
