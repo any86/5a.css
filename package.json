@@ -1,6 +1,6 @@
 {
   "name": "@5a/css",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "dist/main.css",
   "unpkg": "dist/main.css",
   "jsdelivr": "dist/main.css",
@@ -17,7 +17,7 @@
     "sass": "node-sass",
     "release": "standard-version && npm run build:wx && npm run build && npm pub --access public && node ./scripts/demo.js",
     "new": "node ./scripts/new",
-    "copy-fonts":"node ./scripts/copyFonts",
+    "copy-fonts": "node ./scripts/copyFonts",
     "build:wx": "rimraf ./dist/wx && node ./scripts/wx",
     "build": "rimraf dist && npm run copy-fonts && node ./scripts/build",
     "dev": "node-sass src/main.scss dist/css/main.css --watch"

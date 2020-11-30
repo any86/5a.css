@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/any86/5a.css/compare/v0.0.9...v0.0.10) (2020-11-30)
+
+
+### Features
+
+* 增加text-align缩写 ([788b671](https://github.com/any86/5a.css/commit/788b67172a4ecf2a0991b95c5d55fd30f678dbf4))
+
+
+### Bug Fixes
+
+* 修复按钮之间默认间距错误 ([be0f89a](https://github.com/any86/5a.css/commit/be0f89ab558fbd10d1d735fff6cbda82708ea377))
+* 修复按钮样式错误 ([4e02b0a](https://github.com/any86/5a.css/commit/4e02b0af721fc68aa3f2df3e9d35ff7633a0e333))
+* 防止块级按钮左右有边距 ([4bab1d4](https://github.com/any86/5a.css/commit/4bab1d4508d779f6e09a12ab602aa9f1fc80aa06))
+
 ### 0.0.9 (2020-06-14)
 
 
