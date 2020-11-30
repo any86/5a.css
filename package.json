@@ -1,5 +1,5 @@
 {
-  "name": "@5a/css",
+  "name": "5a.css",
   "version": "0.0.10",
   "main": "dist/main.css",
   "unpkg": "dist/main.css",
