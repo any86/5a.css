@@ -1,15 +1,10 @@
-align-items .a {
-    align-items: flex-end
-}
-
-
 @each $var in (center, baseline, stretch, flex-start, flex-end) {
     .align-items-#{$var} {
         align-items: $var;
     }
 
     .align-contents-#{$var} {
-        align-items: $var;
+        align-content: $var;
     }
 
     .align-self-#{$var} {
@@ -19,6 +14,10 @@ align-items .a {
 
 .v-align-middle{vertical-align: middle;}
 
-.t-align-center{
-    text-align: center;
+@each $var in (left, right, center,start,end) {
+    .t-align-#{$var}{
+        text-align: $var;
+    }
 }
+
+
