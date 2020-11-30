@@ -10,7 +10,7 @@ shell.mkdir('-p','./demo/fonts');
 shell.cp('-Rf', './example/*', './demo/example');
 shell.cp('-Rf', './dist/*', './demo/dist');
 shell.cp('-Rf', './index.html', './demo');
-shell.cp('-Rf', './fonts/*', './demo/fonts');
+shell.cp('-Rf', 'node_modules/ionicons/dist/fonts/*', './demo/fonts');
 
 // 发布
 ghpages.publish('./demo', {
