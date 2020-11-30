@@ -1,12 +1,9 @@
 {
   "name": "5a.css",
   "version": "0.0.11",
-  "main": "dist/main.css",
-  "unpkg": "dist/main.css",
-  "jsdelivr": "dist/main.css",
-  "directories": {
-    "example": "example"
-  },
+  "main": "dist/css/main.css",
+  "unpkg": "dist/css/main.css",
+  "jsdelivr": "dist/css/main.css",
   "description": "兼容小程序的css库",
   "files": [
     "dist",
