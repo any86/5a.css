@@ -1,29 +1,27 @@
 const sass = require('node-sass');
-const chalk = require('chalk');
 const fs = require('fs');
 const shell = require('shelljs');
-
+const copyFonts = require('./copyFonts');
+const path = require('path');
 // 打包
-build('main');
-build('helpers');
+build('packages/5a.css/src/main.scss', 'packages/5a.css/dist/css/5a.css');
+build('packages/helpers/src/helpers.scss', 'packages/helpers/dist/helpers.css');
 
 /**
  * 生成css文件
  * @param {String} 文件名不包含扩展名 
  */
-function build(fileName){
-    const DIST_CSS_DIR = 'dist/css'; 
-    shell.mkdir('-p', DIST_CSS_DIR);
+function build(file,outFile) {
+    shell.mkdir('-p', path.dirname(outFile));
     const out = sass.renderSync({
-        file: `src/${fileName}.scss`,
-        sourceMap:true,
-        outFile: `dist/${fileName}.css`,
-        outputStyle:'compressed'
+        file,
+        sourceMap: true,
+        outFile,
+        outputStyle: 'compressed'
     });
-    
-    const DIST_CSS_FILE = `${DIST_CSS_DIR}/${fileName}.css`;
-    fs.writeFileSync(DIST_CSS_FILE, out.css);
-    fs.writeFileSync(`${DIST_CSS_FILE}.map`, out.map);
+
+    fs.writeFileSync(outFile, out.css);
+    fs.writeFileSync(`${outFile}.map`, out.map);
 }
 
 

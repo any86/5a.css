@@ -1,0 +1,70 @@
+@import '../variables';
+.a-collapse {
+    overflow: hidden;
+    border-bottom: 1px solid $gray-300;
+
+    &__item {
+        border-top: 1px solid $gray-300;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            background-color: $gray-100;
+            padding: $space;
+            font-size: $collapse-title-font-size;
+            cursor: pointer;
+            font-weight: bold;
+
+            &__icon-arrow {
+                display: inline-block;
+                transition: transform $animateDuration;
+                width: 1.3em;
+                height: 1.3em;
+                text-align: center;
+            }
+        }
+
+        &__body {
+            display: none;
+            padding: $space;
+            font-size: 14px;
+        }
+    }
+
+    // 展开情况下
+    &__item {
+        &--open {
+            .a-collapse__item__header {
+                border-bottom: 1px solid $gray-300;
+
+                .a-collapse__item__icon-arrow {
+                    transform: rotate(90deg);
+                    transform-origin: center center;
+                }
+            }
+
+            .a-collapse__item__body {
+                display: block;
+            }
+        }
+    }
+
+    // 简化版本
+    &--simplify {
+        border: none;
+        border-bottom: 1px solid $gray-300;
+
+        .a-collapse__item {
+            &__header {
+                border: none;
+                background-color: transparent;
+                padding: $space;
+            }
+
+            &__body {
+                padding: 0 $space $space $space;
+            }
+        }
+    }
+}

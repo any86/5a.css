@@ -18,4 +18,24 @@ import '@5s/css';
 ```
 
 
+## 子模块
+引入5a.css的部分功能:
+
+### @5a.css/mixins
+基于scss的mixin
+```scss
+@import '@5a.css/minins';
+```
+
+### @5a.css/heplers
+常用css样式
+```scss
+@import '@5a.css/heplers';
+```
+
+### @5a.css/functions
+常用scss函数
+```scss
+@import '@5a.css/functions';
+```
 

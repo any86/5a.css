@@ -1,0 +1,39 @@
+@import '../variables';
+
+.a-table {
+    display: table;
+    width: 100%;
+    background-color: $white;
+
+    &--border {
+        border: 1px solid $table-border-color;
+    }
+
+    &--striped {
+        .tr:nth-of-type(2n) {
+            background-color: $table-striped-color;
+        }
+    }
+
+    &__tr {
+        display: table-row;
+        width: 100%;
+        padding: $space;
+
+        &__td,
+        &__th {
+            display: table-cell;
+            vertical-align: middle;
+            padding: $space;
+        }
+
+        &__td {
+            border-top: 1px solid $table-border-color;
+        }
+
+        &__th {
+            word-break: keep-all;
+            font-weight: bold;
+        }
+    }
+}

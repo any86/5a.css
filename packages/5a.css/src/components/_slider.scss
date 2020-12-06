@@ -1,0 +1,36 @@
+// 滑块
+@import '../variables';
+@import '../../../mixins/_mixins.scss';
+
+.a-slider {
+    display: block;
+    background-color: $gray-300;
+    color:$primary;
+    position: relative;
+    border-radius: 9999px;
+
+    &__progress {
+        background-color: currentColor;
+        height: $slider-height;
+        width: 0;
+        border-radius: 9999px;
+    }
+
+    &__indicator {
+        position: absolute;
+        box-shadow: $shadow-all;
+        width: $slider-circle-width;
+        height: $slider-circle-width;
+        z-index: 1;
+        border-radius: 100%;
+        top: 50%;
+        left: 0;
+        background-color: rgba($white, 0.9);
+        transform: translate(-50%, -50%);
+
+        &__tip {
+            @include tooltip;
+            white-space: nowrap;
+        }
+    }
+}
