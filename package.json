@@ -10,7 +10,8 @@
   "scripts": {
     "copy-fonts":"node ./scripts/copyFonts.js",
     "sass": "node-sass",
-    "release": "standard-version && npm run build:wx && npm run build && npm pub --access public && node ./scripts/demo.js",
+    "release:demo":"node ./scripts/demo.js",
+    "release": "standard-version && npm run build:wx && npm run build && npm pub --access public",
     "new": "node ./scripts/new",
     "build:wx": "rimraf ./dist/wx && node ./scripts/wx",
     "build": "rimraf packages/*/dist && npm run copy-fonts &&  node ./scripts/build",
