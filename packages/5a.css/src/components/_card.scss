@@ -1,0 +1,48 @@
+@import '../variables';
+
+.a-card {
+    box-shadow: $shadow-down-lg;
+    width: 100%;
+    background-color: $background-color;
+    border-radius: $radius;
+    overflow: hidden;
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+
+    &__header {
+        padding-top: $space*2;
+        padding-right: $space*2;
+        padding-left: $space*2;
+        &__title {
+            font-size: $font-size-3;
+            font-weight: bold;
+            color: $black;
+        }
+
+        &__subtitle {
+            font-size: $font-size-5;
+            color: $secondary;
+        }
+    }
+
+    &__content {
+        padding-top: $space;
+        padding-right: $space*2;
+        padding-left: $space*2;
+        padding-bottom: $space*2;
+        font-size: $font-size-5;
+        word-break: break-all;
+    }
+
+    &__button {
+        display: block;
+        padding-right: $space*2;
+        padding-left: $space*2;
+        padding-bottom: $space*2;
+        font-size: $font-size-5;
+        color: $info;
+    }
+}

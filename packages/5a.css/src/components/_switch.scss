@@ -1,0 +1,58 @@
+@import '../variables';
+.a-switch {
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    height: $switch-size;
+    width: $switch-size*2;
+    border-radius: $switch-size;
+    background-color: $gray-500;
+    transition: background-color $animateDuration;
+    padding: 1px;
+    vertical-align: middle;
+    // 圆
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left: 1px;
+        top: 1px;
+        display: block;
+        width: $switch-size;
+        height: $switch-size;
+        border-radius: $switch-size;
+        background: $white;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+        transition: transform $animateDuration;
+
+    }
+
+    &--checked {
+        background-color: $primary;
+        z-index: 1;
+
+        &:after {
+            transform: translateX($switch-size);
+            // animation: checkboxAnimation $animateDuration;
+        }
+    }
+
+    &--disabled {
+        &:after{
+            background-color: #ddd;
+        }
+        opacity: 0.6;
+    }
+
+
+    @keyframes checkboxAnimation {
+        0% {
+            width: $switch-size * 2;
+        }
+
+        100% {
+            width: $switch-size;
+        }
+    }
+
+}

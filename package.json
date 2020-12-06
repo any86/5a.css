@@ -1,31 +1,30 @@
 {
   "name": "5a.css",
   "version": "0.0.13",
-  "main": "dist/css/main.css",
-  "unpkg": "dist/css/main.css",
-  "jsdelivr": "dist/css/main.css",
-  "description": "兼容小程序的css库",
+  "description": "常用样式css库",
   "files": [
     "dist",
     "src",
     "fonts"
   ],
   "scripts": {
+    "copy-fonts":"node ./scripts/copyFonts.js",
     "sass": "node-sass",
     "release": "standard-version && npm run build:wx && npm run build && npm pub --access public && node ./scripts/demo.js",
     "new": "node ./scripts/new",
-    "copy-fonts": "node ./scripts/copyFonts",
     "build:wx": "rimraf ./dist/wx && node ./scripts/wx",
-    "build": "rimraf dist && npm run copy-fonts && node ./scripts/build",
-    "dev": "node-sass src/main.scss dist/css/main.css --watch"
+    "build": "rimraf packages/*/dist && npm run copy-fonts &&  node ./scripts/build",
+    "dev": "npm run copy-fonts && node-sass packages/5a.css/src/main.scss packages/5a.css/dist/css/5a.css --watch"
   },
   "devDependencies": {
     "chalk": "^2.4.2",
     "gh-pages": "^2.1.0",
     "ionicons": "^4.6.3",
+    "lerna": "^3.22.1",
     "node-sass": "^4.12.0",
     "shelljs": "^0.8.3",
-    "standard-version": "^8.0.0"
+    "standard-version": "^8.0.0",
+    "rimraf": "^3.0.0"
   },
   "repository": {
     "type": "git",
@@ -41,8 +40,5 @@
   "bugs": {
     "url": "https://github.com/any86/5a.css/issues"
   },
-  "homepage": "https://github.com/any86/5a.css#readme",
-  "dependencies": {
-    "rimraf": "^3.0.0"
-  }
+  "homepage": "https://github.com/any86/5a.css#readme"
 }

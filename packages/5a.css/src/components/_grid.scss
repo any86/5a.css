@@ -1,0 +1,94 @@
+@import '../variables';
+@import '../../../mixins/_mixins.scss';
+
+.a-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &__item {
+        text-align: center;
+        position: relative;
+
+        &__content {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@mixin grid($row:3, $column:3, $hasBorder:false, $isSquare:true) {
+    @extend .a-grid;
+
+    .a-grid__item {
+
+        flex-basis: 100%/$column;
+
+        @if($isSquare) {
+            padding-bottom: 100%/$column;
+            height: 0;
+        }
+
+        &__content {
+
+            @if($isSquare) {
+                width: 100%
+            }
+        }
+    }
+
+    @if($hasBorder) {
+        @for $i from 1 through $row {
+            @for $j from 1 through $column {
+                // 当前格索引
+                $index: ($i - 1) * $column + $j;
+
+                .a-grid__item:nth-child(#{$index}) {
+                    @if $j < $column {
+                        @if $i < $row {
+
+                            @include thinBorder((right, bottom), #ccc);
+                        }
+
+                        @else {
+                            @include thinBorder((right), #ccc);
+                        }
+                    }
+
+                    @else if $i < $row {
+                        @include thinBorder((bottom), #ccc);
+                    }
+                }
+            }
+        }
+    }
+
+
+    // @for $index from 1 to (($row - 1) * $column + 1) {
+    //     .a-grid__item:nth-child(#{$index}) {
+    //         @if($hasBorder) {
+    //             @include thinBorder(bottom, #ccc);
+    //             // border-bottom: 1px solid #ccc;
+    //         }
+    //     }
+    // }
+
+    // @for $index from 1 to $column {
+    //     .a-grid__item:nth-child(#{$column}n + #{$index}) {
+    //         @if($hasBorder) {
+    //             @include thinBorder(right, #ccc);
+    //         }
+    //     }
+    // }
+}
+
+
+.a-grid-3-3 {
+    @include grid(3, 3, true);
+}
+
+.a-grid-2-5 {
+    @include grid(2, 5, false, false);
+}

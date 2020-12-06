@@ -1,0 +1,28 @@
+{
+  "name": "5a.css",
+  "version": "0.0.13",
+  "main": "dist/css/main.css",
+  "unpkg": "dist/css/main.css",
+  "jsdelivr": "dist/css/main.css",
+  "description": "让你可以少写一些css",
+  "files": [
+    "dist",
+    "src",
+    "fonts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://any86@github.com/any86/5a.css.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "ui"
+  ],
+  "author": "Russell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/any86/5a.css/issues"
+  },
+  "homepage": "https://github.com/any86/5a.css#readme"
+}

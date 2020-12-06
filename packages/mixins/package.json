@@ -1,0 +1,24 @@
+{
+  "name": "@5a.css/mixins",
+  "version": "0.0.13",
+  "main": "src/_mixins.scss",
+  "description": "常用mixin(scss)",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://any86@github.com/any86/5a.css.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "ui"
+  ],
+  "author": "Russell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/any86/5a.css/issues"
+  },
+  "homepage": "https://github.com/any86/5a.css#readme"
+}

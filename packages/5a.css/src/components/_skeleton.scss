@@ -1,0 +1,30 @@
+@import '../variables';
+.a-skeleton-rect {
+    overflow: hidden;
+    position: relative;
+    background: $gray-200;
+    display: block;
+    height: 16px;
+    width: 100%;
+    animation: skeletonRect 2s linear infinite;
+
+    @keyframes skeletonRect {
+        50% {
+            opacity: 0.4;
+        }
+
+        75% {
+            opacity: 0.4;
+        }
+
+    }
+}
+
+// 圆形
+.a-skeleton-circle {
+    @extend .a-skeleton-rect;
+    display: inline-block;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+}
