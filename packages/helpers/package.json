@@ -6,7 +6,8 @@
     "jsdelivr": "dist/helpers.css",
     "description": "常见样式封装",
     "files": [
-        "dist"
+        "dist",
+        "src"
     ],
     "repository": {
         "type": "git",

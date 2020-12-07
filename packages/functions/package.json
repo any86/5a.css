@@ -3,11 +3,6 @@
   "version": "0.1.2",
   "main": "_functions",
   "description": "scss function",
-  "files": [
-    "dist",
-    "src",
-    "fonts"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://any86@github.com/any86/5a.css.git"

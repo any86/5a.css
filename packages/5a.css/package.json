@@ -1,14 +1,12 @@
 {
   "name": "5a.css",
   "version": "0.1.2",
-  "main": "dist/css/main.css",
-  "unpkg": "dist/css/main.css",
-  "jsdelivr": "dist/css/main.css",
+  "main": "dist/css/5a.css",
+  "unpkg": "dist/css/5a.css",
+  "jsdelivr": "dist/css/5a.css",
   "description": "让你可以少写一些css",
   "files": [
-    "dist",
-    "src",
-    "fonts"
+    "dist"
   ],
   "dependencies": {
     "@5a.css/functions": "^0.1.2",
