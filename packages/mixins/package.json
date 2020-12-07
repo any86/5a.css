@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/any86/5a.css/issues"
   },
-  "homepage": "https://github.com/any86/5a.css#readme"
+  "publishConfig": {
+    "access": "public"
+},
+  "homepage": "https://github.com/any86/5a.css#readme",
+  "gitHead": "272c137c276a9754f3a549e19a6f0dada493c074"
 }
