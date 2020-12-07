@@ -1,0 +1,25 @@
+@import '../variables';
+
+.a-dropdown {
+    // pointer-events: none;
+    position: absolute;
+    padding-left: $space;
+    padding-right: $space;
+    width: 100%;
+    box-shadow: $shadow-all;
+    z-index: $z-index-dropdown;
+    bottom: 0;
+    right: 0;
+    transform: translate(0, 100%);
+    color: $dropdown-color;
+    background-color: $backgroundColor;
+    border-radius: $radius;
+    // &:after{
+    //     @include triangle(5px,$backgroundColor,top);
+    //     content: '';
+    //     position: absolute;
+    //     top:0;
+    //     left:50%;
+    //     transform: translate(-50%, -100%);
+    // }
+}

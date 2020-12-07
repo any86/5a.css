@@ -1,0 +1,24 @@
+@import '../variables';
+.a-backdrop {
+    position: fixed;
+    z-index: $z-index-backdrop;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $backdrop-background-color;
+
+    &__button-close {
+        position: absolute;
+        text-align: center;
+        color:$white;
+        left: 0;
+        right: 0;
+        bottom:$space;
+        margin:auto;
+        width: $backdrop-width;
+        height: $backdrop-width;
+        line-height: $backdrop-width;
+        font-size: $backdrop-width;
+    }
+}

@@ -1,0 +1,41 @@
+@import '../variables';
+@import '../../../mixins/_mixins.scss';
+.a-picker-view {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    background-color: $white;
+
+    &__content {
+        flex:1;
+        &__item {
+            padding-right: $space;
+            padding-left: $space;
+            font-size: $font-size-4;
+            text-align: center;
+            height: $picker-view-width;
+            line-height: $picker-view-width;
+        }
+    }
+
+    &__mask {
+        position: absolute;
+        top:0;right:0;left:0;bottom:0;
+        background-size: 100% $picker-view-width;
+        background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4)), linear-gradient(0deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4));
+        background-repeat: no-repeat;
+        background-position: top, bottom;
+        backface-visibility: hidden;
+        pointer-events: none;
+    }
+
+    &__indicator{
+        position: absolute !important;
+        width: 100%;
+        @include thinBorder((top,bottom));
+        top:0;
+        bottom:0;
+        margin: auto;
+        height: $picker-view-width;
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "@5a.css/helpers",
+    "version": "0.1.0",
+    "main": "dist/helpers.css",
+    "unpkg": "dist/helpers.css",
+    "jsdelivr": "dist/helpers.css",
+    "description": "常见样式封装",
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://any86@github.com/any86/5a.css.git"
+    },
+    "keywords": [
+        "css",
+        "scss",
+        "ui"
+    ],
+    "author": "Russell",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/any86/5a.css/issues"
+    },
+    "homepage": "https://github.com/any86/5a.css#readme"
+}

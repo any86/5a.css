@@ -1,0 +1,60 @@
+@import '../../../mixins/_mixins.scss';
+@import '../variables';
+
+$cname :'.a-nav-bar';
+#{$cname} {
+    box-shadow: $shadow-down;
+    position: relative;
+    height: 2.8em;
+    line-height: 2.8em;
+    font-size: $font-size-3;
+    font-weight: bold;
+    text-align: center;
+    background-color: $backgroundColor;
+    // icon公共样式
+    &__icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 1.6em;
+        z-index: 1;
+        font-size: 1.4em;
+
+        &:active {
+            opacity: 0.1;
+        }
+    }
+
+
+    &__icon-arrow {
+        left: 0;
+        transform:rotate(180deg);
+        @extend .a-nav-bar__icon;
+        // @extend .ion-ios-arrow-forward;
+    }
+
+    &__icon-more {
+        right: 0;
+        @extend .a-nav-bar__icon;
+        // @extend .ion-ios-more;
+    }
+
+
+    // 反向
+    &--reverse {
+        #{$cname}__icon-arrow {
+            right: 0 !important;
+            left: auto !important;
+            @extend .a-nav-bar__icon;
+            // @extend .ion-ios-arrow-forward;
+        }
+
+        #{$cname}__icon-more {
+            left: 0 !important;
+            right: auto !important;
+            @extend .a-nav-bar__icon;
+            // @extend .ion-ios-more;
+        }
+    }
+}

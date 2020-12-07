@@ -1,0 +1,7 @@
+// 标记
+@import '../variables';
+@import '../../../mixins/_mixins.scss';
+
+.a-badge {
+    @include badge;
+}
