@@ -6,7 +6,7 @@
     "sass": "node-sass",
     "changelog":"lerna version --conventional-commits",
     "release:demo": "node ./scripts/demo.js",
-    "release": "npm run changelog && npm run build && lerna publish --force-publish",
+    "release": "npm run build && lerna publish --force-publish",
     "new": "node ./scripts/new",
     "build:wx": "rimraf ./dist/wx && node ./scripts/wx",
     "build": "rimraf packages/*/dist && npm run copy-fonts &&  node ./scripts/build",
