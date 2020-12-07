@@ -1,6 +1,6 @@
 {
   "name": "5a.css",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/css/main.css",
   "unpkg": "dist/css/main.css",
   "jsdelivr": "dist/css/main.css",
@@ -11,9 +11,9 @@
     "fonts"
   ],
   "dependencies": {
-    "@5a.css/helpers": "^0.1.1",
-    "@5a.css/mixins": "^0.1.1",
-    "@5a.css/functions": "^0.1.1"
+    "@5a.css/functions": "^0.1.2",
+    "@5a.css/helpers": "^0.1.2",
+    "@5a.css/mixins": "^0.1.2"
   },
   "repository": {
     "type": "git",
