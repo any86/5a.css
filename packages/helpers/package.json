@@ -1,6 +1,6 @@
 {
     "name": "@5a.css/helpers",
-    "version": "0.1.5",
+    "version": "0.1.7",
     "main": "dist/helpers.css",
     "unpkg": "dist/helpers.css",
     "jsdelivr": "dist/helpers.css",

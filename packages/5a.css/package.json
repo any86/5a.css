@@ -1,6 +1,6 @@
 {
   "name": "5a.css",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "dist/css/5a.css",
   "unpkg": "dist/css/5a.css",
   "jsdelivr": "dist/css/5a.css",
@@ -10,9 +10,9 @@
     "README.md"
   ],
   "dependencies": {
-    "@5a.css/functions": "^0.1.5",
-    "@5a.css/helpers": "^0.1.5",
-    "@5a.css/mixins": "^0.1.5"
+    "@5a.css/functions": "^0.1.7",
+    "@5a.css/helpers": "^0.1.7",
+    "@5a.css/mixins": "^0.1.7"
   },
   "repository": {
     "type": "git",
