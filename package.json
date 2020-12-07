@@ -1,6 +1,5 @@
 {
   "name": "5a.css",
-  "version": "0.1.1",
   "description": "常用样式css库",
   "scripts": {
     "copy-fonts": "node ./scripts/copyFonts.js",

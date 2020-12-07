@@ -9,12 +9,12 @@
 
 ## 安装
 ```
-npm i @5a/css -S
+npm i 5a.css -S
 ```
 
 ## 使用
 ```javascript
-import '@5s/css';
+import '5s.css';
 ```
 
 
@@ -38,4 +38,3 @@ import '@5s/css';
 ```scss
 @import '@5a.css/functions';
 ```
-
