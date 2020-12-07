@@ -7,7 +7,8 @@
     "description": "常见样式封装",
     "files": [
         "dist",
-        "src"
+        "src",
+        "README.md"
     ],
     "repository": {
         "type": "git",
