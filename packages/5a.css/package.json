@@ -1,6 +1,6 @@
 {
   "name": "5a.css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/css/main.css",
   "unpkg": "dist/css/main.css",
   "jsdelivr": "dist/css/main.css",
@@ -26,7 +26,7 @@
   },
   "publishConfig": {
     "access": "public"
-},
+  },
   "homepage": "https://github.com/any86/5a.css#readme",
   "gitHead": "272c137c276a9754f3a549e19a6f0dada493c074"
 }
