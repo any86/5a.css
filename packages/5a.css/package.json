@@ -10,6 +10,11 @@
     "src",
     "fonts"
   ],
+  "dependencies": {
+    "@5a.css/helpers": "^0.1.1",
+    "@5a.css/mixins": "^0.1.1",
+    "@5a.css/functions": "^0.1.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://any86@github.com/any86/5a.css.git"

@@ -5,6 +5,7 @@
   "scripts": {
     "copy-fonts": "node ./scripts/copyFonts.js",
     "sass": "node-sass",
+    "changelog":"lerna version --conventional-commits",
     "release:demo": "node ./scripts/demo.js",
     "release": "npm run build && lerna publish --force-publish",
     "new": "node ./scripts/new",
