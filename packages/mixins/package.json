@@ -1,6 +1,6 @@
 {
   "name": "@5a.css/mixins",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "main": "src/mixins.scss",
   "description": "常用mixin(scss)",
   "repository": {
