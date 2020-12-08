@@ -1,6 +1,6 @@
 {
   "name": "@5a.css/reset",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "dist/reset.css",
   "description": "scss reset",
   "repository": {
