@@ -1,7 +1,7 @@
 {
-  "name": "@5a.css/functions",
+  "name": "@5a.css/vars",
   "version": "0.1.10",
-  "main": "_functions.scss",
+  "main": "_variables.scss",
   "description": "scss function",
   "repository": {
     "type": "git",
@@ -20,6 +20,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/any86/5a.css#readme",
-  "gitHead": "272c137c276a9754f3a549e19a6f0dada493c074"
+  "homepage": "https://github.com/any86/5a.css#readme"
 }

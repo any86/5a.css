@@ -1,8 +1,8 @@
 @import "node_modules/ionicons/dist/scss/ionicons.scss";
 
-@import "_variables.scss";
+@import "../../vars/_variables.scss";
 @import "../../mixins/_mixins.scss";
-@import "_reset.scss";
+@import "../../reset/src/reset";
 
 // helper
 @import "../../helpers/src/helpers.scss";

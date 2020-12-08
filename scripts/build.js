@@ -4,6 +4,7 @@ const shell = require('shelljs');
 const path = require('path');
 // 打包
 build('packages/5a.css/src/main.scss', 'packages/5a.css/dist/css/5a.css');
+build('packages/reset/src/reset.scss', 'packages/reset/dist/reset.css');
 build('packages/helpers/src/helpers.scss', 'packages/helpers/dist/helpers.css');
 
 /**
