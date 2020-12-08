@@ -1,6 +1,6 @@
 {
   "name": "@5a.css/functions",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "main": "_functions.scss",
   "description": "scss function",
   "repository": {
