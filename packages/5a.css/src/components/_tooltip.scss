@@ -1,5 +1,5 @@
 @import '../../../vars/variables.scss';
-@import '../../../mixins/_mixins.scss';
+@import '../../../mixins/mixins.scss';
 // 内容的宽度收到相对位置关系的父元素的宽度影响, 所以使用的时候最好值把tip放在body的第一级子元素
 .a-tooltip {
    @include tooltip;

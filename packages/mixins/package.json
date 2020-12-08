@@ -1,11 +1,8 @@
 {
   "name": "@5a.css/mixins",
   "version": "0.1.12",
-  "main": "src/_mixins.scss",
+  "main": "src/mixins.scss",
   "description": "常用mixin(scss)",
-  "files": [
-    "src"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://any86@github.com/any86/5a.css.git"
