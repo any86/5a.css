@@ -1,6 +1,6 @@
 {
   "name": "@5a.css/vars",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "main": "_variables.scss",
   "description": "scss function",
   "repository": {
