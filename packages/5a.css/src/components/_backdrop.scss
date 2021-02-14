@@ -1,4 +1,4 @@
-@import '../variables';
+@import '../../../vars/variables.scss';
 .a-backdrop {
     position: fixed;
     z-index: $z-index-backdrop;

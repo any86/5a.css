@@ -1,8 +1,8 @@
 {
-  "name": "@5a.css/mixins",
+  "name": "@5a.css/reset",
   "version": "0.1.13",
-  "main": "src/mixins.scss",
-  "description": "常用mixin(scss)",
+  "main": "dist/reset.css",
+  "description": "scss reset",
   "repository": {
     "type": "git",
     "url": "git+https://any86@github.com/any86/5a.css.git"
@@ -20,6 +20,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/any86/5a.css#readme",
-  "gitHead": "272c137c276a9754f3a549e19a6f0dada493c074"
+  "homepage": "https://github.com/any86/5a.css#readme"
 }

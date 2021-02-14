@@ -1,4 +1,4 @@
-@import '../variables';
+@import '../../../vars/variables.scss';
 @mixin iosLoading($size:1em, $duration:1000, $count:12) {
     &-ios {
         position: relative;

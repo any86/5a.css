@@ -1,6 +1,29 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [0.1.6](https://github.com/any86/5a.css/compare/v0.1.5...v0.1.6) (2020-12-07)
+
+**Note:** Version bump only for package 5a.css
+
+
+
+
+
+## [0.1.4](https://github.com/any86/5a.css/compare/v0.1.3...v0.1.4) (2020-12-07)
+
+**Note:** Version bump only for package 5a.css
+
+
+
+
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.1.1](https://github.com/any86/5a.css/compare/v0.0.14...v0.1.1) (2020-12-07)
 
 ### [0.0.14](https://github.com/any86/5a.css/compare/v0.0.13...v0.0.14) (2020-11-30)
 

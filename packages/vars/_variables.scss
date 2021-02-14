@@ -1,0 +1,202 @@
+// 单位尺寸
+$unit:4px;
+
+// 间距
+$space: $unit * 2;
+// 单位圆角
+$radius: $unit;
+
+// 动画时间
+$animateDuration: 200ms;
+
+// 背景色
+$background-color: #fff;
+
+// 方向
+$directionMaps: ("top": "t",
+    "right": "r",
+    "bottom": "b",
+    "left": "l"
+);
+$directionList: (top, left, right, bottom);
+// zindex
+$z-index-backdrop: 1000;
+$z-index-popup: 1001;
+$z-index-tooltip: 1002;
+$z-index-dropdown: 1003;
+// 字体大小
+// $font-size-base:1rem;
+$font-size-base: $unit * 4;
+$font-size-1: $font-size-base * 1.5;
+$font-size-2: $font-size-base * 1.25;
+$font-size-3: $font-size-base * 1.125;
+$font-size-4: $font-size-base;
+$font-size-5: $font-size-base * 0.875;
+$font-size-6: $font-size-base * 0.75;
+
+// 字体集合
+$font-sizes: ($font-size-1,
+    $font-size-2,
+    $font-size-3,
+    $font-size-4,
+    $font-size-5,
+    $font-size-6);
+
+// 颜色
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(("100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900),
+    $grays);
+
+$blue: #3190ff !default;
+$indigo: #7a30f1 !default;
+$purple: #9e71ef !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+// $red: #f44336 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+// $green: #42b983 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(("blue": $blue,
+        "indigo": $indigo,
+        "purple": $purple,
+        "pink": $pink,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "cyan": $cyan,
+        "white": $white,
+        "black":$black,
+        "gray": $gray-600,
+        "gray-dark": $gray-800),
+    $colors);
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $orange !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(("primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark,
+        "black":$black
+        ),
+    $theme-colors);
+
+$backgroundColor: $white;
+
+// 阴影
+$shadow-all:0 2px 8px rgba(#000, 0.1),
+0 0 0 1px rgba(#ccc, 0.05);
+
+$shadow-down: 0 1px 3px rgba(#000, .125);
+
+$shadow-up: 0 -1px 3px rgba(#000, .06);
+
+$shadow-down-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+
+
+// ========== 组件相关 ==========
+// button
+$button-radius: $radius;
+
+// list
+$space-multiple: 2;
+
+// backdrop
+$backdrop-background-color: rgba(0, 0, 0, 0.6);
+
+// popup
+$popup-background-color: $background-color;
+
+// collapse
+$collapse-title-font-size: $unit*4;
+
+// checkbox
+$checkbox-size: $unit*6 !default;
+
+// radio
+$radio-size: $unit*6 !default;
+
+// switch
+$switch-size: $unit*6;
+$switch-border-color: $gray-300;
+
+// table
+$table-border-color: #ddd;
+$table-striped-color: #f9f9f9;
+
+// tooltip
+$tooltip-color: rgba(0, 0, 0, 0.6);
+
+// dropdown
+$dropdown-color: $black;
+
+// steps
+$steps-normal-color: $gray-400;
+$steps-circle-width: $unit*3;
+$steps-line-width: 2px;
+
+// stepper
+$stepper-width: $unit*6;
+
+// backdrop
+$backdrop-width: $unit*12;
+
+
+// pickerView
+$picker-view-width:$unit*11;
+
+// slider
+$slider-height:$unit;
+$slider-circle-width:$unit*7;
+
+
+// badge
+$badge-padding-y: 5px;
+$badge-height:16px;
+
+
+// tabbar
+$tabbar-height:$unit*15;
+$tabbar-badge-offset-top:$unit;

@@ -1,6 +1,6 @@
-@import '../variables';
-@import '../../../mixins/_mixins.scss';
-@import '../../../functions/_functions.scss';
+@import '../../../vars/variables.scss';
+@import '../../../mixins/mixins.scss';
+@import '../../../functions/functions.scss';
 
 $size:44px;
 .a-button {

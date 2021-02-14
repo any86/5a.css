@@ -1,12 +1,12 @@
 {
   "name": "5a.css",
-  "version": "0.0.13",
   "description": "常用样式css库",
   "scripts": {
-    "copy-fonts":"node ./scripts/copyFonts.js",
+    "copy-fonts": "node ./scripts/copyFonts.js",
     "sass": "node-sass",
-    "release:demo":"node ./scripts/demo.js",
-    "release": "standard-version && npm run build:wx && npm run build && npm pub --access public",
+    "changelog":"lerna version --conventional-commits",
+    "release:demo": "node ./scripts/demo.js",
+    "release": "npm run build && lerna publish --force-publish",
     "new": "node ./scripts/new",
     "build:wx": "rimraf ./dist/wx && node ./scripts/wx",
     "build": "rimraf packages/*/dist && npm run copy-fonts &&  node ./scripts/build",
