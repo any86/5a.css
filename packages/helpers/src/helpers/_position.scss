@@ -1,20 +1,43 @@
 .pos-r {
-    position: relative;
+  position: relative;
 }
 
 .pos-a {
-    position: absolute !important;
+  position: absolute;
 }
 
 .pos-f {
-    position: fixed;
+  position: fixed;
 }
 
 .pos-s {
-    position: sticky;
+  position: sticky;
 }
 
-.pos-a-tl{
-    @extend .pos-a;
-    top:0;left:0;
+.pos-f-top {
+  @extend .pos-f;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.pos-f-bottom {
+  @extend .pos-f;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.pos-a-bottom {
+  @extend .pos-f;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.pos-a-top {
+  @extend .pos-a;
+  top: 0;
+  left: 0;
+  right: 0;
 }
