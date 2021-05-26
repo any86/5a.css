@@ -1,6 +1,6 @@
 {
   "name": "5a.css",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "main": "dist/css/5a.css",
   "unpkg": "dist/css/5a.css",
   "jsdelivr": "dist/css/5a.css",
@@ -10,11 +10,11 @@
     "README.md"
   ],
   "dependencies": {
-    "@5a.css/functions": "^0.1.14",
-    "@5a.css/helpers": "^0.1.14",
-    "@5a.css/mixins": "^0.1.14",
-    "@5a.css/reset": "^0.1.14",
-    "@5a.css/vars": "^0.1.14"
+    "@5a.css/functions": "^0.1.15",
+    "@5a.css/helpers": "^0.1.15",
+    "@5a.css/mixins": "^0.1.15",
+    "@5a.css/reset": "^0.1.15",
+    "@5a.css/vars": "^0.1.15"
   },
   "repository": {
     "type": "git",
