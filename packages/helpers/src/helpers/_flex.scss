@@ -1,15 +1,26 @@
-@for $i from 1 to 10 {
-    .flex-#{$i}{
-        flex: $i;
-        min-width: 0;
-    }
+@for $i from 1 to 6 {
+  .flex-#{$i} {
+    flex: $i;
+    min-width: 0;
+  }
 }
 
-.a-c-c{
-    align-content: center;
+.align-items-center {
+  align-items: center;
+}
+.align-content-center {
+  align-content: center;
+}
+.align-self-center {
+  align-self: center;
 }
 
-.a-i-c{align-items: center;}
-
-.a-i-b{align-items: baseline;}
-.a-i-f-e{align-items: flex-end;}
+.align-items-end {
+  align-items: flex-end;
+}
+.align-content-end {
+  align-content: flex-end;
+}
+.align-self-end {
+  align-self: flex-end;
+}
