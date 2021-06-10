@@ -30,9 +30,9 @@
 
     &--block {
         .a-toast__icon {
-            display: block !important;
+            display: block ;
             margin: auto;
-            font-size: 5em !important;
+            font-size: 5em ;
             line-height: 0.6em;
             &:before {
                 line-height: 0.6em;

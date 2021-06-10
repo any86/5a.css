@@ -57,7 +57,7 @@ $size:44px;
     }
 
     &--full {
-        border-radius: 0 !important;
+        border-radius: 0 ;
         margin:0;
     }
 
@@ -126,10 +126,10 @@ $size:44px;
     .a-button--#{$k}.a-button--outline {
         border-color: $color;
         color: $color;
-        background-color: transparent !important;
+        background-color: transparent ;
         &:active {
             color: darken($color, 20%);
-            background-color: rgba(lighten($color, 1%), 0.06) !important;
+            background-color: rgba(lighten($color, 1%), 0.06) ;
         }
     }
 }
@@ -154,7 +154,7 @@ $size:44px;
     display: flex;
     align-items: flex-start;
     .a-button {
-        border-radius: 0 !important;
+        border-radius: 0 ;
         width: 100%;
     }
     .a-button + .a-button {

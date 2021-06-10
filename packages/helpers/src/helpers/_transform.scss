@@ -1,5 +1,5 @@
 .rotate-0 {
-    transform: rotate(0deg) !important;
+    transform: rotate(0deg) ;
 }
 
 @each $deg in (90, 180, 270) {

@@ -30,7 +30,7 @@
     }
 
     &__indicator{
-        position: absolute !important;
+        position: absolute ;
         width: 100%;
         @include thinBorder((top,bottom));
         top:0;

@@ -1,7 +1,7 @@
 @import '../../../vars/variables.scss';
 .a-popup {
     padding: $space;
-    position: fixed !important;
+    position: fixed ;
     z-index: $z-index-popup;
     background-color: $popup-background-color;
     overflow: hidden;

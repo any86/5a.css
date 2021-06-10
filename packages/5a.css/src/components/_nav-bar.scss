@@ -44,15 +44,15 @@ $cname :'.a-nav-bar';
     // 反向
     &--reverse {
         #{$cname}__icon-arrow {
-            right: 0 !important;
-            left: auto !important;
+            right: 0 ;
+            left: auto ;
             @extend .a-nav-bar__icon;
             // @extend .ion-ios-arrow-forward;
         }
 
         #{$cname}__icon-more {
-            left: 0 !important;
-            right: auto !important;
+            left: 0 ;
+            right: auto ;
             @extend .a-nav-bar__icon;
             // @extend .ion-ios-more;
         }

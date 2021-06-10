@@ -1,6 +1,6 @@
 @for $i from 0 to 7 {
     .p-#{$i} {
-        padding: $space * $i !important;
+        padding: $space * $i ;
     }
 }
 
@@ -8,7 +8,7 @@
 $short in $directionMaps {
     @for $i from 0 to 7 {
         .p#{$short}-#{$i} {
-            padding-#{$directionMap}: $space * $i !important;
+            padding-#{$directionMap}: $space * $i ;
         }
     }
 }
@@ -16,24 +16,24 @@ $short in $directionMaps {
 
 @for $i from 0 to 7 {
     .px-#{$i} {
-        padding-left: $space * $i !important;
-        padding-right: $space * $i !important;
+        padding-left: $space * $i ;
+        padding-right: $space * $i ;
     }
 
     .py-#{$i} {
-        padding-top: $space * $i !important;
-        padding-bottom: $space * $i !important;
+        padding-top: $space * $i ;
+        padding-bottom: $space * $i ;
     }
 }
 
 @for $i from 0 to 7 {
     .px-#{$i} {
-        padding-left: $space * $i !important;
-        padding-right: $space * $i !important;
+        padding-left: $space * $i ;
+        padding-right: $space * $i ;
     }
 
     .py-#{$i} {
-        padding-top: $space * $i !important;
-        padding-bottom: $space * $i !important;
+        padding-top: $space * $i ;
+        padding-bottom: $space * $i ;
     }
 }

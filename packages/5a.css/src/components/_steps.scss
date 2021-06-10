@@ -43,7 +43,7 @@
         // 75
         &__middle {
             .a-steps__item__middle__circle {
-                color: $steps-normal-color !important;
+                color: $steps-normal-color ;
                 &:after {
                     @extend %line;
                     bottom: 0;
@@ -55,8 +55,8 @@
                 width: $steps-circle-width;
                 height: $steps-circle-width;
                 border-radius: 100%;
-                border: 1px solid $steps-normal-color !important;
-                background-color: transparent !important;
+                border: 1px solid $steps-normal-color ;
+                background-color: transparent ;
             }
         }
 
@@ -68,11 +68,11 @@
         &--active {
             .a-steps__item__middle {
                 .a-steps__item__middle__circle {
-                    background-color: $primary !important;
-                    color: $white !important;
-                    border-color: $primary !important;
+                    background-color: $primary ;
+                    color: $white ;
+                    border-color: $primary ;
                     &:after {
-                        background-color: $primary !important;
+                        background-color: $primary ;
                     }
                 }
             }
@@ -82,13 +82,13 @@
         &--active~& {
             .a-steps__item__middle {
                 .a-steps__item__middle__circle {
-                    color: $white !important;
-                    background-color: $primary !important;
-                    border-color: $primary !important;
+                    color: $white ;
+                    background-color: $primary ;
+                    border-color: $primary ;
 
                     &:after,
                     &:before {
-                        background-color: $primary !important;
+                        background-color: $primary ;
                     }
                 }
             }
@@ -139,11 +139,11 @@
 
             .a-steps__item__middle__circle {
                 &:before {
-                    height: calc(50% - #{$steps-circle-width}) !important;
+                    height: calc(50% - #{$steps-circle-width}) ;
                 }
 
                 &:after {
-                    height: calc(50% - #{$steps-circle-width}) !important;
+                    height: calc(50% - #{$steps-circle-width}) ;
                 }
             }
         }
