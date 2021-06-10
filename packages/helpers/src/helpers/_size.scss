@@ -1,0 +1,9 @@
+@each $number in (16, 32, 64, 128, 256, 512, 1024) {
+  .w-#{$number} {
+    width: #{$number}px;
+  }
+
+  .h-#{$number} {
+    width: #{$number}px;
+  }
+}
