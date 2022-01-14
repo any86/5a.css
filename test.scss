@@ -1,0 +1,7 @@
+$map: ('red':#f10, 'green':#0f0);
+
+@each $k,$v in $map {
+  .text-#{$k} {
+    color:$v;
+  }
+}
