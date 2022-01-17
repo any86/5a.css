@@ -1,0 +1,7 @@
+@use "sass:selector";
+@debug selector.unify(".a", ".b");
+@debug selector.unify(".a", ".b,.c");
+@debug selector.unify("div", "h1");
+#{selector.unify(".a", ".b")}{
+  color:#f10;
+}
