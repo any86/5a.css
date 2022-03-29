@@ -24,10 +24,10 @@
 
     .a-grid__item {
 
-        flex-basis: 100%/$column;
+        flex-basis: calc(100%/$column);
 
         @if($isSquare) {
-            padding-bottom: 100%/$column;
+            padding-bottom: calc(100%/$column);
             height: 0;
         }
 

@@ -37,8 +37,8 @@
             font-size: $font-size-1;
             position: relative;
             align-self: center;
-            height: $tabbar-height/2;
-            width: $tabbar-height/2;
+            height: calc($tabbar-height/2);
+            width: calc($tabbar-height/2);
 
             &__badge {
                 @include badge;

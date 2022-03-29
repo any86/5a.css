@@ -14,7 +14,8 @@
     "@5a.css/helpers": "^0.1.19",
     "@5a.css/mixins": "^0.1.19",
     "@5a.css/reset": "^0.1.19",
-    "@5a.css/vars": "^0.1.19"
+    "@5a.css/vars": "^0.1.19",
+    "ionicons": "^4.6.3"
   },
   "repository": {
     "type": "git",

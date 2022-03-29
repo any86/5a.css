@@ -47,7 +47,7 @@
                 &:after {
                     @extend %line;
                     bottom: 0;
-                    height: calc(50% - #{$steps-circle-width / 2});
+                    height: calc(50% - #{calc($steps-circle-width / 2)});
                 }
 
                 display: block;
@@ -102,13 +102,13 @@
                 &:before {
                     @extend %line;
                     top: 0;
-                    height: calc(50% - #{$steps-circle-width / 2});
+                    height: calc(50% - #{calc($steps-circle-width / 2)});
                 }
 
                 &:after {
                     @extend %line;
                     bottom: 0;
-                    height: calc(50% - #{$steps-circle-width / 2});
+                    height: calc(50% - #{calc($steps-circle-width / 2)});
                 }
             }
         }

@@ -15,9 +15,9 @@
         content: '';
         margin: auto;
         display: block;
-        border-radius: $radio-size/2;
-        height: $radio-size/2;
-        width: $radio-size/2;
+        border-radius: calc($radio-size/2);
+        height: calc($radio-size/2);
+        width: calc($radio-size/2);
         transition: transform $animateDuration;
         transform: scale(0);
         background-color: $primary;

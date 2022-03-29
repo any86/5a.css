@@ -1,6 +1,7 @@
 {
   "name": "5a.css",
   "description": "常用样式css库",
+  "type": "module",
   "scripts": {
     "copy-fonts": "node ./scripts/copyFonts.js",
     "sass": "node-sass",
@@ -13,15 +14,13 @@
     "dev": "npm run copy-fonts && node-sass packages/5a.css/src/main.scss packages/5a.css/dist/css/5a.css --watch"
   },
   "devDependencies": {
-    "chalk": "^2.4.2",
-    "gh-pages": "^2.1.0",
-    "ionicons": "^4.6.3",
+    "chalk": "^5.0.1",
+    "gh-pages": "^3.2.3",
     "lerna": "^3.22.1",
-    "node-sass": "^4.12.0",
     "rimraf": "^3.0.0",
     "sass": "^1.47.0",
-    "shelljs": "^0.8.3",
-    "standard-version": "^8.0.0"
+    "shelljs": "^0.8.5",
+    "standard-version": "^9.0.0"
   },
   "repository": {
     "type": "git",

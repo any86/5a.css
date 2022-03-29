@@ -174,7 +174,7 @@ $dropdown-color: $black;
 
 // steps
 $steps-normal-color: $gray-400;
-$steps-circle-width: $unit*3;
+$steps-circle-width: calc($unit*3);
 $steps-line-width: 2px;
 
 // stepper

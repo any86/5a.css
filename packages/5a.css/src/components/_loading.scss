@@ -12,8 +12,8 @@
         >span {
             overflow: hidden;
             position: absolute;
-            top: $size/2;
-            left: $size/2;
+            top: calc($size/2);
+            left: calc($size/2);
             display: block;
             background-color:currentColor;
             width: 0.2*$size;
@@ -23,9 +23,9 @@
 
         @for $i from 0 to $count {
             >span:nth-of-type(#{$i+1}) {
-                transform: rotate(#{360/$count*$i}deg) translateX(0.3*$size);
+                transform: rotate(#{calc(360/$count*$i)}deg) translateX(0.3*$size);
                 animation: ios #{$duration}ms linear infinite;
-                animation-delay: #{$duration*$i/($count)}ms;
+                animation-delay: #{calc($duration*$i/($count))}ms;
             }
         }
 

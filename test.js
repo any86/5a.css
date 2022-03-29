@@ -1,5 +1,5 @@
-const sass = require('sass');
-const path = require('path');
+import  sass from 'sass';
+// const path = require('path');
 
 // const result = sass.compileString(`
 

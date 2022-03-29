@@ -5,3 +5,8 @@
 #{selector.unify(".a", ".b")}{
   color:#f10;
 }
+
+
+.a{
+  width:calc(100px/2);
+}
