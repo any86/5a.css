@@ -2,6 +2,8 @@
 
 "嵌套"和"变量"功能大家都熟, 这里讲一下其他的语法.
 
+https://sass-lang.com/documentation
+
 ## 属性嵌套
 
 ```scss
