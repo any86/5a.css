@@ -1,6 +1,6 @@
 {
   "name": "5a.css",
-  "version": "0.1.20",
+  "version": "0.2.0",
   "main": "dist/css/5a.css",
   "unpkg": "dist/css/5a.css",
   "jsdelivr": "dist/css/5a.css",
@@ -10,11 +10,11 @@
     "README.md"
   ],
   "dependencies": {
-    "@5a.css/functions": "^0.1.20",
-    "@5a.css/helpers": "^0.1.20",
-    "@5a.css/mixins": "^0.1.20",
-    "@5a.css/reset": "^0.1.20",
-    "@5a.css/vars": "^0.1.20",
+    "@5a.css/functions": "^0.2.0",
+    "@5a.css/helpers": "^0.2.0",
+    "@5a.css/mixins": "^0.2.0",
+    "@5a.css/reset": "^0.2.0",
+    "@5a.css/vars": "^0.2.0",
     "ionicons": "^4.6.3"
   },
   "repository": {

@@ -1,6 +1,6 @@
 {
     "name": "@5a.css/helpers",
-    "version": "0.1.20",
+    "version": "0.2.0",
     "main": "dist/helpers.css",
     "description": "常见样式封装",
     "files": [
